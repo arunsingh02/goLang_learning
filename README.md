@@ -1,7 +1,7 @@
 # GoLang Learning
 
-##Clone golang code from github :
-[Github link](https://github.com/arunsingh02/goLang_learning.git)
+## Clone golang code from github :
+[GoLang Github Link](https://github.com/arunsingh02/goLang_learning.git)
 
 ## Run Commad : 
 ```
