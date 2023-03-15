@@ -27,16 +27,16 @@ func main() {
 		fmt.Printf("%v : %v\n", key, value)
 	}
 	// Collecting all keys in slice object
-	keys := make([]string, len(dict))
+	keys := make([]string, len(dict)) // allocates mem and init (slices)
 	i := 0
 	// Iterating for loop
 	for key := range dict {
-		keys[i] = key
+		keys[i] = key // putting values on gven mem
 		i++
 	}
 
 	for i := range keys {
-		fmt.Println(dict[keys[i]])
+		fmt.Println(dict[keys[i]]) // printing values
 	}
 
 	sort.Strings(keys)

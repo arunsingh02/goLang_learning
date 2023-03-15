@@ -17,7 +17,7 @@ func main() {
 	} else {
 		fmt.Println("This is greater number")
 	}
-
+	fmt.Println("Time in unix : ", time.Now().UnixNano())
 	rand.Seed(time.Now().Unix())
 	// dow := rand.Intn(7) + 1
 	// fmt.Println("Day ", dow)
