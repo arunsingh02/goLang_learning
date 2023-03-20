@@ -12,6 +12,12 @@ func main() {
 
 	fmt.Printf("User vivaan details : %+v\n", vivaan)
 	fmt.Printf("Name %v and Email %v of vivaan user.\n", vivaan.Name, vivaan.Email)
+
+	fmt.Println("Status : ", vivaan.Status)
+
+	vivaan.SetStatus(&vivaan.Status)
+
+	fmt.Println("Updated Status : ", vivaan.Status)
 }
 
 // Basic struct definition
@@ -22,3 +28,19 @@ type User struct {
 	Email  string
 	Status bool
 }
+
+// Status is not upadting
+// not the refrence, only copy of the object
+func (u User) SetStatus(Status *bool) {
+	u.Status = false
+	fmt.Println("Set Status : ", u.Status)
+}
+
+/*
+Learning struct
+User vivaan details : {Name:Vivaan Age:1 Email:vivaan@google.ceo Status:true}
+Name Vivaan and Email vivaan@google.ceo of vivaan user.
+Status :  true
+Set Status :  false
+Updated Status :  true
+*/

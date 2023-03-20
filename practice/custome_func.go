@@ -25,6 +25,7 @@ func addValues(val1, val2 int) int {
 }
 
 // ... like *args in pyhton. Handle more values with one arg
+// values is slices
 func addMultiValues(values ...int) (int, int) {
 	total := 0
 	for _, val := range values {

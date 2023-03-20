@@ -14,12 +14,12 @@ func main() {
 	var fileName string = "./namefile.txt"
 	// file create
 	file, err := os.Create(fileName)
-	CheckError(err)
+	CheckNilError(err)
 
 	length, err := io.WriteString(file, content)
-	CheckError(err)
+	CheckNilError(err)
 	fmt.Println("Total length of file is : ", length)
-	defer file.Close()
+	defer file.Close() // Using defer is recommended (Not neccessary)
 	writeFile(fileName, file)
 	defer file.Close()
 	defer readFile(fileName)
@@ -30,17 +30,18 @@ func readFile(fileName string) {
 	// panic: File error
 	// data, err := ioutil.ReadFile("./ss.txt")
 	data, err := ioutil.ReadFile(fileName)
-	CheckError(err)
+	CheckNilError(err)
+	// converting string is imp, else will get data bytes
 	fmt.Println("File content is :\n", string(data))
 }
 
 func writeFile(fileName string, file *os.File) {
 	new_content := "\nI am software engineer."
 	_, err := io.WriteString(file, new_content)
-	CheckError(err)
+	CheckNilError(err)
 }
 
-func CheckError(err error) {
+func CheckNilError(err error) {
 	if err != nil {
 		fmt.Println(err)
 		panic("File error")
