@@ -7,12 +7,14 @@ import (
 	"strings"
 )
 
+// Check error
 func CheckError(err error) {
 	if err != nil {
 		panic(err)
 	}
 }
 
+// Perform GET call
 func PerformGet() {
 	const url string = "http://localhost:8000/get"
 	resp, err := http.Get(url)
@@ -44,6 +46,7 @@ func PerformGet() {
 	}
 }
 
+// Main function
 func main() {
 	fmt.Println("Web GET caller - arunsingh02")
 	PerformGet()
