@@ -35,8 +35,19 @@ func main() {
 		RawQuery: "project=ABC",
 	}
 
-	NewUrl := prepUrl.String()
+	// Values maps a string key to a list of values.
+	// It is typically used for query parameters and form values
+	partsOfUrls := url.Values{}
+	partsOfUrls.Add("firstname", "Arun")
+	partsOfUrls.Add("lastname", "Singh")
+	partsOfUrls.Add("age", "13")
+	partsOfUrls.Add("address", "Bengaluru")
+	fmt.Println("Parts of Urls : ", partsOfUrls)
 
+	partsOfUrls.Del("age")
+	fmt.Println("Parts of Urls : ", partsOfUrls)
+
+	NewUrl := prepUrl.String()
 	fmt.Println("New URL: ", NewUrl)
 
 }
