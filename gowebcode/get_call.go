@@ -30,9 +30,11 @@ func PerformGet() {
 	if len(content) < 100 {
 		var responsefactory strings.Builder
 		byteCount, _ := responsefactory.Write(content)
-		b, _ := responsefactory.WriteString("Hi I am arunsingh")
 
-		fmt.Println("Total byte count : ", byteCount, b)
+		// We can add string
+		// b, _ := responsefactory.WriteString("Hi I am arunsingh")
+
+		fmt.Println("Total byte count : ", byteCount)
 
 		fmt.Println(responsefactory.String())
 
