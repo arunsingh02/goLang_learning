@@ -15,7 +15,7 @@ func CheckError(err error) {
 }
 
 func PerformPostForm() {
-	const URL string = "http://localhost:8000/post"
+	const URL string = "http://localhost:8000/postform"
 
 	requestBody := url.Values{}
 	requestBody.Add("name", "Arun Singh")
