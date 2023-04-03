@@ -58,4 +58,6 @@ go mod init / Module Example:
 (Inside the hello directory)
 >> go run .
 >> Hi, Gladys. Welcome!
+
+Check some initial mod commands example : mymodule/main.go
 ```
