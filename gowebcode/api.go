@@ -15,7 +15,7 @@ func CheckError(err error) {
 	}
 }
 
-// Perform GET call
+// Perform GET call - Controller
 func PerformGet() {
 	const url string = "http://localhost:8000/get"
 	resp, err := http.Get(url)
@@ -47,6 +47,7 @@ func PerformGet() {
 	}
 }
 
+// Perform Post call - Controller
 func PerformPost() {
 	const URL string = "http://localhost:8000/post"
 
@@ -80,6 +81,7 @@ func PerformPost() {
 
 }
 
+// Perform Post call with Form data as input - Controller
 func PerformPostForm() {
 	const URL string = "http://localhost:8000/postform"
 
