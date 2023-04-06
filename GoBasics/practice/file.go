@@ -1,6 +1,6 @@
 // File read and write
 
-package main
+package practice
 
 import (
 	"fmt"
@@ -9,7 +9,7 @@ import (
 	"os"
 )
 
-func main() {
+func FilePlay() {
 	content := "My name is Arun Singh!"
 	var fileName string = "./namefile.txt"
 	// file create

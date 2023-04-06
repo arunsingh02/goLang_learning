@@ -1,6 +1,6 @@
 // conditional (if else, switch case) and loop example
 
-package main
+package practice
 
 import (
 	"fmt"
@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-func main() {
+func CheckConditionWithLoop() {
 	number := 42
 	if number < 40 {
 		fmt.Println("This is small number")

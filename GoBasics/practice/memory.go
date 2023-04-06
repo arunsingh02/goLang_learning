@@ -1,13 +1,13 @@
 // Array, Slices example
 
-package main
+package practice
 
 import (
 	"fmt"
 	"sort"
 )
 
-func main() {
+func MemPlay() {
 	// Array example (memory is fixed)
 	var colors [3]string
 	colors[0] = "choco"

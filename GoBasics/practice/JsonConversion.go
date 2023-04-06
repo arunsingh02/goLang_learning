@@ -1,4 +1,4 @@
-package main
+package practice
 
 import (
 	"encoding/json"
@@ -59,10 +59,9 @@ func DecodedJson() {
 
 }
 
-func main() {
+func JsonConvert() {
 	fmt.Println("Welcome JSON conversion in go")
 	EncodeJson()
-	fmt.Println("\n==================================\n")
 	DecodedJson()
 }
 

@@ -1,11 +1,11 @@
-package main
+package practice
 
 import (
 	"fmt"
 	"sort"
 )
 
-func main() {
+func SlicePlay() {
 	fmt.Println("Welcome in slices")
 
 	var fruitList = []string{}
