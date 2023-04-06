@@ -1,13 +1,13 @@
 // prepare un-ordered map (key : value pair)
 
-package main
+package practice
 
 import (
 	"fmt"
 	"sort"
 )
 
-func main() {
+func OnorderedMap() {
 	// declaration of map (un-ordered dict)
 	dict := make(map[string]string)
 	dict["firstname"] = "Arun"

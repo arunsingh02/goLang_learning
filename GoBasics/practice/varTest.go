@@ -1,11 +1,11 @@
 // Variable in Go Lang
-package main
+package practice
 
 import "fmt"
 
 const myConst int = 64
 
-func main() {
+func VarPlay() {
 	var myString string = "This is string"
 	fmt.Println(myString)
 	fmt.Printf("The variable's type is %T\n", myString)

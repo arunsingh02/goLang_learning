@@ -1,10 +1,10 @@
-package main
+package practice
 
 import "fmt"
 
 const MAX int = 5
 
-func main() {
+func PointerPlay() {
 	var ptr *int
 	fmt.Println("Value in ptr", ptr)
 

@@ -1,11 +1,11 @@
-package main
+package practice
 
 import (
 	"fmt"
 	"time"
 )
 
-func main() {
+func TimePlay() {
 	// explicit type for Time
 	var n time.Time = time.Now()
 	fmt.Println("Current time is ", n)

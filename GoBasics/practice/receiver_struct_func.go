@@ -1,6 +1,6 @@
 // receiver struct function
 
-package main
+package practice
 
 import "fmt"
 
@@ -12,7 +12,7 @@ type Cat struct {
 	sound  string
 }
 
-func main() {
+func CheckStruct() {
 	// Struct obj initialization (constructor)
 	bombay_cat := Cat{6, "Bombay", "Brown", "Meow!"}
 	fmt.Println(bombay_cat)

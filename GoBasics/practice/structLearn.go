@@ -1,8 +1,8 @@
-package main
+package practice
 
 import "fmt"
 
-func main() {
+func StructLearn() {
 	// struct in GoLang
 	// No class concept, no inheritence and no super/parent
 

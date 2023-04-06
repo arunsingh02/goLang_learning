@@ -1,10 +1,10 @@
 // Add custom functions
 
-package main
+package practice
 
 import "fmt"
 
-func main() {
+func CheckCoustomFuction() {
 	doNothing()
 	sum := addValues(12, 23)
 	fmt.Println("Toatl sum : ", sum)

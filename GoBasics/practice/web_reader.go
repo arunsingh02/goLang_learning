@@ -1,6 +1,6 @@
 // Read the online file
 
-package main
+package practice
 
 import (
 	"encoding/json"
@@ -12,7 +12,7 @@ import (
 
 const link string = "http://services.explorecalifornia.org/json/tours.php"
 
-func main() {
+func WebReader() {
 	// var link string = "https://people.sc.fsu.edu/~jburkardt/data/csv/addresses.csv"
 	resp, err := http.Get(link)
 	CheckError(err)

@@ -1,6 +1,6 @@
 // Calculator for Mac
 
-package main
+package practice
 
 import (
 	"bufio"
@@ -11,7 +11,7 @@ import (
 	"strings"
 )
 
-func main() {
+func MCalculator() {
 	fmt.Println("This is Mac calculator.")
 	// explicit variable type (with var and without :)
 	var reader *bufio.Reader = bufio.NewReader(os.Stdin)

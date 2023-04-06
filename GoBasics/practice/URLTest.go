@@ -1,4 +1,4 @@
-package main
+package practice
 
 import (
 	"fmt"
@@ -7,7 +7,7 @@ import (
 
 const Url string = "https://netapp.com:3000/profile?name=Arun&level=MTS3"
 
-func main() {
+func URLPlay() {
 	fmt.Println("Handlling URLs in golang")
 
 	//parsing

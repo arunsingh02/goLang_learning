@@ -1,11 +1,11 @@
 // Using defer
 // Last In First Out
 
-package main
+package practice
 
 import "fmt"
 
-func main() {
+func Defer() {
 	defer fmt.Println("World")
 	fmt.Println("One")
 	defer fmt.Println("\nTwo")

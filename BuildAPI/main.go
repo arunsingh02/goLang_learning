@@ -152,7 +152,7 @@ func main() {
 		"FaceWash", "Nivia", 345, "65", &Constructor{"Bpvt", "Beauty", "54", 12},
 	})
 
-	// model
+	// routers
 	r.HandleFunc("/", serveHome).Methods("GET")
 	r.HandleFunc("/products", GetAllProducts).Methods("GET")
 	r.HandleFunc("/product/{id}", GetOneProduct).Methods("GET")

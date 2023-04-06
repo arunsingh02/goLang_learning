@@ -1,8 +1,8 @@
-package main
+package practice
 
 import "fmt"
 
-func main() {
+func CheckMap() {
 	// maps in golang
 	// Un-Ordered dictonaries
 

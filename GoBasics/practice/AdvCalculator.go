@@ -1,6 +1,6 @@
 // Advanced calculator for Mac
 
-package main
+package practice
 
 import (
 	"bufio"
@@ -11,7 +11,7 @@ import (
 	"strings"
 )
 
-func main() {
+func AdvancedCalculator() {
 	reader := bufio.NewReader(os.Stdin)
 
 	fmt.Print("Value 1 : ")

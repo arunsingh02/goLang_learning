@@ -1,4 +1,4 @@
-package main
+package practice
 
 import (
 	"bufio"
@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-func main() {
+func StringConvert() {
 	reader := bufio.NewReader(os.Stdin)
 	fmt.Print("Enter a number : ")
 	anInput, _ := reader.ReadString('\n')
