@@ -70,7 +70,7 @@ func collectAllMovies() []primitive.M {
 func collectOneMovie(movieID string) primitive.M {
 	var movie bson.M
 	id, _ := primitive.ObjectIDFromHex(movieID)
-	err := collection.FindOne(context.Background(), bson.M{"_id": id})
+	err := collection.FindOne(context.Background(), bson.M{"_id": id}).Decode(&movie)
 	if err != nil {
 		log.Fatal(err)
 	}
