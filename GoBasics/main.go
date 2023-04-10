@@ -28,6 +28,5 @@ func main() {
 	// practice.OnorderedMap()
 	// practice.URLPlay()
 	// practice.VarPlay()
-	// practice.WebReader()
-	practice.HandleRaceCondition()
+	practice.WebReader()
 }
