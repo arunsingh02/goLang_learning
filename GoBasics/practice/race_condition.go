@@ -50,6 +50,8 @@ func HandleRaceCondition() {
 /*
 Without Mutex :
 
+>> go run --race main.go
+
 WARNING: DATA RACE
 Read at 0x00c00020c198 by goroutine 6:
   runtime.growslice()

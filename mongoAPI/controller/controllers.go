@@ -1,3 +1,5 @@
+// Need to update the password of Mongo Atlas to access DB
+
 package controller
 
 import (
@@ -15,7 +17,7 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
-const connectionString = "mongodb+srv://arunsingh02:doNotDisturb@cluster0.tkqh4up.mongodb.net/?retryWrites=true&w=majority"
+const connectionString = "mongodb+srv://arunsingh02:<password>@cluster0.tkqh4up.mongodb.net/?retryWrites=true&w=majority"
 const dbName = "disney"
 const colName = "watchlist"
 
