@@ -78,4 +78,8 @@ Please check goLang_learning/mongoAPI module to get more info about mongo BD usa
 ```
 https://pkg.go.dev/
 https://golangbyexample.com//
+https://github.com/mongodb/mongo-go-driver (Mongo Go Driver referencne)
+https://github.com/dlsniper/gopherconuk (Go micro-service / GCUK)
+https://github.com/smartystreets/goconvey (Testing)
+https://www.youtube.com/watch?v=bM6N-vgPlyQ&list=PLy-NDN51bIDVUNrl5KpfdHqkHfpFEFvWW&index=1
 ```

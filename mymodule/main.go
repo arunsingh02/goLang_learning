@@ -31,6 +31,7 @@ go mod init github.com/arunsingh02/mymodule
 - Created go.mod file
 go get -u github.com/gorilla/mux
 - Updated the go.mod (require github.com/gorilla/mux v1.0.8 //indirect)
+- Created new go.sum file with package checksum
 go build .
 go run .
 go mod tidy

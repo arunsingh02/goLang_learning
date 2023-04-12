@@ -4,6 +4,7 @@ They can be thought of as pipes which is used by goroutines to communicate.
 This communication between goroutines doesn’t require any explicit locks.
 Locks are internally managed by channel themselves.
 Channel along with goroutine makes the go programming language concurrent
+Ref: https://www.youtube.com/watch?v=YEKjSzIwAdA&list=PLy-NDN51bIDVUNrl5KpfdHqkHfpFEFvWW&index=2
 */
 
 package main
@@ -35,6 +36,7 @@ func main() {
 	go func(ch chan<- int, wg *sync.WaitGroup) {
 		fmt.Println("Sender") // chan<- means sender
 		ch <- 5
+		close(ch)
 		defer wg.Done()
 	}(ch, wg)
 	wg.Wait()
