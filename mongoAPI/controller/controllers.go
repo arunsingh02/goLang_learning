@@ -21,6 +21,7 @@ const connectionString = "mongodb+srv://arunsingh02:<password>@cluster0.tkqh4up.
 const dbName = "disney"
 const colName = "watchlist"
 
+// MOST IMPORTANT
 var collection *mongo.Collection
 
 // Special function, called before main
@@ -74,7 +75,7 @@ func collectOneMovie(movieID string) primitive.M {
 	id, _ := primitive.ObjectIDFromHex(movieID)
 	err := collection.FindOne(context.Background(), bson.M{"_id": id}).Decode(&movie)
 	if err != nil {
-		log.Fatal(err)
+		fmt.Println(err)
 	}
 	/*
 		Getting error
