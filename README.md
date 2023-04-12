@@ -71,7 +71,20 @@ https://cloud.mongodb.com/
 Create Cluster
 Add User and IP address
 Dump dummy data and play around.
-Please check goLang_learning/mongoAPI module to get more info about mongo BD usage.
+Please check goLang_learning/mongoAPI module to get more info about mongo DB usage.
+```
+
+## Testing in Go
+```
+Ending a file's name with _test.go tells the go test command that this file contains test functions.
+Test function names have the form TestName, where Name says something about the specific test.
+Currently we are using 'goconvey' module for testing (mongoAPI/controller/controllers_test.go)
+
+
+Commands to run test file:
+go test -v (verbose output that lists all of the tests and their results)
+go test
+[Note: The go test command executes test functions (whose names begin with Test) in test files (whose names end with _test.go)]
 ```
 
 ## References
@@ -81,5 +94,6 @@ https://golangbyexample.com//
 https://github.com/mongodb/mongo-go-driver (Mongo Go Driver referencne)
 https://github.com/dlsniper/gopherconuk (Go micro-service / GCUK)
 https://github.com/smartystreets/goconvey (Testing)
-https://www.youtube.com/watch?v=bM6N-vgPlyQ&list=PLy-NDN51bIDVUNrl5KpfdHqkHfpFEFvWW&index=1
+https://www.youtube.com/playlist?list=PLRAV69dS1uWQGDQoBYMZWKjzuhCaOnBpa
+https://www.youtube.com/playlist?list=PLy-NDN51bIDVUNrl5KpfdHqkHfpFEFvWW
 ```
