@@ -29,7 +29,7 @@ func TestCollectOneMoviesWithCorrectID(t *testing.T) {
 	})
 }
 
-// Test the single entry with correct _id from DB
+// Test the single entry with wrong _id from DB
 func TestCollectOneMoviesWithWrongID(t *testing.T) {
 	Convey("Getting the all movies from Disney plateform", t, func() {
 		Convey("with the valid function", func() {

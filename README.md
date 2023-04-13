@@ -49,7 +49,7 @@ https://go.dev/doc/tutorial/create-module#:~:text=Open%20a%20command%20prompt%20
 ```
 go mod init [module-path] (The go mod init command initializes and writes a new go.mod file in the current directory, in effect creating a new module rooted at the current directory. The go.mod file must not already exist.)
 go mod tidy (go mod tidy ensures that the go.mod file matches the source code in the module.)
-Refrence: https://go.dev/ref/mod#go-mod-init
+Reference: https://go.dev/ref/mod#go-mod-init
 
 go mod init / Module Example:
     |- greetings
@@ -60,7 +60,7 @@ go mod init / Module Example:
        |- go.mod
 (Inside the hello directory)
 >> go run .
->> Hi, Gladys. Welcome!
+>> Hi, Arun. Welcome!
 
 Check some initial mod commands example : mymodule/main.go
 ```
@@ -80,10 +80,19 @@ Ending a file's name with _test.go tells the go test command that this file cont
 Test function names have the form TestName, where Name says something about the specific test.
 Currently we are using 'goconvey' module for testing (mongoAPI/controller/controllers_test.go)
 
-
 Commands to run test file:
-go test -v (verbose output that lists all of the tests and their results)
-go test
+>> go test -v (verbose output that lists all of the tests and their results)
+>> go test
+>> go test -coverprofile=coverage.out
+PASS
+        example.com/greetings   coverage: 100.0% of statements
+ok      example.com/greetings   1.190s
+New coverage.out file will be genrated (greetings/coverage.out)
+
+>> go tool cover -html=coverage.out (Present the results in a web browser.)
+>> go test -bench=. (Execute benchmarks)
+Ref : https://www.digitalocean.com/community/tutorials/how-to-write-unit-tests-in-go-using-go-test-and-the-testing-package
+
 [Note: The go test command executes test functions (whose names begin with Test) in test files (whose names end with _test.go)]
 ```
 
