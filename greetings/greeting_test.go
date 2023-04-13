@@ -11,7 +11,7 @@ func TestHelloWithName(t *testing.T) {
 	want := regexp.MustCompile(`\b` + name + `\b`)
 	msg := Hello("Arun")
 	if !want.MatchString(msg) {
-		t.Fatalf(`Hello("Gladys") = %q, want match for %#q, nil`, msg, want)
+		t.Fatalf(`Hello("Arun") = %q, want match for %#q, nil`, msg, want)
 	}
 }
 
