@@ -1,3 +1,15 @@
+/*
+Function:
+func some_func_name(arguments) return_values
+Method:
+func (receiver receiver_type) some_func_name(arguments) return_values
+
+> A function can be used as first-order objects and can be passed around while methods cannot.
+> Methods can be used for chaining on the receiver while function cannot be used for the same.
+> There can exist different methods with the same name with a different receiver,
+but there cannot exist two different functions with the same name in the same package.
+*/
+
 package practice
 
 import "fmt"
@@ -31,6 +43,7 @@ type User struct {
 
 // Status is not upadting
 // not the refrence, only copy of the object
+// Method (Higher order function)
 func (u User) SetStatus(Status *bool) {
 	u.Status = false
 	fmt.Println("Set Status : ", u.Status)
