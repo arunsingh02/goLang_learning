@@ -1,0 +1,73 @@
+name: CreateStorageClusterPlan
+type: Reservation
+spec:
+  build:
+    element_12_0:
+      type: element
+      info:
+        element: magnesium
+        repository: magnesium-patch3
+        version: 12.3.1.9
+  resource_requirements:
+    filter:
+      match_attributes:
+        location: 'WIC'
+      match_metadata:
+        lab: 'SF_Sustaining'
+        resource_pool: 'CPE_WIC'
+    resource_types:
+      storage_node:
+        - name: sfnodephysical
+          count: 2
+          filter:
+            match_expressions:
+            - attribute_name: name
+              operator: In
+              values:
+                - NLABPICT061910
+                - NLABPICT072214D
+      ip_address:
+        - name: managementVip
+          count: 1
+          filter:
+            match_attributes:
+              subnetName: Subnet_194_64_0
+            match_expressions:
+              - attribute_name: networkName
+                operator: In
+                values:
+                  - ICT-Lab-Pool
+        - name: storageVip
+          count: 1
+          filter:
+            match_attributes:
+              subnetName: Subnet_194_192_0
+            match_expressions:
+              - attribute_name: networkName
+                operator: In
+                values:
+                  - ICT-Lab-Pool
+  setup:
+    stages:
+      - name: setupNodesStage
+        tasks:
+          - name: setupStorageNodesTask
+            type: provision_storage_node
+            refs:
+              node: sfnodephysical
+              build: element_12_0
+            config:
+              rtfi_params:
+                sf_inplace: false
+              skip_post_rtfi_network: false
+      - name: createClusterStage
+        tasks:
+          - name: createStorageClusterTask
+            type: create_storage_cluster
+            refs:
+              provision_tasks:
+                - setupStorageNodesTask
+              cluster_mvip_name: managementVip
+              cluster_svip_name: storageVip
+            config:
+              cluster_name: "CPE_Sustaining_2N"

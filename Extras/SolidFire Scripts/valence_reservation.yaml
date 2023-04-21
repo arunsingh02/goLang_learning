@@ -1,0 +1,66 @@
+---
+name: FQDNTesting
+spec:
+  build:
+    fqdn_testing_as7:
+      info:
+        element: magnesium
+        repository: magnesium-patch5
+        version: 12.5.0.897
+      type: element
+  resource_requirements:
+    filter:
+      match_attributes:
+        location: WIC
+      match_metadata:
+        lab: SF_Sustaining
+        resource_pool: CPE_WIC
+    resource_types:
+      ip_address:
+      - count: 1
+        filter:
+          match_attributes:
+            $subnet.label: storage
+        name: storageVip
+      - count: 1
+        filter:
+          match_attributes:
+            $subnet.label: management
+        name: managementVip
+      storage_node:
+      - count: 3
+        filter:
+          match_expressions:
+          - attribute_name: model
+            operator: In
+            values:
+            - H410S-0
+            - H410S-1
+            - H610S-1
+        name: storageNodes
+  setup:
+    stages:
+    - name: setupNodesStage
+      tasks:
+      - config:
+          rtfi_params:
+            sf_bond_mode_10g: LACP
+            sf_inplace: false
+          skip_post_rtfi_network: false
+        name: setupStorageNodesTask
+        refs:
+          build: fqdn_testing_as7
+          node: storageNodes
+        type: provision_storage_node
+    - name: createClusterStage
+      tasks:
+      - config:
+          cluster_name: FQDNTestingCluster
+        name: createStorageClusterTask
+        refs:
+          cluster_mvip_name: managementVip
+          cluster_svip_name: storageVip
+          provision_tasks:
+          - setupStorageNodesTask
+        type: create_storage_cluster
+type: Reservation

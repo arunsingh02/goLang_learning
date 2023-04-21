@@ -1,0 +1,172 @@
+=========================================================================================================
+USAGE :
+
+python3 sfapp_bin_move_script.py --help
+usage: sfapp_bin_move_srcipt.py [-h] (-m MVIP | -n NODES [NODES ...]) [-u USER] [-s SRC] [-d DEST] [-b] [-r]
+
+This script will copy the sfapp (BIN) to all nodes to get new changes in element code snippet.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -m MVIP, --mvip MVIP  Cluster MVIP
+  -n NODES [NODES ...], --nodes NODES [NODES ...]
+                        List of node IP addresses
+  -u USER, --user USER  (Optional) Node administrator username (Default value : root)
+  -s SRC, --src SRC     sfapp source path (Optional only while running revert command)
+  -d DEST, --dest DEST  (Optional) sfapp destination path (Default value : /sf/bin)
+  -b, --backup          Backup of existing bin of cluster (Second way to copy sfapp at destination)
+  -r, --revert          Revert Cluster with old bin (In case of any failure with new sfapp)
+
+=========================================================================================================
+
+1. Providing mvip and source file path (Running this script first time for any cluster)
+By default values:
+destination path is /sf/bin
+username is root
+binBackup is False
+revertCluster is False
+
+
+>> python3 sfapp_bin_move_script.py -m 10.194.79.178 -s Mag_Patch7_Rel/build/Release/bin/sfapp
+Hitting ListActiveNodes API to collect storage nodes IPs
+To get the authorization, make an API call with postman and use the basic auth, <username>/<password>, and then when you click the code button underneath send, generate the python requests code and you will get the header object. Currently we generated basic auth for admin/admin.
+Total number of Nodes : 3
+Storage IPs : 10.194.192.180, 10.194.192.181, 10.194.192.182
+Start copying sfapp to the nodes
+
+============================10.194.192.180===================================
+
+ssh root@10.194.192.180 stop solidfire
+ssh root@10.194.192.180 cp /sf/bin/sfapp /sf/bin/sfapp.org   -> Creating one backup file for original sfapp of running cluster (new in script and useful in case of failure with new sfapp.)
+ssh root@10.194.192.180 rm -f /sf/bin/sfapp
+scp sfapp root@10.194.192.180:/sf/bin
+ssh root@10.194.192.180 start solidfire
+
+============================10.194.192.181===================================
+
+ssh root@10.194.192.181 stop solidfire
+ssh root@10.194.192.181 cp /sf/bin/sfapp /sf/bin/sfapp.org
+ssh root@10.194.192.181 rm -f /sf/bin/sfapp
+scp sfapp root@10.194.192.181:/sf/bin
+ssh root@10.194.192.181 start solidfire
+
+============================10.194.192.182===================================
+
+ssh root@10.194.192.182 stop solidfire
+ssh root@10.194.192.182 cp /sf/bin/sfapp /sf/bin/sfapp.org
+ssh root@10.194.192.182 rm -f /sf/bin/sfapp
+scp sfapp root@10.194.192.182:/sf/bin
+ssh root@10.194.192.182 start solidfire
+Done
+We can refresh the cluster UI page, if loaded successfully means services are up and running. Otherwise please ssh to nodes and check `status solidfire` to confirm solidfire services are active.
+
+=========================================================================================================
+
+2. Providing mvip and -r (revertCluster)
+In this case only source path is optional.
+
+>> python3 sfapp_bin_move_script.py -m 10.194.79.178 -r
+Hitting ListActiveNodes API to collect storage nodes IPs
+To get the authorization, make an API call with postman and use the basic auth, <username>/<password>, and then when you click the code button underneath send, generate the python requests code and you will get the header object. Currently we generated basic auth for admin/admin.
+Total number of Nodes : 3
+Storage IPs : 10.194.192.180, 10.194.192.181, 10.194.192.182
+Start copying sfapp to the nodes
+
+============================10.194.192.180===================================
+
+ssh root@10.194.192.180 stop solidfire
+ssh root@10.194.192.180 rm -f /sf/bin/sfapp
+ssh root@10.194.192.180 cp /sf/bin/sfapp.org /sf/bin/sfapp   -> Reverting back the original sfapp
+ssh root@10.194.192.180 start solidfire
+
+============================10.194.192.181===================================
+
+ssh root@10.194.192.181 stop solidfire
+ssh root@10.194.192.181 rm -f /sf/bin/sfapp
+ssh root@10.194.192.181 cp /sf/bin/sfapp.org /sf/bin/sfapp
+ssh root@10.194.192.181 start solidfire
+
+============================10.194.192.182===================================
+
+ssh root@10.194.192.182 stop solidfire
+ssh root@10.194.192.182 rm -f /sf/bin/sfapp
+ssh root@10.194.192.182 cp /sf/bin/sfapp.org /sf/bin/sfapp
+ssh root@10.194.192.182 start solidfire
+Done
+We can refresh the cluster UI page, if loaded successfully means services are up and running. Otherwise please ssh to nodes and check `status solidfire` to confirm solidfire services are active.
+
+=========================================================================================================
+
+3. Providing mvip, source file path and -b (binBackup)
+This is one more way to take a backup of sfapp at destination. (not required at first time run)
+
+
+>> python3 app/api/sfapp_bin_move_srcipt.py -m 10.194.79.178 -s Mag_Patch7_Rel/build/Release/bin/sfapp -b
+Hitting ListActiveNodes API to collect storage nodes IPs
+To get the authorization, make an API call with postman and use the basic auth, <username>/<password>, and then when you click the code button underneath send, generate the python requests code and you will get the header object. Currently we generated basic auth for admin/admin.
+Total number of Nodes : 3
+Storage IPs : 10.194.192.180, 10.194.192.181, 10.194.192.182
+Start copying sfapp to the nodes
+
+============================10.194.192.180===================================
+
+ssh root@10.194.192.180 stop solidfire
+ssh root@10.194.192.180 cp /sf/bin/sfapp /sf/bin/sfapp_936    -> taking backup of sfapp
+ssh root@10.194.192.180 rm -f /sf/bin/sfapp
+scp Mag_Patch7_Rel/build/Release/bin/sfapp root@10.194.192.180:/sf/bin
+ssh root@10.194.192.180 start solidfire
+
+============================10.194.192.181===================================
+
+ssh root@10.194.192.181 stop solidfire
+ssh root@10.194.192.181 cp /sf/bin/sfapp /sf/bin/sfapp_659
+ssh root@10.194.192.181 rm -f /sf/bin/sfapp
+scp Mag_Patch7_Rel/build/Release/bin/sfapp root@10.194.192.181:/sf/bin
+ssh root@10.194.192.181 start solidfire
+
+============================10.194.192.182===================================
+
+ssh root@10.194.192.182 stop solidfire
+ssh root@10.194.192.182 cp /sf/bin/sfapp /sf/bin/sfapp_758
+ssh root@10.194.192.182 rm -f /sf/bin/sfapp
+scp Mag_Patch7_Rel/build/Release/bin/sfapp root@10.194.192.182:/sf/bin
+ssh root@10.194.192.182 start solidfire
+Done
+We can refresh the cluster UI page, if loaded successfully means services are up and running. Otherwise please ssh to nodes and check `status solidfire` to confirm solidfire services are active.
+
+=========================================================================================================
+
+4. Providing nodes list, source file path
+
+>> python3 sfapp_bin_move_srcipt.py -n 10.194.192.180 10.194.192.181 -s Mag_Patch7_Rel/build/Release/bin/sfapp
+Total number of Nodes : 2
+Storage IPs : 10.194.192.180, 10.194.192.181
+Start copying sfapp to the nodes
+
+============================10.194.192.180===================================
+
+ssh root@10.194.192.180 stop solidfire
+ssh root@10.194.192.180 rm -f /sf/bin/sfapp
+scp Mag_Patch7_Rel/build/Release/bin/sfapp root@10.194.192.180:/sf/bin
+ssh root@10.194.192.180 start solidfire
+
+============================10.194.192.181===================================
+
+ssh root@10.194.192.181 stop solidfire
+ssh root@10.194.192.181 rm -f /sf/bin/sfapp
+scp Mag_Patch7_Rel/build/Release/bin/sfapp root@10.194.192.181:/sf/bin
+ssh root@10.194.192.181 start solidfire
+Done
+We can refresh the cluster UI page, if loaded successfully means services are up and running. Otherwise please ssh to nodes and check `status solidfire` to confirm solidfire services are active.
+(venv) arunsingh@aruns7-mac-0 logs-service %
+
+=========================================================================================================
+
+5. Providing mvip, nodes list, source file path
+Getting error, can't provide mvip and nodes at once.
+
+python3 app/api/sfapp_bin_move_srcipt.py -m 10.194.79.178 -n 10.194.192.180 10.194.192.181 -s Mag_Patch7_Rel/build/Release/bin/sfapp
+usage: sfapp_bin_move_srcipt.py [-h] (-m MVIP | -n NODES [NODES ...]) [-u USER] [-s SRC] [-d DEST] [-b] [-r]
+sfapp_bin_move_srcipt.py: error: argument -n/--nodes: not allowed with argument -m/--mvip
+
+=========================================================================================================

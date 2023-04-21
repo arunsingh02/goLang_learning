@@ -1,0 +1,16 @@
+>> ls -la
+-rwx------  1 aruns7 dip      1054 May 19 17:21 add_ssh_agent_for_dmake
+
+=========================================================================================================
+1. Running the script
+
+>> ./add_ssh_agent_for_dmake
+Creating dmake runnning env.
+Check rsa file status in ~/.ssh folder
+Total number of solidfire_dev_rsa file in .ssh folder: 3
+Activate your SSH-agent and then add the solidfire dev key to the agent (MANDATORY)
+SolidF1r3   -> (This is the password, please copy and paste)
+/data/sandbox
+Agent pid 16490
+Enter passphrase for /u/aruns7/sfrtp/.ssh/solidfire_dev_rsa: (<passphrase : SolidF1r3>)
+Identity added: /u/aruns7/sfrtp/.ssh/solidfire_dev_rsa (/u/aruns7/sfrtp/.ssh/solidfire_dev_rsa)
