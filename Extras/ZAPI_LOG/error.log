@@ -1,0 +1,491 @@
+brbuild: Log initialization: 0.289 secs (flush: 0.084)
+brbuild: timestamp:remote_start netapp_packages@deploy_vm.linux64.debug 1681383858.77   13-Apr 07:04:18
+brbuild: timestamp:remote_loaded        netapp_packages@deploy_vm.linux64.debug 1681383858.77   13-Apr 07:04:18
+brbuild: Getting build lock file offtap/deploy/pkg/deploy_vm/bedrock/export/linux64.debug/netapp_packages/.brlock
+brbuild: this component is being rebuilt because no signature exists for this component, either because the component was not previously built successfully or because the component was earlier found to be have been modified
+brbuild: started at Thu Apr 13 07:04:19 2023
+brbuild: Host:     bldrtp113-rh6-01
+brbuild: Environment:
+brbuild:     BRCOMPONENT    = deploy_vm
+brbuild:     BRCOMPONENTDIR = offtap/deploy/pkg/deploy_vm
+brbuild:     BRENV          = 1
+brbuild:     BREPOCH        = 1681383546
+brbuild:     BREXPORT       = bedrock/export/linux64.debug/netapp_packages
+brbuild:     BRIMAGE        = 
+brbuild:     BRIMAGETYPE    = 
+brbuild:     BRIMPORT       = bedrock/import/linux64.debug/netapp_packages
+brbuild:     BRINTERNAL     = bedrock/internal/linux64.debug/netapp_packages
+brbuild:     BRLOCAL        = bedrock/local/linux64.debug/netapp_packages
+brbuild:     BRLOGFILENAME  = 20230413-065906.log
+brbuild:     BRPRIVATE      = bedrock/private/linux64.debug/netapp_packages
+brbuild:     BRREBUILD      = EMPTY_OR_MOD
+brbuild:     BRSUBCOMPONENT = netapp_packages
+brbuild:     BRVARIANT      = linux64.debug
+brbuild:     BRWORKSPACE    = /x/eng/bbrtp30/users/aruns7/debian_upgrade_02_6671692_2304130638
+brbuild:     BSD99          = 1
+brbuild:     CCACHE         = /usr/software/rats/bin/br_ccache-4.0
+brbuild:     CCACHE_BUILD   = 1
+brbuild:     DEBUG          = 1
+brbuild:     PATH           = bedrock/import/linux64.debug/netapp_packages/build:bedrock/import/linux64.debug/netapp_packages/debian_setup:bedrock/import/linux64.debug/netapp_packages/pkg-l:bedrock/import/linux64.debug/netapp_packages/sdot_images:bedrock/import/linux64.debug/netapp_packages/src:bedrock/import/linux64.debug/netapp_packages/tools:bedrock/import/linux64.debug/netapp_packages/btool:bedrock/import/linux64.debug/netapp_packages/constructor
+brbuild: Command: '/usr/software/rats/bedrock/bin/br_isolate-10 ./brenv/br_run_mymake.pl'
+brbuild: starting _interrupter for pid 2697683
+
++++ Running br_run_mymake.pl
+
++++ Generating netapp_packages Makefile
+
++++ Keeping original netapp_packages Makefile.
+
++++ Running: bedrock/import/linux64.debug/netapp_packages/btool/brenv/br_make.pl --no-builtin-rules --print-directory --makefile=./bedrock/Makefile.netapp_packages.linux64.debug --check-symlink-times netapp_packages
+/usr/software/rats/bin/make-4.1 --jobs=18 --no-builtin-rules --print-directory --makefile=./bedrock/Makefile.netapp_packages.linux64.debug --check-symlink-times netapp_packages
+br_make.pl: Entering directory '/x/eng/bbrtp30/users/aruns7/debian_upgrade_02_6671692_2304130638/offtap/deploy/pkg/deploy_vm'
+# Clean the previous build
+bedrock/import/linux64.debug/netapp_packages/btool/brenv/tools/bin/rm -rf bedrock/internal/linux64.debug/netapp_packages/*
+bedrock/import/linux64.debug/netapp_packages/btool/brenv/tools/bin/rm -rf bedrock/private/linux64.debug/netapp_packages/*
+bedrock/import/linux64.debug/netapp_packages/btool/brenv/tools/bin/rm -rf bedrock/export/linux64.debug/netapp_packages/*
+./netapp_packages.sh
+
++ bedrock/import/linux64.debug/netapp_packages/btool/brenv/tools/bin/cp bedrock/import/linux64.debug/netapp_packages/src/deploy_buildtools/vmlinuz-3.10.0-327.4.4.el7.x86_64 /dev/shm/vmlinuz-3.10.0-327.4.4.el7.x86_64.2697948.11941
+
++ bedrock/import/linux64.debug/netapp_packages/btool/brenv/tools/bin/mkdir /dev/shm/3.10.0-327.4.4.el7.x86_64.2697948.11941
+
++ bedrock/import/linux64.debug/netapp_packages/btool/brenv/tools/bin/tar -I bedrock/import/linux64.debug/netapp_packages/btool/brenv/tools/bin/gzip -xf bedrock/import/linux64.debug/netapp_packages/src/deploy_buildtools/3.10.0-327.4.4.el7.x86_64.tar.gz -C /dev/shm/3.10.0-327.4.4.el7.x86_64.2697948.11941
+Thu Apr 13 07:04:28 EDT 2023 process_imports started
+
++ cd bedrock/import/linux64.debug/netapp_packages/pkg-l
+
++ ../../../../../bedrock/import/linux64.debug/netapp_packages/btool/brenv/tools/bin/tar hcvf license_manager.tar license_manager/final/license_manager.deb
+license_manager/final/license_manager.deb
+Thu Apr 13 07:04:28 EDT 2023 process_imports finished in 0 seconds
+Thu Apr 13 07:04:28 EDT 2023 copy_image started
+
++ bedrock/import/linux64.debug/netapp_packages/btool/brenv/tools/bin/cp --sparse=always bedrock/local/linux64.debug/netapp_packages/deploy_vm/debian_setup/ONTAPdeploy.raw bedrock/private/linux64.debug/netapp_packages/
+Thu Apr 13 07:06:21 EDT 2023 copy_image finished in 113 seconds
+Thu Apr 13 07:06:21 EDT 2023 install_software started
+
++ bedrock/import/linux64.debug/netapp_packages/btool/brenv/tools/bin/guestfish -x -a bedrock/private/linux64.debug/netapp_packages/ONTAPdeploy.raw
+libguestfs: trace: add_drive_opts "bedrock/private/linux64.debug/netapp_packages/ONTAPdeploy.raw"
+libguestfs: trace: add_drive_opts = 0
+libguestfs: trace: launch
+libguestfs: trace: launch = 0
+libguestfs: trace: mount "/dev/sda1" "/"
+libguestfs: trace: mount = 0
+libguestfs: trace: swapon_device "/dev/sda2"
+libguestfs: trace: swapon_device = 0
+libguestfs: trace: is_dir "/root/.ssh/"
+libguestfs: trace: is_dir = 1
+libguestfs: trace: tar_in "/dev/fd/4" "/root/.ssh/"
+libguestfs: trace: tar_in = 0
+libguestfs: trace: mv "/root/.ssh/id_rsa.pub" "/root/.ssh/authorized_keys"
+libguestfs: trace: mv = 0
+libguestfs: trace: chmod 384 "/root/.ssh/authorized_keys"
+libguestfs: trace: chmod = 0
+libguestfs: trace: sh "chown root:root /root/.ssh/authorized_keys"
+libguestfs: trace: sh = ""
+
+libguestfs: trace: is_dir "/tmp"
+libguestfs: trace: is_dir = 1
+libguestfs: trace: tar_in "/dev/fd/4" "/tmp"
+libguestfs: trace: tar_in = 0
+libguestfs: trace: mv "/tmp/systemd/install_ontap_images.service" "/etc/systemd/system"
+libguestfs: trace: mv = 0
+libguestfs: trace: mv "/tmp/systemd/install_ontap_images.sh" "/etc/systemd/system"
+libguestfs: trace: mv = 0
+libguestfs: trace: sh "chmod +x /etc/systemd/system/install_ontap_images.sh"
+libguestfs: trace: sh = ""
+
+libguestfs: trace: sh "systemctl enable /etc/systemd/system/install_ontap_images.service"
+libguestfs: trace: sh = ""
+
+libguestfs: trace: mv "/tmp/systemd/db_browser.service" "/etc/systemd/system"
+libguestfs: trace: mv = 0
+libguestfs: trace: sh "systemctl enable /etc/systemd/system/db_browser.service"
+libguestfs: trace: sh = ""
+
+libguestfs: trace: rm_rf "/tmp/systemd"
+libguestfs: trace: rm_rf = 0
+libguestfs: trace: sh "echo "admin:admin123" | chpasswd"
+libguestfs: trace: sh = ""
+
+libguestfs: trace: mkdir_p "/opt/netapp/data/asup"
+libguestfs: trace: mkdir_p = 0
+libguestfs: trace: sh "chown netapp:netapp /opt/netapp/data/asup"
+libguestfs: trace: sh = ""
+
+libguestfs: trace: sh "chmod o-r /opt/netapp/data/asup"
+libguestfs: trace: sh = ""
+
+libguestfs: trace: ln_s "/opt/netapp/data/asup/pyAsup.log" "/opt/netapp/log/pyAsup.log"
+libguestfs: trace: ln_s = 0
+libguestfs: trace: ln_s "/opt/netapp/data/asup/AsupService.log" "/opt/netapp/log/AsupService.log"
+libguestfs: trace: ln_s = 0
+libguestfs: trace: sh "chown -h netapp:netapp /opt/netapp/log/pyAsup.log"
+libguestfs: trace: sh = ""
+
+libguestfs: trace: sh "chown -h netapp:netapp /opt/netapp/log/AsupService.log"
+libguestfs: trace: sh = ""
+
+libguestfs: trace: mkdir_p "/opt/netapp"
+libguestfs: trace: mkdir_p = 0
+libguestfs: trace: sh "groupadd -f www-data-users"
+libguestfs: trace: sh = ""
+
+libguestfs: trace: sh "usermod -a -G www-data-users admin"
+libguestfs: trace: sh = ""
+
+libguestfs: trace: sh "usermod -a -G www-data-users www-data"
+libguestfs: trace: sh = ""
+
+libguestfs: trace: sh "groupadd -f uwsgi-sockets"
+libguestfs: trace: sh = ""
+
+libguestfs: trace: sh "usermod -a -G uwsgi-sockets netapp"
+libguestfs: trace: sh = ""
+
+libguestfs: trace: sh "usermod -a -G uwsgi-sockets www-data"
+libguestfs: trace: sh = ""
+
+libguestfs: trace: touch "/opt/netapp/log/nginx_access.log"
+libguestfs: trace: touch = 0
+libguestfs: trace: touch "/opt/netapp/log/nginx_error.log"
+libguestfs: trace: touch = 0
+libguestfs: trace: sh "chown www-data:www-data /opt/netapp/log/nginx_access.log"
+libguestfs: trace: sh = ""
+
+libguestfs: trace: sh "chown www-data:www-data /opt/netapp/log/nginx_error.log"
+libguestfs: trace: sh = ""
+
+libguestfs: trace: is_dir "/opt/netapp/"
+libguestfs: trace: is_dir = 1
+libguestfs: trace: tar_in "/dev/fd/4" "/opt/netapp/"
+libguestfs: trace: tar_in = 0
+libguestfs: trace: is_dir "/opt/netapp/uwsgi"
+libguestfs: trace: is_dir = 1
+libguestfs: trace: tar_in "/dev/fd/4" "/opt/netapp/uwsgi"
+libguestfs: trace: tar_in = 0
+libguestfs: trace: is_dir "/opt/netapp/uwsgi"
+libguestfs: trace: is_dir = 1
+libguestfs: trace: tar_in "/dev/fd/4" "/opt/netapp/uwsgi"
+libguestfs: trace: tar_in = 0
+libguestfs: trace: sh "chown -Rv netapp:netapp /opt/netapp/uwsgi"
+libguestfs: trace: sh = "changed ownership of '/opt/netapp/uwsgi/vassals/kvmadmin_server.ini' from 202805:dip to netapp:netapp\nchanged ownership of '/opt/netapp/uwsgi/vassals' from 202805:dip to netapp:netapp\nchanged ownership of '/opt/netapp/uwsgi/vassals-default.ini' from 202805:dip to netapp:netapp\nchanged ownership of '/opt/netapp/uwsgi/emperor.ini' from 202805:dip to netapp:netapp\nchanged ownership of '/opt/netapp/uwsgi' from 202805:dip to netapp:netapp\n"
+changed ownership of '/opt/netapp/uwsgi/vassals/kvmadmin_server.ini' from 202805:dip to netapp:netapp
+changed ownership of '/opt/netapp/uwsgi/vassals' from 202805:dip to netapp:netapp
+changed ownership of '/opt/netapp/uwsgi/vassals-default.ini' from 202805:dip to netapp:netapp
+changed ownership of '/opt/netapp/uwsgi/emperor.ini' from 202805:dip to netapp:netapp
+changed ownership of '/opt/netapp/uwsgi' from 202805:dip to netapp:netapp
+
+libguestfs: trace: sh "chmod go-rwx /opt/netapp/uwsgi"
+libguestfs: trace: sh = ""
+
+libguestfs: trace: touch "/opt/netapp/log/uwsgi_emperor.log"
+libguestfs: trace: touch = 0
+libguestfs: trace: touch "/opt/netapp/log/uwsgi_sdotadmin_server.log"
+libguestfs: trace: touch = 0
+libguestfs: trace: touch "/opt/netapp/log/uwsgi_kvmadmin_server.log"
+libguestfs: trace: touch = 0
+libguestfs: trace: sh "chown netapp:netapp /opt/netapp/log/uwsgi_emperor.log"
+libguestfs: trace: sh = ""
+
+libguestfs: trace: sh "chown netapp:netapp /opt/netapp/log/uwsgi_sdotadmin_server.log"
+libguestfs: trace: sh = ""
+
+libguestfs: trace: sh "chown netapp:netapp /opt/netapp/log/uwsgi_kvmadmin_server.log"
+libguestfs: trace: sh = ""
+
+libguestfs: trace: mv "/etc/nginx/mime.types" "/etc/"
+libguestfs: trace: mv = 0
+libguestfs: trace: mv "/etc/nginx/uwsgi_params" "/etc/"
+libguestfs: trace: mv = 0
+libguestfs: trace: rm_rf "/etc/nginx"
+libguestfs: trace: rm_rf = 0
+libguestfs: trace: is_dir "/etc"
+libguestfs: trace: is_dir = 1
+libguestfs: trace: tar_in "/dev/fd/4" "/etc"
+libguestfs: trace: tar_in = 0
+libguestfs: trace: mv "/etc/mime.types" "/etc/nginx/"
+libguestfs: trace: mv = 0
+libguestfs: trace: mv "/etc/uwsgi_params" "/etc/nginx/"
+libguestfs: trace: mv = 0
+libguestfs: trace: is_dir "/tmp"
+libguestfs: trace: is_dir = 1
+libguestfs: trace: tar_in "/dev/fd/4" "/tmp"
+libguestfs: trace: tar_in = 0
+libguestfs: trace: sh "cp -r /tmp/nginx-non-promoted/* /etc/nginx"
+libguestfs: trace: sh = ""
+
+libguestfs: trace: rm_rf "/tmp/nginx-non-promoted"
+libguestfs: trace: rm_rf = 0
+libguestfs: trace: is_dir "/etc/systemd/system/"
+libguestfs: trace: is_dir = 1
+libguestfs: trace: tar_in "/dev/fd/4" "/etc/systemd/system/"
+libguestfs: trace: tar_in = 0
+libguestfs: trace: is_dir "/etc/systemd/system/"
+libguestfs: trace: is_dir = 1
+libguestfs: trace: tar_in "/dev/fd/4" "/etc/systemd/system/"
+libguestfs: trace: tar_in = 0
+libguestfs: trace: sh "systemctl enable uwsgi.service"
+libguestfs: trace: sh = ""
+
+libguestfs: trace: mkdir_p "/opt/netapp/sdotadminui"
+libguestfs: trace: mkdir_p = 0
+libguestfs: trace: is_dir "/opt/netapp/sdotadminui"
+libguestfs: trace: is_dir = 1
+libguestfs: trace: tar_in "/dev/fd/4" "/opt/netapp/sdotadminui"
+libguestfs: trace: tar_in = 0
+libguestfs: trace: sh "chown -Rv www-data:www-data /opt/netapp/sdotadminui"
+libguestfs: trace: sh = "changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-BlackIt.ddaa6865d948489ba15a.ttf' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/templates/hosts_column-templates/nodes-nodeName-template.html' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/templates/hosts_column-templates/nodes-clusterName-template.html' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/templates/hosts_column-templates/network-name-template.html' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/templates/hosts_column-templates/storage-name-template.html' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/templates/hosts_column-templates' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_network_column-templates/vlan.html' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_network_column-templates/action.html' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_network_column-templates/status.html' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_network_column-templates/mode.html' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_network_column-templates' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_autosupport_asup-history_column-templates/download.html' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_autosupport_asup-history_column-templates/progress-popover-template.html' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_autosupport_asup-history_column-templates/cluster.html' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_autosupport_asup-history_column-templates/node.html' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_autosupport_asup-history_column-templates/status.html' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_autosupport_asup-history_column-templates/status-popover-template.html' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_autosupport_asup-history_column-templates' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_credentials/credentialOperations-template.html' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_credentials/credentialVerifiedStatus-template.html' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_credentials' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/templates/cluster_createv2_net-precheck_column-templates/test_name.html' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/templates/cluster_createv2_net-precheck_column-templates/src_host.html' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/templates/cluster_createv2_net-precheck_column-templates/dst_host.html' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/templates/cluster_createv2_net-precheck_column-templates/status.html' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/templates/cluster_createv2_net-precheck_column-templates/summary.html' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/templates/cluster_createv2_net-precheck_column-templates' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_licenses_column-templates/expires.html' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_licenses_column-templates/cluster.html' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_licenses_column-templates/capacity.html' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_licenses_column-templates/link.html' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_licenses_column-templates/total_capacity.html' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_licenses_column-templates/type.html' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_licenses_column-templates/lease_expiry.html' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_licenses_column-templates/aggregate_type.html' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_licenses_column-templates/operation.html' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_licenses_column-templates/cluster_capacity.html' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_licenses_column-templates/pool_status.html' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_licenses_column-templates/pool_name.html' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_licenses_column-templates/status.html' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_licenses_column-templates/name.html' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_licenses_column-templates/available_capacity.html' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_licenses_column-templates/aggregate_name.html' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_licenses_column-templates' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_plugin_column_templates/pluginOperations-template.html' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_plugin_column_templates/pluginVerifiedStatus-template.html' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_plugin_column_templates' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/templates/hosts_components_generic-host/hostColumn-template.html' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/templates/hosts_components_generic-host/host-delete-template.html' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/templates/hosts_components_generic-host/level.html' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/templates/hosts_components_generic-host' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/templates' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/clarity/clarity-ui-overrides.css' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/clarity/clarity-ui.min.css' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/clarity' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/images/icon-not-run.svg' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/images/icon-in-progress.svg' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/images/free.svg' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/images/debug-event.svg' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/images/fileupload.svg' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/images/icon-flash.svg' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/images/icon_cancelled.svg' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/images/login_logo.png' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/images' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets/favicon.ico' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/assets' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-BlackIt.ttf.bafa15907a9ff7962bbd.woff2' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/styles.8a72137736fce0dbbef4.bundle.js' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-SemiboldIt.otf.fe3cbd07b27e040cff73.woff' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-BlackIt.38cd304380f4d5645ce6.otf' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/vendors~main.8a72137736fce0dbbef4.chunk.js.map' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-Semibold.c8eb65424f2f0206e83a.ttf' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/dxicons.1286a19fc578e6b5a92e.woff2' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-BlackIt.19b218f01fb05d328a85.eot' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/styles-8a72137736fce0dbbef4.css' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/styles-8a72137736fce0dbbef4.css.map' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-ExtraLightIt.24da54a20f6484856705.otf' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-Bold.1a2a157bfd94b250884c.otf' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/index.html' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-Bold.93b5bf1f0f220d7ad167.eot' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-ExtraLight.84f38db9918ebb6106e5.eot' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-SemiboldIt.ttf.f25d5f4a6db370d5e335.woff2' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/vendors~polyfills.8a72137736fce0dbbef4.chunk.js' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-Regular.5e1d162e634a102d7da8.otf' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-It.804a5a72877fa3e658ba.eot' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-Black.587ba2724f87ade04aab.ttf' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-Semibold.ttf.9ef07ea6ee6d06f4fd48.woff2' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-Semibold.78667e5e4b54fea9bb85.otf' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-LightIt.otf.8991e3bb0c2411f59090.woff' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-Light.b818f4970be48d5cba35.eot' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/polyfills.8a72137736fce0dbbef4.bundle.js' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-SemiboldIt.51e929490d1d431b4127.ttf' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-BoldIt.otf.f49ab603c2bb4dc23344.woff' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-BlackIt.otf.80668f161c73ffbc392b.woff' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-ExtraLightIt.ttf.022f2c3af11ed55b413d.woff2' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-It.otf.e242c0963b781c217058.woff' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-ExtraLight.d4882f17633d5441269d.otf' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-BoldIt.ttf.720946715a1caadbe92a.woff2' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-Regular.otf.bbd955e1383a2ab66329.woff' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/main.8a72137736fce0dbbef4.bundle.js' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-LightIt.e2f4cdfb3a6df28516ed.eot' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/dxicons.2b145cefd95f699e2eec.woff' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-Bold.otf.86dae8227f7c14807065.woff' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/vendors~main.8a72137736fce0dbbef4.chunk.js.LICENSE' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/vendors~main.8a72137736fce0dbbef4.chunk.js' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-SemiboldIt.bceddbf12daf9ef8f246.eot' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-Regular.d165cf1a72ee7db500ec.ttf' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-Light.ttf.9ac3a965ff8034e8c4f3.woff2' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-LightIt.a33030baca7e31c579ea.ttf' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-ExtraLightIt.5b2fdcaf6a96e39c30a3.eot' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-Light.otf.7d901d6001e12e3fd365.woff' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-It.61403c3297a48cfeaf13.ttf' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-Bold.1e9b84fcbc477139e160.ttf' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-It.221e2885deff8820941c.otf' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/login-background.ab6269e28ae73c0b1a71.jpg' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/racked_cabled.acbdbe1a305706039484.svg' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/ui-grid.227446cf79f53e00a94c.eot' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-ExtraLight.ttf.18628e10fd7064357e54.woff2' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-BoldIt.50e6e618cfc82e151d37.otf' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/hapair.e0dd4d307476848dd971.svg' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-SemiboldIt.4e5ce2e7cf30ec4e0298.otf' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-BoldIt.18f07e29928daf1ac14b.eot' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-Black.otf.cc8efb2fcf0cc7e48d41.woff' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-Regular.ttf.713df4a98683bbbc9e0d.woff2' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-Regular.ac064e4ccb70dc3a2b5b.eot' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-ExtraLightIt.otf.ef7233ecd78d566cc460.woff' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/vendors~polyfills.8a72137736fce0dbbef4.chunk.js.LICENSE' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-Semibold.baa29e58bf6f07dcc7e3.eot' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-Bold.ttf.5696c8591069a363bedb.woff2' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-ExtraLightIt.95c44531a311edd3e77b.ttf' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-Light.779f3bf41b852b5582d4.otf' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-LightIt.ttf.f9b216cb099a5be92689.woff2' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-Light.a663a1ba5f49629a86f7.ttf' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-Semibold.otf.99f66ff4eab8123edcaa.woff' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-Black.2ff1682f373b0f9d917d.eot' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-ExtraLight.otf.efc4e410f7b659a6613f.woff' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-Black.2516b34268d5abb314bd.otf' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/dxicons.147eb6fe61ff3af12cd8.ttf' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-ExtraLight.abbaecf00224cd108683.ttf' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/vendors~polyfills.8a72137736fce0dbbef4.chunk.js.map' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-It.ttf.9a310e9db68fa99e332f.woff2' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-Black.ttf.2a13689cc44f0e6da478.woff2' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-LightIt.06b76910b912d54a5696.otf' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-BoldIt.7edeabe69cf9fd9b8d63.ttf' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui/dist' from 202805:dip to www-data:www-data\nchanged ownership of '/opt/netapp/sdotadminui' from root:root to www-data:www-data\n"
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-BlackIt.ddaa6865d948489ba15a.ttf' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/templates/hosts_column-templates/nodes-nodeName-template.html' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/templates/hosts_column-templates/nodes-clusterName-template.html' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/templates/hosts_column-templates/network-name-template.html' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/templates/hosts_column-templates/storage-name-template.html' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/templates/hosts_column-templates' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_network_column-templates/vlan.html' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_network_column-templates/action.html' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_network_column-templates/status.html' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_network_column-templates/mode.html' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_network_column-templates' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_autosupport_asup-history_column-templates/download.html' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_autosupport_asup-history_column-templates/progress-popover-template.html' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_autosupport_asup-history_column-templates/cluster.html' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_autosupport_asup-history_column-templates/node.html' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_autosupport_asup-history_column-templates/status.html' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_autosupport_asup-history_column-templates/status-popover-template.html' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_autosupport_asup-history_column-templates' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_credentials/credentialOperations-template.html' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_credentials/credentialVerifiedStatus-template.html' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_credentials' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/templates/cluster_createv2_net-precheck_column-templates/test_name.html' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/templates/cluster_createv2_net-precheck_column-templates/src_host.html' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/templates/cluster_createv2_net-precheck_column-templates/dst_host.html' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/templates/cluster_createv2_net-precheck_column-templates/status.html' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/templates/cluster_createv2_net-precheck_column-templates/summary.html' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/templates/cluster_createv2_net-precheck_column-templates' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_licenses_column-templates/expires.html' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_licenses_column-templates/cluster.html' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_licenses_column-templates/capacity.html' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_licenses_column-templates/link.html' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_licenses_column-templates/total_capacity.html' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_licenses_column-templates/type.html' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_licenses_column-templates/lease_expiry.html' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_licenses_column-templates/aggregate_type.html' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_licenses_column-templates/operation.html' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_licenses_column-templates/cluster_capacity.html' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_licenses_column-templates/pool_status.html' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_licenses_column-templates/pool_name.html' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_licenses_column-templates/status.html' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_licenses_column-templates/name.html' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_licenses_column-templates/available_capacity.html' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_licenses_column-templates/aggregate_name.html' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_licenses_column-templates' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_plugin_column_templates/pluginOperations-template.html' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_plugin_column_templates/pluginVerifiedStatus-template.html' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/templates/admin_plugin_column_templates' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/templates/hosts_components_generic-host/hostColumn-template.html' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/templates/hosts_components_generic-host/host-delete-template.html' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/templates/hosts_components_generic-host/level.html' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/templates/hosts_components_generic-host' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/templates' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/clarity/clarity-ui-overrides.css' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/clarity/clarity-ui.min.css' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/clarity' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/images/icon-not-run.svg' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/images/icon-in-progress.svg' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/images/free.svg' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/images/debug-event.svg' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/images/fileupload.svg' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/images/icon-flash.svg' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/images/icon_cancelled.svg' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/images/login_logo.png' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/images' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets/favicon.ico' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/assets' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-BlackIt.ttf.bafa15907a9ff7962bbd.woff2' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/styles.8a72137736fce0dbbef4.bundle.js' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-SemiboldIt.otf.fe3cbd07b27e040cff73.woff' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-BlackIt.38cd304380f4d5645ce6.otf' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/vendors~main.8a72137736fce0dbbef4.chunk.js.map' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-Semibold.c8eb65424f2f0206e83a.ttf' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/dxicons.1286a19fc578e6b5a92e.woff2' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-BlackIt.19b218f01fb05d328a85.eot' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/styles-8a72137736fce0dbbef4.css' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/styles-8a72137736fce0dbbef4.css.map' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-ExtraLightIt.24da54a20f6484856705.otf' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-Bold.1a2a157bfd94b250884c.otf' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/index.html' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-Bold.93b5bf1f0f220d7ad167.eot' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-ExtraLight.84f38db9918ebb6106e5.eot' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-SemiboldIt.ttf.f25d5f4a6db370d5e335.woff2' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/vendors~polyfills.8a72137736fce0dbbef4.chunk.js' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-Regular.5e1d162e634a102d7da8.otf' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-It.804a5a72877fa3e658ba.eot' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-Black.587ba2724f87ade04aab.ttf' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-Semibold.ttf.9ef07ea6ee6d06f4fd48.woff2' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-Semibold.78667e5e4b54fea9bb85.otf' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-LightIt.otf.8991e3bb0c2411f59090.woff' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-Light.b818f4970be48d5cba35.eot' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/polyfills.8a72137736fce0dbbef4.bundle.js' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-SemiboldIt.51e929490d1d431b4127.ttf' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-BoldIt.otf.f49ab603c2bb4dc23344.woff' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-BlackIt.otf.80668f161c73ffbc392b.woff' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-ExtraLightIt.ttf.022f2c3af11ed55b413d.woff2' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-It.otf.e242c0963b781c217058.woff' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-ExtraLight.d4882f17633d5441269d.otf' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-BoldIt.ttf.720946715a1caadbe92a.woff2' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-Regular.otf.bbd955e1383a2ab66329.woff' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/main.8a72137736fce0dbbef4.bundle.js' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-LightIt.e2f4cdfb3a6df28516ed.eot' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/dxicons.2b145cefd95f699e2eec.woff' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-Bold.otf.86dae8227f7c14807065.woff' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/vendors~main.8a72137736fce0dbbef4.chunk.js.LICENSE' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/vendors~main.8a72137736fce0dbbef4.chunk.js' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-SemiboldIt.bceddbf12daf9ef8f246.eot' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-Regular.d165cf1a72ee7db500ec.ttf' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-Light.ttf.9ac3a965ff8034e8c4f3.woff2' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-LightIt.a33030baca7e31c579ea.ttf' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-ExtraLightIt.5b2fdcaf6a96e39c30a3.eot' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-Light.otf.7d901d6001e12e3fd365.woff' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-It.61403c3297a48cfeaf13.ttf' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-Bold.1e9b84fcbc477139e160.ttf' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-It.221e2885deff8820941c.otf' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/login-background.ab6269e28ae73c0b1a71.jpg' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/racked_cabled.acbdbe1a305706039484.svg' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/ui-grid.227446cf79f53e00a94c.eot' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-ExtraLight.ttf.18628e10fd7064357e54.woff2' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-BoldIt.50e6e618cfc82e151d37.otf' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/hapair.e0dd4d307476848dd971.svg' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-SemiboldIt.4e5ce2e7cf30ec4e0298.otf' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-BoldIt.18f07e29928daf1ac14b.eot' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-Black.otf.cc8efb2fcf0cc7e48d41.woff' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-Regular.ttf.713df4a98683bbbc9e0d.woff2' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-Regular.ac064e4ccb70dc3a2b5b.eot' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-ExtraLightIt.otf.ef7233ecd78d566cc460.woff' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/vendors~polyfills.8a72137736fce0dbbef4.chunk.js.LICENSE' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-Semibold.baa29e58bf6f07dcc7e3.eot' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-Bold.ttf.5696c8591069a363bedb.woff2' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-ExtraLightIt.95c44531a311edd3e77b.ttf' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-Light.779f3bf41b852b5582d4.otf' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-LightIt.ttf.f9b216cb099a5be92689.woff2' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-Light.a663a1ba5f49629a86f7.ttf' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-Semibold.otf.99f66ff4eab8123edcaa.woff' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-Black.2ff1682f373b0f9d917d.eot' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-ExtraLight.otf.efc4e410f7b659a6613f.woff' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-Black.2516b34268d5abb314bd.otf' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/dxicons.147eb6fe61ff3af12cd8.ttf' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-ExtraLight.abbaecf00224cd108683.ttf' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/vendors~polyfills.8a72137736fce0dbbef4.chunk.js.map' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-It.ttf.9a310e9db68fa99e332f.woff2' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-Black.ttf.2a13689cc44f0e6da478.woff2' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-LightIt.06b76910b912d54a5696.otf' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist/SourceSansPro-BoldIt.7edeabe69cf9fd9b8d63.ttf' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui/dist' from 202805:dip to www-data:www-data
+changed ownership of '/opt/netapp/sdotadminui' from root:root to www-data:www-data
+
+libguestfs: trace: sh "chmod go-rwx /opt/netapp/sdotadminui"
+libguestfs: trace: sh = ""
+
+libguestfs: trace: tgz_in "bedrock/import/linux64.debug/netapp_packages/src/deploy_vmware/VMware-vSphere-Perl-SDK-6.7.0-8156551.x86_64.tar.gz" "/tmp"
+libguestfs: trace: tgz_in = 0
+libguestfs: trace: sh "echo "ubuntu" > /etc/ubuntu-release"
+libguestfs: trace: sh = ""
+
+libguestfs: trace: sh "sed -i 's/install_content_vicli_perl();/#install_content_vicli_perl();/' /tmp/vmware-vsphere-cli-distrib/vmware-install.pl"
+libguestfs: trace: sh = ""
+
+libguestfs: trace: sh "cd /tmp/vmware-vsphere-cli-distrib; perl -d:Trace vmware-install.pl --default EULA_AGREED=yes"
+libguestfs: trace: sh = "Creating a new vSphere CLI installer database using the tar4 format.\n\nInstalling vSphere CLI 6.7.0 build-8156551 for Linux.\n\nIn which directory do you want to install the executable files? \n[/usr/bin] \n\nPlease wait while copying vSphere CLI files...\n\nThe installation of vSphere CLI 6.7.0 build-8156551 for Linux completed \nsuccessfully. You can decide to remove this software from your system at any \ntime by invoking the following command: \n"/usr/bin/vmware-uninstall-vSphere-CLI.pl".\n\nThis installer has successfully installed both vSphere CLI and the vSphere SDK \nfor Perl.\n\nEnjoy,\n\n--the VMware team\n\n"
+Creating a new vSphere CLI installer database using the tar4 format.
+
+Installing vSphere CLI 6.7.0 build-8156551 for Linux.
+
+In which directory do you want to install the executable files?
+[/usr/bin]
+
+Please wait while copying vSphere CLI files...
+
+The installation of vSphere CLI 6.7.0 build-8156551 for Linux completed
+successfully. You can decide to remove this software from your system at any
+time by invoking the following command:
+"/usr/bin/vmware-uninstall-vSphere-CLI.pl".
+
+This installer has successfully installed both vSphere CLI and the vSphere SDK
+for Perl.
+
+Enjoy,
+
+--the VMware team
+
+
+libguestfs: trace: sh "/tmp/vmware-tools-distrib/lib/sbin64/vmware-tools-upgrader -d ||:"
+libguestfs: trace: sh = ""
+libguestfs: trace: rm_rf "/tmp/vmware-vsphere-cli-distrib"
+libguestfs: trace: rm_rf = 0
+libguestfs: trace: mkdir_p "/opt/netapp/lib/sdotadmin/tools"
+libguestfs: trace: mkdir_p = 0
+libguestfs: trace: is_dir "/opt/netapp/lib/sdotadmin/tools"
+libguestfs: trace: is_dir = 1
+libguestfs: trace: tar_in "/dev/fd/4" "/opt/netapp/lib/sdotadmin/tools"
+libguestfs: trace: tar_in = 0
+libguestfs: trace: ln_s "/opt/netapp/lib/sdotadmin/tools/support_bundler/support_bundler.sh" "/usr/bin/kvm_support_bundler"
+libguestfs: trace: ln_s = 0
+libguestfs: trace: mkdir_p "/opt/netapp/data/support_bundles"
+libguestfs: trace: mkdir_p = 0
+libguestfs: trace: write "/root/dummy" "#!/usr/bin/env bash\x0aexit 0"
+libguestfs: trace: write = 0
+libguestfs: trace: chmod 511 "/root/dummy"
+libguestfs: trace: chmod = 0
+libguestfs: trace: mv "/usr/sbin/service" "/usr/sbin/service.bak"
+libguestfs: trace: mv = 0
+libguestfs: trace: sh "ln -s /root/dummy /usr/sbin/service"
+libguestfs: trace: sh = ""
+
+libguestfs: trace: sh "ln -s /lib/modules/5.10.0-20-amd64 /lib/modules/`uname -r`"
+libguestfs: trace: sh = ""
+
+libguestfs: trace: is_dir "/root"
+libguestfs: trace: is_dir = 1
+libguestfs: trace: tar_in "/dev/fd/4" "/root"
+libguestfs: trace: tar_in = 0
+libguestfs: trace: sh "tar xf /root/scst-3.7.0.tar.bz2 -C /root"
+libguestfs: trace: sh = ""
+
+libguestfs: trace: sh "export KVER=5.10.0-20-amd64; cd /root/scst-3.7.0/ && make scst_install && make usr_install && make iscsi_install && make scstadm_install && depmod"
+libguestfs: trace: sh = NULL (error)
+*stdin*:113: libguestfs: error: sh: sh: 0: getcwd() failed: No such file or directory
+sed: can't read /lib/modules/5.10.0-20-amd64/build/.config: No such file or directory
+grep: /lib/modules/5.10.0-20-amd64/build/.config: No such file or directory
+make[3]: *** /lib/modules/5.10.0-20-amd64/build: No such file or directory.  Stop.
+make[2]: *** [Makefile:75: all] Error 2
+make[1]: *** [Makefile:39: install] Error 2
+make: *** [Makefile:175: scst_install] Error 2
+libguestfs: trace: close
+libguestfs: trace: shutdown
+libguestfs: trace: internal_autosync
+libguestfs: trace: internal_autosync = 0
+libguestfs: trace: shutdown = 0
+
++ bedrock/import/linux64.debug/netapp_packages/btool/brenv/tools/bin/guestfish -x -a bedrock/private/linux64.debug/netapp_packages/ONTAPdeploy.raw
+libguestfs: trace: add_drive_opts "bedrock/private/linux64.debug/netapp_packages/ONTAPdeploy.raw"
+libguestfs: trace: add_drive_opts = 0
+libguestfs: trace: launch
+libguestfs: trace: launch = 0
+libguestfs: trace: mount "/dev/sda1" "/"
+libguestfs: trace: mount = 0
+libguestfs: trace: cat "/opt/netapp/log/postinst.log"
+libguestfs: trace: cat = NULL (error)
+*stdin*:3: libguestfs: error: cat: open: /opt/netapp/log/postinst.log: No such file or directory
+libguestfs: trace: close
+libguestfs: trace: shutdown
+libguestfs: trace: internal_autosync
+libguestfs: trace: internal_autosync = 0
+libguestfs: trace: shutdown = 0
+Makefile.netapp_packages:40: recipe for target 'bedrock/internal/linux64.debug/netapp_packages/ONTAPdeploy.raw' failed
+br_make.pl: *** [bedrock/internal/linux64.debug/netapp_packages/ONTAPdeploy.raw] Error 1
+br_make.pl: Leaving directory '/x/eng/bbrtp30/users/aruns7/debian_upgrade_02_6671692_2304130638/offtap/deploy/pkg/deploy_vm'
+brbuild: rc: 2
+brbuild: done
+brbuild: Error running process (subprocessError): 2
+brbuild: timestamp:remote_complete      netapp_packages@deploy_vm.linux64.debug 1681384000.65   13-Apr 07:06:40
+brbuild: sent back the result successfully:
+        {'timestamps': {'rmt_pkl_loaded': 1681383858.768281, 'rmt_start': 1681383858.766463, 'rmt_complete': 1681384000.647366}, 'log_instantiated': None, 'dispatch': {'loc_start': '1681383856.88,bldrtp113-rh6-01', 'remote_complete': 1681384000.647479, 'remote_start': '1681383858.77,bldrtp113-rh6-01,2697652,/x/eng/bbrtp30/users/aruns7/debian_upgrade_02_6671692_2304130638'}, 'resources': {'consumed_cpu': 0.4154466217460916, 'consumed_mem': 465360}, 'exitcode': 2}

@@ -1,0 +1,388 @@
+}
+2023-02-10 09:25:12,073|DEBUG|29662|40470|logger.py|132|ClusterRestApis.py|100:r_system_node_get_iter| Cluster [cluster_2debug]: "GET https://10.228.161.163:443/api/cluster/nodes/?fields=*" node_info: [{'product-version': 'NetApp Release Lighthouse__9.13.0: Mon Aug 29 06:30:41 UTC 2022', 'node-nvram-id': 2443885388, 'nvram-battery-status': 'battery_ok', 'env-failed-fan-count': 0, 'env-failed-fan-message': 'There are no failed fans.', 'env-failed-power-supply-count': 0, 'env-failed-power-supply-message': 'There are no failed power supplies.', 'env-over-temperature': 'false', 'node-uuid': 'e16e667e-a865-11ed-b980-000c29c2b6e0', 'node': 'cluster_2debug-01', 'node-serial-number': '99887766554433221176', 'node-location': None, 'node-owner': None, 'node-model': 'FDvM300', 'node-system-id': '2443885388', 'node-uptime': 16809, 'is-node-healthy': 'true', 'node-storage-configuration': 'unknown'}, {'product-version': 'NetApp Release Lighthouse__9.13.0: Mon Aug 29 06:30:41 UTC 2022', 'node-nvram-id': 2443885395, 'nvram-battery-status': 'battery_ok', 'env-failed-fan-count': 0, 'env-failed-fan-message': 'There are no failed fans.', 'env-failed-power-supply-count': 0, 'env-failed-power-supply-message': 'There are no failed power supplies.', 'env-over-temperature': 'false', 'node-uuid': 'e1713a5c-a865-11ed-b980-000c29c2b6e0', 'node': 'cluster_2debug-02', 'node-serial-number': '99887766554433221183', 'node-location': None, 'node-owner': None, 'node-model': 'FDvM300', 'node-system-id': '2443885395', 'node-uptime': 16872, 'is-node-healthy': 'true', 'node-storage-configuration': 'unknown'}]
+2023-02-10 09:25:12,125|DEBUG|29662|40470|logger.py|132|ClusterRestApis.py|622:r_get_cluster_identity| Cluster [cluster_2debug]: "GET https://10.228.161.163:443/api/cluster/?fields=**" response: {
+  "name": "cluster_2debug",
+  "uuid": "e1581e6e-a865-11ed-b980-000c29c2b6e0",
+  "version": {
+    "full": "NetApp Release Lighthouse__9.13.0: Mon Aug 29 06:30:41 UTC 2022",
+    "generation": 9,
+    "major": 13,
+    "minor": 0
+  },
+  "dns_domains": [
+    "gdl.englab.netapp.com"
+  ],
+  "name_servers": [
+    "10.224.223.135"
+  ],
+  "ntp_servers": [
+    "10.60.248.183"
+  ],
+  "management_interfaces": [
+    {
+      "uuid": "f4ef7e40-a8fe-11ed-a914-00a0b8941b38",
+      "name": "cluster_mgmt",
+      "ip": {
+        "address": "10.228.161.163"
+      },
+      "_links": {
+        "self": {
+          "href": "/api/network/ip/interfaces/f4ef7e40-a8fe-11ed-a914-00a0b8941b38"
+        }
+      }
+    }
+  ],
+  "metric": {
+    "timestamp": "2023-02-10T09:53:00Z",
+    "duration": "PT15S",
+    "status": "ok",
+    "latency": {
+      "other": 0,
+      "total": 0,
+      "read": 0,
+      "write": 0
+    },
+    "iops": {
+      "read": 0,
+      "write": 0,
+      "other": 0,
+      "total": 0
+    },
+    "throughput": {
+      "read": 0,
+      "write": 0,
+      "other": 0,
+      "total": 0
+    }
+  },
+  "statistics": {
+    "timestamp": "2023-02-10T09:53:07Z",
+    "status": "ok",
+    "latency_raw": {
+      "other": 0,
+      "total": 0,
+      "read": 0,
+      "write": 0
+    },
+    "iops_raw": {
+      "read": 0,
+      "write": 0,
+      "other": 0,
+      "total": 0
+    },
+    "throughput_raw": {
+      "read": 0,
+      "write": 0,
+      "other": 0,
+      "total": 0
+    }
+  },
+  "timezone": {
+    "name": "Etc/UTC"
+  },
+  "certificate": {
+    "uuid": "dd6de9b4-a8fe-11ed-a914-00a0b8941b38",
+    "_links": {
+      "self": {
+        "href": "/api/security/certificates/dd6de9b4-a8fe-11ed-a914-00a0b8941b38"
+      }
+    }
+  },
+  "san_optimized": false,
+  "peering_policy": {
+    "minimum_passphrase_length": 8,
+    "authentication_required": true,
+    "encryption_required": false
+  },
+  "_links": {
+    "self": {
+      "href": "/api/cluster/?fields=**"
+    }
+  }
+}
+2023-02-10 09:25:12,127|DEBUG|29662|40470|logger.py|132|ClusterRestApis.py|629:r_get_cluster_identity| Cluster [cluster_2debug]: "GET https://10.228.161.163:443/api/cluster/?fields=**" cluster_identity info:{'cluster-name': 'cluster_2debug', 'cluster-uuid': 'e1581e6e-a865-11ed-b980-000c29c2b6e0', 'cluster-location': None, 'cluster-contact': None}
+2023-02-10 09:25:12,131| INFO|29662|40470|logger.py|132|cluster.py|3999:patch_cluster_identity| Cluster [cluster_2debug]: cluster's node count validation successful
+2023-02-10 09:25:12,132| INFO|29662|40470|logger.py|132|cluster.py|4010:patch_cluster_identity| Cluster [cluster_2debug]: cluster identity refreshed
+2023-02-10 09:25:25,936|DEBUG|29662|0|coroutine.py|177|RESTAPI [controllers.job:get_job] executing
+2023-02-10 09:25:25,938|DEBUG|29662|0|coroutine.py|190|Registered Myself: current tasks [{140540310803048: <CoroutineRecord (asynchronous.cluster_tasks:refresh_cluster) [ACTIVE]>, 140540310802776: <CoroutineRecord (controllers.job:get_job) [ACTIVE]>}]
+2023-02-10 09:25:25,942| INFO|29662|40484|restapi.py|231|Processing GET http://127.0.0.1:8080/api/v3/jobs/cf83cfca-a924-11ed-8ff2-000c29c2b6e0?fields=*,last_modified,message
+2023-02-10 09:25:25,946| INFO|29662|40484|restapi.py|263|GET http://127.0.0.1:8080/api/v3/jobs/cf83cfca-a924-11ed-8ff2-000c29c2b6e0?fields=*,last_modified,message returned in 8ms with status HTTPStatus.OK (BA)
+2023-02-10 09:25:41,338|DEBUG|29662|40470|logger.py|132|ClusterRestApis.py|1475:r_system_cli_version| Cluster [cluster_2debug]: "GET https://10.228.161.163:443/api/private/cli" response: {
+  "output": "2 entries were acted on.
+
+Node: cluster_2debug-01
+NetApp Release devN_220829_0200: Mon Aug 29 02:30:41 EDT 2022   <1>
+
+Node: cluster_2debug-02
+NetApp Release devN_220829_0200: Mon Aug 29 02:30:41 EDT 2022   <1>
+
+"
+}
+2023-02-10 09:25:41,340|DEBUG|29662|40470|logger.py|132|ClusterRestApis.py|1479:r_system_cli_version| Cluster [cluster_2debug]: "GET https://10.228.161.163:443/api/private/cli" system CLI node version: 2 entries were acted on.
+
+Node: cluster_2debug-01
+NetApp Release devN_220829_0200: Mon Aug 29 02:30:41 EDT 2022   <1>
+
+Node: cluster_2debug-02
+NetApp Release devN_220829_0200: Mon Aug 29 02:30:41 EDT 2022   <1>
+
+
+2023-02-10 09:25:41,372|DEBUG|29662|0|coroutine.py|177|RESTAPI [controllers.job:get_job] executing
+2023-02-10 09:25:41,373|DEBUG|29662|0|coroutine.py|190|Registered Myself: current tasks [{140540310803048: <CoroutineRecord (asynchronous.cluster_tasks:refresh_cluster) [ACTIVE]>, 140540310803592: <CoroutineRecord (controllers.job:get_job) [ACTIVE]>}]
+2023-02-10 09:25:41,379| INFO|29662|40485|restapi.py|231|Processing GET http://127.0.0.1:8080/api/v3/jobs/cf83cfca-a924-11ed-8ff2-000c29c2b6e0?fields=*,last_modified,message
+2023-02-10 09:25:41,381| INFO|29662|40485|restapi.py|263|GET http://127.0.0.1:8080/api/v3/jobs/cf83cfca-a924-11ed-8ff2-000c29c2b6e0?fields=*,last_modified,message returned in 7ms with status HTTPStatus.OK (BA)
+2023-02-10 09:25:41,410|DEBUG|29662|40470|logger.py|132|ClusterRestApis.py|1103:r_system_get_version| Cluster [cluster_2debug]: GET https://10.228.161.163:443/api/cluster/ response: {
+  "version": {
+    "full": "NetApp Release Lighthouse__9.13.0: Mon Aug 29 06:30:41 UTC 2022",
+    "generation": 9,
+    "major": 13,
+    "minor": 0
+  },
+  "_links": {
+    "self": {
+      "href": "/api/cluster/"
+    }
+  }
+}
+2023-02-10 09:25:41,412|DEBUG|29662|40470|logger.py|132|ClusterRestApis.py|1111:r_system_get_version| Cluster [cluster_2debug]: GET https://10.228.161.163:443/api/cluster/ version_info: {'generation': '9', 'major': '13', 'minor': '0'}
+2023-02-10 09:25:41,428|DEBUG|29662|40470|fault.py|147|Unable to find a registered fault for zapi.system_node_get_iter.
+2023-02-10 09:25:41,508|DEBUG|29662|40470|logger.py|132|ZAPI.py|241:invoke|
+API: "system-node-get-iter"
+User: "admin"
+Request:
+<?xml version="1.0" ?>
+<!DOCTYPE netapp
+  SYSTEM 'file:/etc/netapp_filer.dtd'>
+<netapp nmsdk_language="Python" nmsdk_platform="Debian GNU/Linux 10
+ \l unknown" nmsdk_version="5.4" version="1.40" xmlns="http://www.netapp.com/filer/admin">
+        <system-node-get-iter/>
+</netapp>
+
+Response:
+<?xml version="1.0" ?>
+<!DOCTYPE netapp
+  SYSTEM 'file:/etc/netapp_gx.dtd'>
+<netapp version="1.230" xmlns="http://www.netapp.com/filer/admin">
+
+
+        <results status="passed">
+                <attributes-list>
+                        <node-details-info>
+                                <cpu-busytime>1051</cpu-busytime>
+                                <env-failed-fan-count>0</env-failed-fan-count>
+                                <env-failed-fan-message>There are no failed fans.</env-failed-fan-message>
+                                <env-failed-power-supply-count>0</env-failed-power-supply-count>
+                                <env-failed-power-supply-message>There are no failed power supplies.</env-failed-power-supply-message>
+                                <env-over-temperature>false</env-over-temperature>
+                                <is-all-flash-optimized>false</is-all-flash-optimized>
+                                <is-all-flash-select-optimized>false</is-all-flash-select-optimized>
+                                <is-capacity-optimized>false</is-capacity-optimized>
+                                <is-cloud-optimized>false</is-cloud-optimized>
+                                <is-diff-svcs>false</is-diff-svcs>
+                                <is-epsilon-node>false</is-epsilon-node>
+                                <is-node-cluster-eligible>true</is-node-cluster-eligible>
+                                <is-node-healthy>true</is-node-healthy>
+                                <is-perf-optimized>false</is-perf-optimized>
+                                <maximum-aggregate-size>219902325555200</maximum-aggregate-size>
+                                <maximum-number-of-volumes>1000</maximum-number-of-volumes>
+                                <maximum-volume-size>329853488332800</maximum-volume-size>
+                                <node>cluster_2debug-01</node>
+                                <node-location/>
+                                <node-model>FDvM300</node-model>
+                                <node-nvram-id>2443885388</node-nvram-id>
+                                <node-owner/>
+                                <node-serial-number>99887766554433221176</node-serial-number>
+                                <node-storage-configuration>unknown</node-storage-configuration>
+                                <node-system-id>2443885388</node-system-id>
+                                <node-uptime>16838</node-uptime>
+                                <node-uuid>e16e667e-a865-11ed-b980-000c29c2b6e0</node-uuid>
+                                <node-vendor>NetApp</node-vendor>
+                                <nvram-battery-status>battery_ok</nvram-battery-status>
+                                <product-version>NetApp Release Lighthouse__9.13.0: Mon Aug 29 06:30:41 UTC 2022</product-version>
+                                <sas2-sas3-mixed-stack-support>none</sas2-sas3-mixed-stack-support>
+                                <vmhost-info>
+                                        <vm-uuid>4216f19a-02b2-bc47-bd03-9a0ed470dcfa</vm-uuid>
+                                        <vmhost-error>Failed to connnect to the vSphere server. Reason: Either the server hostname or IP address is not set, or there are network issues. Correct the vSphere credentials with the &quot;system node virtual-machine hypervisor modify-credentials&quot; command.</vmhost-error>
+                                        <vmhost-hardware-vendor>VMware, Inc.</vmhost-hardware-vendor>
+                                        <vmhost-model>VMware Virtual Platform</vmhost-model>
+                                        <vmhost-software-vendor>NetApp</vmhost-software-vendor>
+                                </vmhost-info>
+                        </node-details-info>
+                        <node-details-info>
+                                <cpu-busytime>1023</cpu-busytime>
+                                <env-failed-fan-count>0</env-failed-fan-count>
+                                <env-failed-fan-message>There are no failed fans.</env-failed-fan-message>
+                                <env-failed-power-supply-count>0</env-failed-power-supply-count>
+                                <env-failed-power-supply-message>There are no failed power supplies.</env-failed-power-supply-message>
+                                <env-over-temperature>false</env-over-temperature>
+                                <is-all-flash-optimized>false</is-all-flash-optimized>
+                                <is-all-flash-select-optimized>false</is-all-flash-select-optimized>
+                                <is-capacity-optimized>false</is-capacity-optimized>
+                                <is-cloud-optimized>false</is-cloud-optimized>
+                                <is-diff-svcs>false</is-diff-svcs>
+                                <is-epsilon-node>false</is-epsilon-node>
+                                <is-node-cluster-eligible>true</is-node-cluster-eligible>
+                                <is-node-healthy>true</is-node-healthy>
+                                <is-perf-optimized>false</is-perf-optimized>
+                                <maximum-aggregate-size>219902325555200</maximum-aggregate-size>
+                                <maximum-number-of-volumes>1000</maximum-number-of-volumes>
+                                <maximum-volume-size>329853488332800</maximum-volume-size>
+                                <node>cluster_2debug-02</node>
+                                <node-location/>
+                                <node-model>FDvM300</node-model>
+                                <node-nvram-id>2443885395</node-nvram-id>
+                                <node-owner/>
+                                <node-serial-number>99887766554433221183</node-serial-number>
+                                <node-storage-configuration>unknown</node-storage-configuration>
+                                <node-system-id>2443885395</node-system-id>
+                                <node-uptime>16902</node-uptime>
+                                <node-uuid>e1713a5c-a865-11ed-b980-000c29c2b6e0</node-uuid>
+                                <node-vendor>NetApp</node-vendor>
+                                <nvram-battery-status>battery_ok</nvram-battery-status>
+                                <product-version>NetApp Release Lighthouse__9.13.0: Mon Aug 29 06:30:41 UTC 2022</product-version>
+                                <sas2-sas3-mixed-stack-support>none</sas2-sas3-mixed-stack-support>
+                                <vmhost-info>
+                                        <vm-uuid>421664fe-41ed-3c4f-2093-8807ff506c42</vm-uuid>
+                                        <vmhost-error>Failed to connnect to the vSphere server. Reason: Either the server hostname or IP address is not set, or there are network issues. Correct the vSphere credentials with the &quot;system node virtual-machine hypervisor modify-credentials&quot; command.</vmhost-error>
+                                        <vmhost-hardware-vendor>VMware, Inc.</vmhost-hardware-vendor>
+                                        <vmhost-model>VMware Virtual Platform</vmhost-model>
+                                        <vmhost-software-vendor>NetApp</vmhost-software-vendor>
+                                </vmhost-info>
+                        </node-details-info>
+                </attributes-list>
+                <num-records>2</num-records>
+        </results>
+</netapp>
+
+2023-02-10 09:25:41,509|DEBUG|29662|40470|logger.py|132|ClusterZapis.py|245:z_system_node_get_iter| Cluster [cluster_2debug]: got system node get iter: [[{'cpu-busytime': '1051', 'env-failed-fan-count': '0', 'env-failed-fan-message': 'There are no failed fans.', 'env-failed-power-supply-count': '0', 'env-failed-power-supply-message': 'There are no failed power supplies.', 'env-over-temperature': 'false', 'is-all-flash-optimized': 'false', 'is-all-flash-select-optimized': 'false', 'is-capacity-optimized': 'false', 'is-cloud-optimized': 'false', 'is-diff-svcs': 'false', 'is-epsilon-node': 'false', 'is-node-cluster-eligible': 'true', 'is-node-healthy': 'true', 'is-perf-optimized': 'false', 'maximum-aggregate-size': '219902325555200', 'maximum-number-of-volumes': '1000', 'maximum-volume-size': '329853488332800', 'node': 'cluster_2debug-01', 'node-location': None, 'node-model': 'FDvM300', 'node-nvram-id': '2443885388', 'node-owner': None, 'node-serial-number': '99887766554433221176', 'node-storage-configuration': 'unknown', 'node-system-id': '2443885388', 'node-uptime': '16838', 'node-uuid': 'e16e667e-a865-11ed-b980-000c29c2b6e0', 'node-vendor': 'NetApp', 'nvram-battery-status': 'battery_ok', 'product-version': 'NetApp Release Lighthouse__9.13.0: Mon Aug 29 06:30:41 UTC 2022', 'sas2-sas3-mixed-stack-support': 'none', 'vmhost-info': {'vm-uuid': '4216f19a-02b2-bc47-bd03-9a0ed470dcfa', 'vmhost-error': 'Failed to connnect to the vSphere server. Reason: Either the server hostname or IP address is not set, or there are network issues. Correct the vSphere credentials with the "system node virtual-machine hypervisor modify-credentials" command.', 'vmhost-hardware-vendor': 'VMware, Inc.', 'vmhost-model': 'VMware Virtual Platform', 'vmhost-software-vendor': 'NetApp'}}, {'cpu-busytime': '1023', 'env-failed-fan-count': '0', 'env-failed-fan-message': 'There are no failed fans.', 'env-failed-power-supply-count': '0', 'env-failed-power-supply-message': 'There are no failed power supplies.', 'env-over-temperature': 'false', 'is-all-flash-optimized': 'false', 'is-all-flash-select-optimized': 'false', 'is-capacity-optimized': 'false', 'is-cloud-optimized': 'false', 'is-diff-svcs': 'false', 'is-epsilon-node': 'false', 'is-node-cluster-eligible': 'true', 'is-node-healthy': 'true', 'is-perf-optimized': 'false', 'maximum-aggregate-size': '219902325555200', 'maximum-number-of-volumes': '1000', 'maximum-volume-size': '329853488332800', 'node': 'cluster_2debug-02', 'node-location': None, 'node-model': 'FDvM300', 'node-nvram-id': '2443885395', 'node-owner': None, 'node-serial-number': '99887766554433221183', 'node-storage-configuration': 'unknown', 'node-system-id': '2443885395', 'node-uptime': '16902', 'node-uuid': 'e1713a5c-a865-11ed-b980-000c29c2b6e0', 'node-vendor': 'NetApp', 'nvram-battery-status': 'battery_ok', 'product-version': 'NetApp Release Lighthouse__9.13.0: Mon Aug 29 06:30:41 UTC 2022', 'sas2-sas3-mixed-stack-support': 'none', 'vmhost-info': {'vm-uuid': '421664fe-41ed-3c4f-2093-8807ff506c42', 'vmhost-error': 'Failed to connnect to the vSphere server. Reason: Either the server hostname or IP address is not set, or there are network issues. Correct the vSphere credentials with the "system node virtual-machine hypervisor modify-credentials" command.', 'vmhost-hardware-vendor': 'VMware, Inc.', 'vmhost-model': 'VMware Virtual Platform', 'vmhost-software-vendor': 'NetApp'}}]]
+2023-02-10 09:25:41,515| INFO|29662|40470|logger.py|132|node.py|3494:patch_node_identity| Node [cluster_2debug-01] Cluster [cluster_2debug]: node identity refreshed
+2023-02-10 09:25:41,595|DEBUG|29662|40470|logger.py|132|ZAPI.py|241:invoke|
+API: "net-interface-get-iter"
+User: "admin"
+Request:
+<?xml version="1.0" ?>
+<!DOCTYPE netapp
+  SYSTEM 'file:/etc/netapp_filer.dtd'>
+<netapp nmsdk_language="Python" nmsdk_platform="Debian GNU/Linux 10
+ \l unknown" nmsdk_version="5.4" version="1.40" xmlns="http://www.netapp.com/filer/admin">
+        <net-interface-get-iter>
+                <query>
+                        <net-interface-info>
+                                <role>node_mgmt</role>
+                                <current-node>cluster_2debug-01</current-node>
+                        </net-interface-info>
+                </query>
+        </net-interface-get-iter>
+</netapp>
+
+Response:
+<?xml version="1.0" ?>
+<!DOCTYPE netapp
+  SYSTEM 'file:/etc/netapp_gx.dtd'>
+<netapp version="1.230" xmlns="http://www.netapp.com/filer/admin">
+
+
+        <results status="passed">
+                <attributes-list>
+                        <net-interface-info>
+				<address>10.228.161.202</address>
+                                <address-family>ipv4</address-family>
+                                <administrative-status>up</administrative-status>
+                                <current-node>cluster_2debug-01</current-node>
+                                <current-port>e0a</current-port>
+                                <data-protocols>
+                                        <data-protocol>none</data-protocol>
+                                </data-protocols>
+                                <dns-domain-name>none</dns-domain-name>
+                                <failover-group>Default</failover-group>
+                                <failover-policy>local_only</failover-policy>
+                                <firewall-policy>mgmt</firewall-policy>
+                                <home-node>cluster_2debug-01</home-node>
+                                <home-port>e0a</home-port>
+                                <interface-name>cluster_2debug-01_mgmt1</interface-name>
+                                <ipspace>Default</ipspace>
+                                <is-auto-revert>true</is-auto-revert>
+                                <is-home>true</is-home>
+                                <is-vip>false</is-vip>
+                                <lif-uuid>c4c9f915-a8fe-11ed-a914-00a0b8941b38</lif-uuid>
+                                <listen-for-dns-query>false</listen-for-dns-query>
+                                <netmask>255.255.252.0</netmask>
+                                <netmask-length>22</netmask-length>
+                                <operational-status>up</operational-status>
+                                <role>node_mgmt</role>
+                                <service-names>
+                                        <lif-service-name>management_core</lif-service-name>
+                                        <lif-service-name>management_autosupport</lif-service-name>
+                                        <lif-service-name>management_ssh</lif-service-name>
+                                        <lif-service-name>management_https</lif-service-name>
+                                        <lif-service-name>management_ems</lif-service-name>
+                                        <lif-service-name>management_ntp_client</lif-service-name>
+                                        <lif-service-name>management_dns_client</lif-service-name>
+                                        <lif-service-name>management_ad_client</lif-service-name>
+                                        <lif-service-name>management_ldap_client</lif-service-name>
+                                        <lif-service-name>management_nis_client</lif-service-name>
+                                        <lif-service-name>management_http</lif-service-name>
+                                        <lif-service-name>backup_ndmp_control</lif-service-name>
+                                        <lif-service-name>management_snmp_server</lif-service-name>
+                                        <lif-service-name>management_ntp_server</lif-service-name>
+                                        <lif-service-name>management_log_forwarding</lif-service-name>
+                                </service-names>
+                                <service-policy>default-management</service-policy>
+                                <use-failover-group>unused</use-failover-group>
+                                <vserver>cluster_2debug</vserver>
+                        </net-interface-info>
+                </attributes-list>
+                <num-records>1</num-records>
+        </results>
+</netapp>
+
+2023-02-10 09:25:41,596| INFO|29662|40470|logger.py|132|node.py|3400:patch_node_management_network| Node [cluster_2debug-01] Cluster [cluster_2debug]: node management network information refreshed
+2023-02-10 09:25:41,601|DEBUG|29662|40470|logger.py|132|client_api_helper.py|221:get_vm_info| get_vm_info executing
+2023-02-10 09:25:41,622|DEBUG|29662|0|coroutine.py|177|RESTAPI [controllers.job:get_job] executing
+2023-02-10 09:25:41,625|DEBUG|29662|0|coroutine.py|190|Registered Myself: current tasks [{140540310803048: <CoroutineRecord (asynchronous.cluster_tasks:refresh_cluster) [ACTIVE]>, 140540310804136: <CoroutineRecord (controllers.job:get_job) [ACTIVE]>}]
+2023-02-10 09:25:41,633| INFO|29662|40486|restapi.py|231|Processing GET http://127.0.0.1:8080/api/v3/jobs/cf83cfca-a924-11ed-8ff2-000c29c2b6e0?fields=*,last_modified,message
+2023-02-10 09:25:41,637| INFO|29662|40486|restapi.py|263|GET http://127.0.0.1:8080/api/v3/jobs/cf83cfca-a924-11ed-8ff2-000c29c2b6e0?fields=*,last_modified,message returned in 11ms with status HTTPStatus.OK (BA)
+2023-02-10 09:25:41,883|DEBUG|29662|0|coroutine.py|177|RESTAPI [controllers.job:get_job] executing
+2023-02-10 09:25:41,885|DEBUG|29662|0|coroutine.py|190|Registered Myself: current tasks [{140540310803048: <CoroutineRecord (asynchronous.cluster_tasks:refresh_cluster) [ACTIVE]>, 140540310804136: <CoroutineRecord (controllers.job:get_job) [ACTIVE]>}]
+2023-02-10 09:25:41,889| INFO|29662|40487|restapi.py|231|Processing GET http://127.0.0.1:8080/api/v3/jobs/cf83cfca-a924-11ed-8ff2-000c29c2b6e0?fields=*,last_modified,message
+2023-02-10 09:25:41,892| INFO|29662|40487|restapi.py|263|GET http://127.0.0.1:8080/api/v3/jobs/cf83cfca-a924-11ed-8ff2-000c29c2b6e0?fields=*,last_modified,message returned in 7ms with status HTTPStatus.OK (BA)
+2023-02-10 09:25:41,925|DEBUG|29662|40470|rest.py|173|response body: {"cpus":"4","host_id":"sdot-b200-008.gdl.englab.netapp.com","hw_version":"vmx-14","memory":"16384","metadata":{"cluster_uuid":"e1581e6e-a865-11ed-b980-000c29c2b6e0","node_uuid":"e16e667e-a865-11ed-b980-000c29c2b6e0"},"mgmt_server_uid":"3025b4b7-b510-4852-98ed-38668b194b85","name":"cluster_2debug-01","obj_id":"vm-11331","state":"poweredon","vm_uid":"50162700-0d28-f9f7-951e-c91d59c782de"}
+2023-02-10 09:25:41,928| INFO|29662|40470|logger.py|132|node.py|3582:refresh_vm_name| Node [cluster_2debug-01] Cluster [cluster_2debug]: Node vm_name information refresh successful.
+2023-02-10 09:25:41,930|DEBUG|29662|40470|logger.py|132|client_api_helper.py|221:get_vm_info| get_vm_info executing
+2023-02-10 09:25:42,155|DEBUG|29662|0|coroutine.py|177|RESTAPI [controllers.job:get_job] executing
+2023-02-10 09:25:42,158|DEBUG|29662|0|coroutine.py|190|Registered Myself: current tasks [{140540310803048: <CoroutineRecord (asynchronous.cluster_tasks:refresh_cluster) [ACTIVE]>, 140540310804136: <CoroutineRecord (controllers.job:get_job) [ACTIVE]>}]
+2023-02-10 09:25:42,162| INFO|29662|40488|restapi.py|231|Processing GET http://127.0.0.1:8080/api/v3/jobs/cf83cfca-a924-11ed-8ff2-000c29c2b6e0?fields=*,last_modified,message
+2023-02-10 09:25:42,165| INFO|29662|40488|restapi.py|263|GET http://127.0.0.1:8080/api/v3/jobs/cf83cfca-a924-11ed-8ff2-000c29c2b6e0?fields=*,last_modified,message returned in 7ms with status HTTPStatus.OK (BA)
+2023-02-10 09:25:42,256|DEBUG|29662|40470|rest.py|173|response body: {"cpus":"4","host_id":"sdot-b200-008.gdl.englab.netapp.com","hw_version":"vmx-14","memory":"16384","metadata":{"cluster_uuid":"e1581e6e-a865-11ed-b980-000c29c2b6e0","node_uuid":"e16e667e-a865-11ed-b980-000c29c2b6e0"},"mgmt_server_uid":"3025b4b7-b510-4852-98ed-38668b194b85","name":"cluster_2debug-01","obj_id":"vm-11331","state":"poweredon","vm_uid":"50162700-0d28-f9f7-951e-c91d59c782de"}
+2023-02-10 09:25:42,260| INFO|29662|40470|logger.py|132|node.py|3615:refresh_state| Node [cluster_2debug-01] Cluster [cluster_2debug]: Node state information refresh successful.
+2023-02-10 09:25:42,263|DEBUG|29662|40470|logger.py|132|client_api_helper.py|558:vm_get_vm_vnics| vm_get_vm_vnics executing
+2023-02-10 09:25:42,468|DEBUG|29662|0|coroutine.py|177|RESTAPI [controllers.job:get_job] executing
+2023-02-10 09:25:42,470|DEBUG|29662|0|coroutine.py|190|Registered Myself: current tasks [{140540310803048: <CoroutineRecord (asynchronous.cluster_tasks:refresh_cluster) [ACTIVE]>, 140540310804136: <CoroutineRecord (controllers.job:get_job) [ACTIVE]>}]
+2023-02-10 09:25:42,475| INFO|29662|40489|restapi.py|231|Processing GET http://127.0.0.1:8080/api/v3/jobs/cf83cfca-a924-11ed-8ff2-000c29c2b6e0?fields=*,last_modified,message
+2023-02-10 09:25:42,477| INFO|29662|40489|restapi.py|263|GET http://127.0.0.1:8080/api/v3/jobs/cf83cfca-a924-11ed-8ff2-000c29c2b6e0?fields=*,last_modified,message returned in 7ms with status HTTPStatus.OK (BA)
+2023-02-10 09:25:42,568|DEBUG|29662|40470|rest.py|173|response body: [{"mac":"00:A0:B8:94:1B:38","model":"VirtualVmxnet3","name":"Network adapter 1","network_name":"ONTAP-Management"},{"mac":"00:A0:B8:94:9E:4B","model":"VirtualVmxnet3","name":"Network adapter 2","network_name":"ONTAP-External"},{"mac":"02:09:40:00:28:F4","model":"VirtualVmxnet3","name":"Network adapter 3","network_name":"ONTAP-Internal"},{"mac":"02:09:40:00:28:F3","model":"VirtualVmxnet3","name":"Network adapter 4","network_name":"ONTAP-Internal"},{"mac":"02:09:40:00:28:C8","model":"VirtualVmxnet3","name":"Network adapter 5","network_name":"ONTAP-Internal"},{"mac":"02:09:40:00:28:20","model":"VirtualVmxnet3","name":"Network adapter 6","network_name":"ONTAP-Internal"},{"mac":"00:A0:B8:94:65:69","model":"VirtualVmxnet3","name":"Network adapter 7","network_name":"ONTAP-External"}]
+2023-02-10 09:25:42,586| INFO|29662|40470|logger.py|132|node.py|3681:refresh_network_info| Node [cluster_2debug-01] Cluster [cluster_2debug]: Network information refresh successful.
+2023-02-10 09:25:42,588|DEBUG|29662|40470|logger.py|132|client_api_helper.py|570:vm_get_vm_vdisks| vm_get_vm_vdisks executing
+2023-02-10 09:25:42,771|DEBUG|29662|0|coroutine.py|177|RESTAPI [controllers.job:get_job] executing
+2023-02-10 09:25:42,771|DEBUG|29662|0|coroutine.py|190|Registered Myself: current tasks [{140540310803048: <CoroutineRecord (asynchronous.cluster_tasks:refresh_cluster) [ACTIVE]>, 140540310804136: <CoroutineRecord (controllers.job:get_job) [ACTIVE]>}]
+2023-02-10 09:25:42,776| INFO|29662|40490|restapi.py|231|Processing GET http://127.0.0.1:8080/api/v3/jobs/cf83cfca-a924-11ed-8ff2-000c29c2b6e0?fields=*,last_modified,message
+2023-02-10 09:25:42,779| INFO|29662|40490|restapi.py|263|GET http://127.0.0.1:8080/api/v3/jobs/cf83cfca-a924-11ed-8ff2-000c29c2b6e0?fields=*,last_modified,message returned in 7ms with status HTTPStatus.OK (BA)
+2023-02-10 09:25:42,900|DEBUG|29662|40470|rest.py|173|response body: [{"capacity":7742,"controller_id":"SCSI controller 0","controller_type":"VirtualLsiLogicSASController","disk_addr":{"bus":"0","controller":"7","target":"0","unit":"0"},"name":"cluster_2debug-01.vmdk","pool":"sdot-b200-008-hdd","total_diskspace":7742},{"capacity":122880,"controller_id":"SCSI controller 1","controller_type":"VirtualLsiLogicSASController","disk_addr":{"bus":"1","controller":"7","target":"0","unit":"0"},"name":"cluster_2debug-01_1.vmdk","pool":"sdot-b200-008-hdd","total_diskspace":122880},{"capacity":4096,"controller_id":"NVME controller 0","controller_type":"VirtualNVMEController","disk_addr":{"bus":null,"controller":null,"target":"0","unit":"0"},"name":"cluster_2debug-01_2.vmdk","pool":"sdot-b200-008-hdd","total_diskspace":4096},{"capacity":69632,"controller_id":"SCSI controller 2","controller_type":"VirtualLsiLogicSASController","disk_addr":{"bus":"2","controller":"7","target":"0","unit":"0"},"name":"cluster_2debug-01_3.vmdk","pool":"sdot-b200-008-hdd","total_diskspace":69632},{"capacity":69632,"controller_id":"SCSI controller 3","controller_type":"VirtualLsiLogicSASController","disk_addr":{"bus":"3","controller":"7","target":"0","unit":"0"},"name":"cluster_2debug-01_4.vmdk","pool":"sdot-b200-008-hdd","total_diskspace":69632},{"capacity":25600,"controller_id":"SCSI controller 0","controller_type":"VirtualLsiLogicSASController","disk_addr":{"bus":"0","controller":"7","target":"1","unit":"0"},"name":"cluster_2debug-01_5.vmdk","pool":"sdot-b200-008-hdd","total_diskspace":25600},{"capacity":25600,"controller_id":"SCSI controller 1","controller_type":"VirtualLsiLogicSASController","disk_addr":{"bus":"1","controller":"7","target":"1","unit":"0"},"name":"cluster_2debug-01_6.vmdk","pool":"sdot-b200-008-hdd","total_diskspace":25600},{"capacity":20480,"controller_id":"SCSI controller 2","controller_type":"VirtualLsiLogicSASController","disk_addr":{"bus":"2","controller":"7","target":"1","unit":"0"},"name":"cluster_2debug-01_7.vmdk","pool":"sdot-b200-008-hdd","total_diskspace":20480},{"capacity":10240,"controller_id":"SCSI controller 3","controller_type":"VirtualLsiLogicSASController","disk_addr":{"bus":"3","controller":"7","target":"1","unit":"0"},"name":"cluster_2debug-01_8.vmdk","pool":"sdot-b200-008-hdd","total_diskspace":10240},{"capacity":10240,"controller_id":"SCSI controller 0","controller_type":"VirtualLsiLogicSASController","disk_addr":{"bus":"0","controller":"7","target":"2","unit":"0"},"name":"cluster_2debug-01_9.vmdk","pool":"sdot-b200-008-hdd","total_diskspace":10240},{"capacity":10240,"controller_id":"SCSI controller 1","controller_type":"VirtualLsiLogicSASController","disk_addr":{"bus":"1","controller":"7","target":"2","unit":"0"},"name":"cluster_2debug-01_10.vmdk","pool":"sdot-b200-008-hdd","total_diskspace":10240},{"capacity":10240,"controller_id":"SCSI controller 2","controller_type":"VirtualLsiLogicSASController","disk_addr":{"bus":"2","controller":"7","target":"2","unit":"0"},"name":"cluster_2debug-01_11.vmdk","pool":"sdot-b200-008-hdd","total_diskspace":10240},{"capacity":10240,"controller_id":"SCSI controller 3","controller_type":"VirtualLsiLogicSASController","disk_addr":{"bus":"3","controller":"7","target":"2","unit":"0"},"name":"cluster_2debug-01_12.vmdk","pool":"sdot-b200-008-hdd","total_diskspace":10240},{"capacity":10240,"controller_id":"SCSI controller 0","controller_type":"VirtualLsiLogicSASController","disk_addr":{"bus":"0","controller":"7","target":"3","unit":"0"},"name":"cluster_2debug-01_13.vmdk","pool":"sdot-b200-008-hdd","total_diskspace":10240},{"capacity":15360,"controller_id":"SCSI controller 1","controller_type":"VirtualLsiLogicSASController","disk_addr":{"bus":"1","controller":"7","target":"3","unit":"0"},"name":"cluster_2debug-01_14.vmdk","pool":"sdot-b200-008-hdd","total_diskspace":15360},{"capacity":15360,"controller_id":"SCSI controller 2","controller_type":"VirtualLsiLogicSASController","disk_addr":{"bus":"2","controller":"7","target":"3","unit":"0"},"name":"cluster_2debug-01_15.vmdk","pool":"sdot-b200-008-hdd","total_diskspace":15360}]
+2023-02-10 09:25:42,932| INFO|29662|40470|logger.py|132|node.py|3821:refresh_storage_pool_info| Node [cluster_2debug-01] Cluster [cluster_2debug]: Node storage pool information refresh successful.
+2023-02-10 09:25:42,935|DEBUG|29662|40470|logger.py|132|client_api_helper.py|570:vm_get_vm_vdisks| vm_get_vm_vdisks executing
+2023-02-10 09:25:43,083|DEBUG|29662|0|coroutine.py|177|RESTAPI [controllers.job:get_job] executing
+2023-02-10 09:25:43,085|DEBUG|29662|0|coroutine.py|190|Registered Myself: current tasks [{140540310803048: <CoroutineRecord (asynchronous.cluster_tasks:refresh_cluster) [ACTIVE]>, 140540310804136: <CoroutineRecord (controllers.job:get_job) [ACTIVE]>}]
+2023-02-10 09:25:43,091| INFO|29662|40491|restapi.py|231|Processing GET http://127.0.0.1:8080/api/v3/jobs/cf83cfca-a924-11ed-8ff2-000c29c2b6e0?fields=*,last_modified,message
+2023-02-10 09:25:43,094| INFO|29662|40491|restapi.py|263|GET http://127.0.0.1:8080/api/v3/jobs/cf83cfca-a924-11ed-8ff2-000c29c2b6e0?fields=*,last_modified,message returned in 8ms with status HTTPStatus.OK (BA)
+2023-02-10 09:25:43,299|DEBUG|29662|40470|rest.py|173|response body: [{"capacity":7742,"controller_id":"SCSI controller 0","controller_type":"VirtualLsiLogicSASController","disk_addr":{"bus":"0","controller":"7","target":"0","unit":"0"},"name":"cluster_2debug-01.vmdk","pool":"sdot-b200-008-hdd","total_diskspace":7742},{"capacity":122880,"controller_id":"SCSI controller 1","controller_type":"VirtualLsiLogicSASController","disk_addr":{"bus":"1","controller":"7","target":"0","unit":"0"},"name":"cluster_2debug-01_1.vmdk","pool":"sdot-b200-008-hdd","total_diskspace":122880},{"capacity":4096,"controller_id":"NVME controller 0","controller_type":"VirtualNVMEController","disk_addr":{"bus":null,"controller":null,"target":"0","unit":"0"},"name":"cluster_2debug-01_2.vmdk","pool":"sdot-b200-008-hdd","total_diskspace":4096},{"capacity":69632,"controller_id":"SCSI controller 2","controller_type":"VirtualLsiLogicSASController","disk_addr":{"bus":"2","controller":"7","target":"0","unit":"0"},"name":"cluster_2debug-01_3.vmdk","pool":"sdot-b200-008-hdd","total_diskspace":69632},{"capacity":69632,"controller_id":"SCSI controller 3","controller_type":"VirtualLsiLogicSASController","disk_addr":{"bus":"3","controller":"7","target":"0","unit":"0"},"name":"cluster_2debug-01_4.vmdk","pool":"sdot-b200-008-hdd","total_diskspace":69632},{"capacity":25600,"controller_id":"SCSI controller 0","controller_type":"VirtualLsiLogicSASController","disk_addr":{"bus":"0","controller":"7","target":"1","unit":"0"},"name":"cluster_2debug-01_5.vmdk","pool":"sdot-b200-008-hdd","total_diskspace":25600},{"capacity":25600,"controller_id":"SCSI controller 1","controller_type":"VirtualLsiLogicSASController","disk_addr":{"bus":"1","controller":"7","target":"1","unit":"0"},"name":"cluster_2debug-01_6.vmdk","pool":"sdot-b200-008-hdd","total_diskspace":25600},{"capacity":20480,"controller_id":"SCSI controller 2","controller_type":"VirtualLsiLogicSASController","disk_addr":{"bus":"2","controller":"7","target":"1","unit":"0"},"name":"cluster_2debug-01_7.vmdk","pool":"sdot-b200-008-hdd","total_diskspace":20480},{"capacity":10240,"controller_id":"SCSI controller 3","controller_type":"VirtualLsiLogicSASController","disk_addr":{"bus":"3","controller":"7","target":"1","unit":"0"},"name":"cluster_2debug-01_8.vmdk","pool":"sdot-b200-008-hdd","total_diskspace":10240},{"capacity":10240,"controller_id":"SCSI controller 0","controller_type":"VirtualLsiLogicSASController","disk_addr":{"bus":"0","controller":"7","target":"2","unit":"0"},"name":"cluster_2debug-01_9.vmdk","pool":"sdot-b200-008-hdd","total_diskspace":10240},{"capacity":10240,"controller_id":"SCSI controller 1","controller_type":"VirtualLsiLogicSASController","disk_addr":{"bus":"1","controller":"7","target":"2","unit":"0"},"name":"cluster_2debug-01_10.vmdk","pool":"sdot-b200-008-hdd","total_diskspace":10240},{"capacity":10240,"controller_id":"SCSI controller 2","controller_type":"VirtualLsiLogicSASController","disk_addr":{"bus":"2","controller":"7","target":"2","unit":"0"},"name":"cluster_2debug-01_11.vmdk","pool":"sdot-b200-008-hdd","total_diskspace":10240},{"capacity":10240,"controller_id":"SCSI controller 3","controller_type":"VirtualLsiLogicSASController","disk_addr":{"bus":"3","controller":"7","target":"2","unit":"0"},"name":"cluster_2debug-01_12.vmdk","pool":"sdot-b200-008-hdd","total_diskspace":10240},{"capacity":10240,"controller_id":"SCSI controller 0","controller_type":"VirtualLsiLogicSASController","disk_addr":{"bus":"0","controller":"7","target":"3","unit":"0"},"name":"cluster_2debug-01_13.vmdk","pool":"sdot-b200-008-hdd","total_diskspace":10240},{"capacity":15360,"controller_id":"SCSI controller 1","controller_type":"VirtualLsiLogicSASController","disk_addr":{"bus":"1","controller":"7","target":"3","unit":"0"},"name":"cluster_2debug-01_14.vmdk","pool":"sdot-b200-008-hdd","total_diskspace":15360},{"capacity":15360,"controller_id":"SCSI controller 2","controller_type":"VirtualLsiLogicSASController","disk_addr":{"bus":"2","controller":"7","target":"3","unit":"0"},"name":"cluster_2debug-01_15.vmdk","pool":"sdot-b200-008-hdd","total_diskspace":15360}]
+2023-02-10 09:25:43,306|DEBUG|29662|40470|logger.py|132|client_api_helper.py|570:vm_get_vm_vdisks| vm_get_vm_vdisks executing
+2023-02-10 09:25:43,385|DEBUG|29662|0|coroutine.py|177|RESTAPI [controllers.job:get_job] executing
+2023-02-10 09:25:43,387|DEBUG|29662|0|coroutine.py|190|Registered Myself: current tasks [{140540310803048: <CoroutineRecord (asynchronous.cluster_tasks:refresh_cluster) [ACTIVE]>, 140540310804136: <CoroutineRecord (controllers.job:get_job) [ACTIVE]>}]
+2023-02-10 09:25:43,393| INFO|29662|40492|restapi.py|231|Processing GET http://127.0.0.1:8080/api/v3/jobs/cf83cfca-a924-11ed-8ff2-000c29c2b6e0?fields=*,last_modified,message
+2023-02-10 09:25:43,396| INFO|29662|40492|restapi.py|263|GET http://127.0.0.1:8080/api/v3/jobs/cf83cfca-a924-11ed-8ff2-000c29c2b6e0?fields=*,last_modified,message returned in 8ms with status HTTPStatus.OK (BA)
+2023-02-10 09:25:43,590|DEBUG|29662|40470|rest.py|173|response body: [{"capacity":7742,"controller_id":"SCSI controller 0","controller_type":"VirtualLsiLogicSASController","disk_addr":{"bus":"0","controller":"7","target":"0","unit":"0"},"name":"cluster_2debug-01.vmdk","pool":"sdot-b200-008-hdd","total_diskspace":7742},{"capacity":122880,"controller_id":"SCSI controller 1","controller_type":"VirtualLsiLogicSASController","disk_addr":{"bus":"1","controller":"7","target":"0","unit":"0"},"name":"cluster_2debug-01_1.vmdk","pool":"sdot-b200-008-hdd","total_diskspace":122880},{"capacity":4096,"controller_id":"NVME controller 0","controller_type":"VirtualNVMEController","disk_addr":{"bus":null,"controller":null,"target":"0","unit":"0"},"name":"cluster_2debug-01_2.vmdk","pool":"sdot-b200-008-hdd","total_diskspace":4096},{"capacity":69632,"controller_id":"SCSI controller 2","controller_type":"VirtualLsiLogicSASController","disk_addr":{"bus":"2","controller":"7","target":"0","unit":"0"},"name":"cluster_2debug-01_3.vmdk","pool":"sdot-b200-008-hdd","total_diskspace":69632},{"capacity":69632,"controller_id":"SCSI controller 3","controller_type":"VirtualLsiLogicSASController","disk_addr":{"bus":"3","controller":"7","target":"0","unit":"0"},"name":"cluster_2debug-01_4.vmdk","pool":"sdot-b200-008-hdd","total_diskspace":69632},{"capacity":25600,"controller_id":"SCSI controller 0","controller_type":"VirtualLsiLogicSASController","disk_addr":{"bus":"0","controller":"7","target":"1","unit":"0"},"name":"cluster_2debug-01_5.vmdk","pool":"sdot-b200-008-hdd","total_diskspace":25600},{"capacity":25600,"controller_id":"SCSI controller 1","controller_type":"VirtualLsiLogicSASController","disk_addr":{"bus":"1","controller":"7","target":"1","unit":"0"},"name":"cluster_2debug-01_6.vmdk","pool":"sdot-b200-008-hdd","total_diskspace":25600},{"capacity":20480,"controller_id":"SCSI controller 2","controller_type":"VirtualLsiLogicSASController","disk_addr":{"bus":"2","controller":"7","target":"1","unit":"0"},"name":"cluster_2debug-01_7.vmdk","pool":"sdot-b200-008-hdd","total_diskspace":20480},{"capacity":10240,"controller_id":"SCSI controller 3","controller_type":"VirtualLsiLogicSASController","disk_addr":{"bus":"3","controller":"7","target":"1","unit":"0"},"name":"cluster_2debug-01_8.vmdk","pool":"sdot-b200-008-hdd","total_diskspace":10240},{"capacity":10240,"controller_id":"SCSI controller 0","controller_type":"VirtualLsiLogicSASController","disk_addr":{"bus":"0","controller":"7","target":"2","unit":"0"},"name":"cluster_2debug-01_9.vmdk","pool":"sdot-b200-008-hdd","total_diskspace":10240},{"capacity":10240,"controller_id":"SCSI controller 1","controller_type":"VirtualLsiLogicSASController","disk_addr":{"bus":"1","controller":"7","target":"2","unit":"0"},"name":"cluster_2debug-01_10.vmdk","pool":"sdot-b200-008-hdd","total_diskspace":10240},{"capacity":10240,"controller_id":"SCSI controller 2","controller_type":"VirtualLsiLogicSASController","disk_addr":{"bus":"2","controller":"7","target":"2","unit":"0"},"name":"cluster_2debug-01_11.vmdk","pool":"sdot-b200-008-hdd","total_diskspace":10240},{"capacity":10240,"controller_id":"SCSI controller 3","controller_type":"VirtualLsiLogicSASController","disk_addr":{"bus":"3","controller":"7","target":"2","unit":"0"},"name":"cluster_2debug-01_12.vmdk","pool":"sdot-b200-008-hdd","total_diskspace":10240},{"capacity":10240,"controller_id":"SCSI controller 0","controller_type":"VirtualLsiLogicSASController","disk_addr":{"bus":"0","controller":"7","target":"3","unit":"0"},"name":"cluster_2debug-01_13.vmdk","pool":"sdot-b200-008-hdd","total_diskspace":10240},{"capacity":15360,"controller_id":"SCSI controller 1","controller_type":"VirtualLsiLogicSASController","disk_addr":{"bus":"1","controller":"7","target":"3","unit":"0"},"name":"cluster_2debug-01_14.vmdk","pool":"sdot-b200-008-hdd","total_diskspace":15360},{"capacity":15360,"controller_id":"SCSI controller 2","controller_type":"VirtualLsiLogicSASController","disk_addr":{"bus":"2","controller":"7","target":"3","unit":"0"},"name":"cluster_2debug-01_15.vmdk","pool":"sdot-b200-008-hdd","total_diskspace":15360}]
+2023-02-10 09:25:43,596|DEBUG|29662|40470|logger.py|132|node.py|5319:get_ontap_disk_names| Disks to find: ['cluster_2debug-01.vmdk', 'cluster_2debug-01_1.vmdk', 'cluster_2debug-01_2.vmdk', 'cluster_2debug-01_3.vmdk', 'cluster_2debug-01_4.vmdk', 'cluster_2debug-01_5.vmdk', 'cluster_2debug-01_6.vmdk', 'cluster_2debug-01_7.vmdk', 'cluster_2debug-01_8.vmdk', 'cluster_2debug-01_9.vmdk', 'cluster_2debug-01_10.vmdk', 'cluster_2debug-01_11.vmdk', 'cluster_2debug-01_12.vmdk', 'cluster_2debug-01_13.vmdk', 'cluster_2debug-01_14.vmdk', 'cluster_2debug-01_15.vmdk']
+2023-02-10 09:25:43,698|DEBUG|29662|0|coroutine.py|177|RESTAPI [controllers.job:get_job] executing
+2023-02-10 09:25:43,701|DEBUG|29662|0|coroutine.py|190|Registered Myself: current tasks [{140540310803048: <CoroutineRecord (asynchronous.cluster_tasks:refresh_cluster) [ACTIVE]>, 140540310804136: <CoroutineRecord (controllers.job:get_job) [ACTIVE]>}]
+2023-02-10 09:25:43,706| INFO|29662|40493|restapi.py|231|Processing GET http://127.0.0.1:8080/api/v3/jobs/cf83cfca-a924-11ed-8ff2-000c29c2b6e0?fields=*,last_modified,message
+2023-02-10 09:25:43,709| INFO|29662|40493|restapi.py|263|GET http://127.0.0.1:8080/api/v3/jobs/cf83cfca-a924-11ed-8ff2-000c29c2b6e0?fields=*,last_modified,message returned in 8ms with status HTTPStatus.OK (BA)

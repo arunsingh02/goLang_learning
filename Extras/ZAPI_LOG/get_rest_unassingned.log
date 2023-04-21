@@ -1,0 +1,447 @@
+022-12-19 07:55:55,551|DEBUG|10090|0|coroutine.py|177|RESTAPI [controllers.job:get_job] executing
+2022-12-19 07:55:55,551|DEBUG|10090|0|coroutine.py|190|Registered Myself: current tasks [{140091618331368: <CoroutineRecord (asynchronous.cluster_tasks:refresh_cluster) [ACTIVE]>, 140091618332184: <CoroutineRecord (controllers.job:get_job) [ACTIVE]>}]
+2022-12-19 07:55:55,554| INFO|10090|5879|restapi.py|231|Processing GET http://127.0.0.1:8080/api/v3/jobs/90bc68c8-7f72-11ed-a425-000c297a9d59?fields=*,last_modified,message
+2022-12-19 07:55:55,556| INFO|10090|5879|restapi.py|263|GET http://127.0.0.1:8080/api/v3/jobs/90bc68c8-7f72-11ed-a425-000c297a9d59?fields=*,last_modified,message returned in 4ms with status HTTPStatus.OK (BA)
+2022-12-19 07:55:55,819|DEBUG|10090|0|coroutine.py|177|RESTAPI [controllers.job:get_job] executing
+2022-12-19 07:55:55,820|DEBUG|10090|0|coroutine.py|190|Registered Myself: current tasks [{140091618331368: <CoroutineRecord (asynchronous.cluster_tasks:refresh_cluster) [ACTIVE]>, 140091618332184: <CoroutineRecord (controllers.job:get_job) [ACTIVE]>}]
+2022-12-19 07:55:55,822| INFO|10090|5880|restapi.py|231|Processing GET http://127.0.0.1:8080/api/v3/jobs/90bc68c8-7f72-11ed-a425-000c297a9d59?fields=*,last_modified,message
+2022-12-19 07:55:55,824| INFO|10090|5880|restapi.py|263|GET http://127.0.0.1:8080/api/v3/jobs/90bc68c8-7f72-11ed-a425-000c297a9d59?fields=*,last_modified,message returned in 4ms with status HTTPStatus.OK (BA)
+2022-12-19 07:55:56,089|DEBUG|10090|0|coroutine.py|177|RESTAPI [controllers.job:get_job] executing
+2022-12-19 07:55:56,090|DEBUG|10090|0|coroutine.py|190|Registered Myself: current tasks [{140091618331368: <CoroutineRecord (asynchronous.cluster_tasks:refresh_cluster) [ACTIVE]>, 140091618332184: <CoroutineRecord (controllers.job:get_job) [ACTIVE]>}]
+2022-12-19 07:55:56,091| INFO|10090|5881|restapi.py|231|Processing GET http://127.0.0.1:8080/api/v3/jobs/90bc68c8-7f72-11ed-a425-000c297a9d59?fields=*,last_modified,message
+2022-12-19 07:55:56,093| INFO|10090|5881|restapi.py|263|GET http://127.0.0.1:8080/api/v3/jobs/90bc68c8-7f72-11ed-a425-000c297a9d59?fields=*,last_modified,message returned in 3ms with status HTTPStatus.OK (BA)
+2022-12-19 07:55:56,191|DEBUG|10090|5877|rest.py|173|response body: [{"cpus":"1","host_id":"sdot-smicro-009.gdl.englab.netapp.com","hw_version":"vmx-11","memory":"128","metadata":{},"mgmt_server_uid":"3025b4b7-b510-4852-98ed-38668b194b85","name":"vCLS-718aed66-9789-4537-b636-8bb2a063957d","obj_id":"vm-1286","state":"poweredoff","vm_uid":"50166dc7-51f8-a6ab-2d3b-f7fa197928c1"},{"cpus":"2","host_id":"sdot-smicro-009.gdl.englab.netapp.com","hw_version":"vmx-13","memory":"4096","metadata":{},"mgmt_server_uid":"3025b4b7-b510-4852-98ed-38668b194b85","name":"dep-9.8N","obj_id":"vm-5220","state":"poweredoff","vm_uid":"524281f7-736a-e5e8-58bb-b566d5434b18"},{"cpus":"2","host_id":"sdot-smicro-009.gdl.englab.netapp.com","hw_version":"vmx-13","memory":"4096","metadata":{},"mgmt_server_uid":"3025b4b7-b510-4852-98ed-38668b194b85","name":"ONTAPdeploy_9.12.1_kk","obj_id":"vm-5402","state":"poweredon","vm_uid":"5016b9d5-e8b9-698b-2458-cb16f88c4a02"},{"cpus":"2","host_id":"sdot-smicro-009.gdl.englab.netapp.com","hw_version":"vmx-13","memory":"4096","metadata":{},"mgmt_server_uid":"3025b4b7-b510-4852-98ed-38668b194b85","name":"ONTAPdeploy_9.10.1_Rep","obj_id":"vm-5416","state":"poweredoff","vm_uid":"5016281a-4d57-5e2d-debf-df318e5ffcb9"},{"cpus":"2","host_id":"sdot-smicro-009.gdl.englab.netapp.com","hw_version":"vmx-13","memory":"4096","metadata":{},"mgmt_server_uid":"3025b4b7-b510-4852-98ed-38668b194b85","name":"ONTAPdeploy_9.8.1N","obj_id":"vm-5420","state":"poweredoff","vm_uid":"5016ba19-ab6d-a1ef-6d70-10650e122fbd"},{"cpus":"2","host_id":"sdot-smicro-009.gdl.englab.netapp.com","hw_version":"vmx-13","memory":"4096","metadata":{},"mgmt_server_uid":"3025b4b7-b510-4852-98ed-38668b194b85","name":"deploy-9.12.new","obj_id":"vm-6469","state":"poweredon","vm_uid":"50169d00-7853-12ae-f1b1-4f7f6b171a13"},{"cpus":"2","host_id":"sdot-smicro-009.gdl.englab.netapp.com","hw_version":"vmx-13","memory":"4096","metadata":{},"mgmt_server_uid":"3025b4b7-b510-4852-98ed-38668b194b85","name":"DEPLOY_9.13.1","obj_id":"vm-8253","state":"poweredon","vm_uid":"52a1cb62-0764-ad9e-4176-41f493692d14"},{"cpus":"2","host_id":"sdot-smicro-009.gdl.englab.netapp.com","hw_version":"vmx-13","memory":"4096","metadata":{},"mgmt_server_uid":"3025b4b7-b510-4852-98ed-38668b194b85","name":"Deploy_arun","obj_id":"vm-8326","state":"poweredon","vm_uid":"52e8b244-443d-5d7a-c713-14d2938d7eb0"},{"cpus":"4","host_id":"sdot-smicro-009.gdl.englab.netapp.com","hw_version":"vmx-14","memory":"16384","metadata":{"cluster_uuid":"b2c5f3e4-63cf-11ed-bfb4-000c297a9d59","node_uuid":"b2c64bbe-63cf-11ed-bfb4-000c297a9d59"},"mgmt_server_uid":"3025b4b7-b510-4852-98ed-38668b194b85","name":"ArunS_2node-01","obj_id":"vm-8356","state":"poweredon","vm_uid":"5016cfce-cb7f-9695-d0a1-3e1f94727ec1"},{"cpus":"4","host_id":"sdot-smicro-009.gdl.englab.netapp.com","hw_version":"vmx-14","memory":"16384","metadata":{"cluster_uuid":"c5dde25c-6a14-11ed-bfb4-00505696bec4","node_uuid":"c5de2cc6-6a14-11ed-bfb4-00505696bec4"},"mgmt_server_uid":"3025b4b7-b510-4852-98ed-38668b194b85","name":"cluster_zapi_to_rest_u-01","obj_id":"vm-8626","state":"poweredon","vm_uid":"5016f6ae-4c56-8803-ead0-75f94f66f407"},{"cpus":"4","host_id":"sdot-smicro-009.gdl.englab.netapp.com","hw_version":"vmx-14","memory":"16384","metadata":{"cluster_uuid":"22723022-70a5-11ed-a778-000c297a9d59","node_uuid":"2273752c-70a5-11ed-a778-000c297a9d59"},"mgmt_server_uid":"3025b4b7-b510-4852-98ed-38668b194b85","name":"test-cluster-dns-01","obj_id":"vm-8784","state":"poweredoff","vm_uid":"5016667c-c755-52e8-d65c-e7bc43af8405"},{"cpus":"4","host_id":"sdot-smicro-009.gdl.englab.netapp.com","hw_version":"vmx-14","memory":"16384","metadata":{"cluster_uuid":"4dc8066e-711a-11ed-b035-000c297a9d59","node_uuid":"4dc92e5e-711a-11ed-b035-000c297a9d59"},"mgmt_server_uid":"3025b4b7-b510-4852-98ed-38668b194b85","name":"test-set-dns-rest-01","obj_id":"vm-8803","state":"poweredoff","vm_uid":"50162132-1f90-f5dd-fe82-24c0826e75d6"}]
+2022-12-19 07:55:56,203|DEBUG|10090|5877|logger.py|132|client_api_helper.py|726:host_get_vms| Info for all VMs on host [{'host_id': 'sdot-smicro-009.gdl.englab.netapp.com',
+ 'hw_version': 'vmx-11',
+ 'metadata': {'cluster_uuid': None, 'node_uuid': None},
+ 'mgmt_server_uid': '3025b4b7-b510-4852-98ed-38668b194b85',
+ 'name': 'vCLS-718aed66-9789-4537-b636-8bb2a063957d',
+ 'obj_id': 'vm-1286',
+ 'state': 'poweredoff',
+ 'vm_uid': '50166dc7-51f8-a6ab-2d3b-f7fa197928c1'}, {'host_id': 'sdot-smicro-009.gdl.englab.netapp.com',
+ 'hw_version': 'vmx-13',
+ 'metadata': {'cluster_uuid': None, 'node_uuid': None},
+ 'mgmt_server_uid': '3025b4b7-b510-4852-98ed-38668b194b85',
+ 'name': 'dep-9.8N',
+ 'obj_id': 'vm-5220',
+ 'state': 'poweredoff',
+ 'vm_uid': '524281f7-736a-e5e8-58bb-b566d5434b18'}, {'host_id': 'sdot-smicro-009.gdl.englab.netapp.com',
+ 'hw_version': 'vmx-13',
+ 'metadata': {'cluster_uuid': None, 'node_uuid': None},
+ 'mgmt_server_uid': '3025b4b7-b510-4852-98ed-38668b194b85',
+ 'name': 'ONTAPdeploy_9.12.1_kk',
+ 'obj_id': 'vm-5402',
+ 'state': 'poweredon',
+ 'vm_uid': '5016b9d5-e8b9-698b-2458-cb16f88c4a02'}, {'host_id': 'sdot-smicro-009.gdl.englab.netapp.com',
+ 'hw_version': 'vmx-13',
+ 'metadata': {'cluster_uuid': None, 'node_uuid': None},
+ 'mgmt_server_uid': '3025b4b7-b510-4852-98ed-38668b194b85',
+ 'name': 'ONTAPdeploy_9.10.1_Rep',
+ 'obj_id': 'vm-5416',
+ 'state': 'poweredoff',
+ 'vm_uid': '5016281a-4d57-5e2d-debf-df318e5ffcb9'}, {'host_id': 'sdot-smicro-009.gdl.englab.netapp.com',
+ 'hw_version': 'vmx-13',
+ 'metadata': {'cluster_uuid': None, 'node_uuid': None},
+ 'mgmt_server_uid': '3025b4b7-b510-4852-98ed-38668b194b85',
+ 'name': 'ONTAPdeploy_9.8.1N',
+ 'obj_id': 'vm-5420',
+ 'state': 'poweredoff',
+ 'vm_uid': '5016ba19-ab6d-a1ef-6d70-10650e122fbd'}, {'host_id': 'sdot-smicro-009.gdl.englab.netapp.com',
+ 'hw_version': 'vmx-13',
+ 'metadata': {'cluster_uuid': None, 'node_uuid': None},
+ 'mgmt_server_uid': '3025b4b7-b510-4852-98ed-38668b194b85',
+ 'name': 'deploy-9.12.new',
+ 'obj_id': 'vm-6469',
+ 'state': 'poweredon',
+ 'vm_uid': '50169d00-7853-12ae-f1b1-4f7f6b171a13'}, {'host_id': 'sdot-smicro-009.gdl.englab.netapp.com',
+ 'hw_version': 'vmx-13',
+ 'metadata': {'cluster_uuid': None, 'node_uuid': None},
+ 'mgmt_server_uid': '3025b4b7-b510-4852-98ed-38668b194b85',
+ 'name': 'DEPLOY_9.13.1',
+ 'obj_id': 'vm-8253',
+ 'state': 'poweredon',
+ 'vm_uid': '52a1cb62-0764-ad9e-4176-41f493692d14'}, {'host_id': 'sdot-smicro-009.gdl.englab.netapp.com',
+ 'hw_version': 'vmx-13',
+ 'metadata': {'cluster_uuid': None, 'node_uuid': None},
+ 'mgmt_server_uid': '3025b4b7-b510-4852-98ed-38668b194b85',
+ 'name': 'Deploy_arun',
+ 'obj_id': 'vm-8326',
+ 'state': 'poweredon',
+ 'vm_uid': '52e8b244-443d-5d7a-c713-14d2938d7eb0'}, {'host_id': 'sdot-smicro-009.gdl.englab.netapp.com',
+ 'hw_version': 'vmx-14',
+ 'metadata': {'cluster_uuid': 'b2c5f3e4-63cf-11ed-bfb4-000c297a9d59',
+              'node_uuid': 'b2c64bbe-63cf-11ed-bfb4-000c297a9d59'},
+ 'mgmt_server_uid': '3025b4b7-b510-4852-98ed-38668b194b85',
+ 'name': 'ArunS_2node-01',
+ 'obj_id': 'vm-8356',
+ 'state': 'poweredon',
+ 'vm_uid': '5016cfce-cb7f-9695-d0a1-3e1f94727ec1'}, {'host_id': 'sdot-smicro-009.gdl.englab.netapp.com',
+ 'hw_version': 'vmx-14',
+ 'metadata': {'cluster_uuid': 'c5dde25c-6a14-11ed-bfb4-00505696bec4',
+              'node_uuid': 'c5de2cc6-6a14-11ed-bfb4-00505696bec4'},
+ 'mgmt_server_uid': '3025b4b7-b510-4852-98ed-38668b194b85',
+ 'name': 'cluster_zapi_to_rest_u-01',
+ 'obj_id': 'vm-8626',
+ 'state': 'poweredon',
+ 'vm_uid': '5016f6ae-4c56-8803-ead0-75f94f66f407'}, {'host_id': 'sdot-smicro-009.gdl.englab.netapp.com',
+ 'hw_version': 'vmx-14',
+ 'metadata': {'cluster_uuid': '22723022-70a5-11ed-a778-000c297a9d59',
+              'node_uuid': '2273752c-70a5-11ed-a778-000c297a9d59'},
+ 'mgmt_server_uid': '3025b4b7-b510-4852-98ed-38668b194b85',
+ 'name': 'test-cluster-dns-01',
+ 'obj_id': 'vm-8784',
+ 'state': 'poweredoff',
+ 'vm_uid': '5016667c-c755-52e8-d65c-e7bc43af8405'}, {'host_id': 'sdot-smicro-009.gdl.englab.netapp.com',
+ 'hw_version': 'vmx-14',
+ 'metadata': {'cluster_uuid': '4dc8066e-711a-11ed-b035-000c297a9d59',
+              'node_uuid': '4dc92e5e-711a-11ed-b035-000c297a9d59'},
+ 'mgmt_server_uid': '3025b4b7-b510-4852-98ed-38668b194b85',
+ 'name': 'test-set-dns-rest-01',
+ 'obj_id': 'vm-8803',
+ 'state': 'poweredoff',
+ 'vm_uid': '50162132-1f90-f5dd-fe82-24c0826e75d6'}]
+2022-12-19 07:55:56,204|DEBUG|10090|5877|logger.py|132|node.py|1579:get_vm_name_from_host| Node [ArunS_2node-01] Cluster [ArunS_2node]: found VM 'ArunS_2node-01' for node on host 'sdot-smicro-009.gdl.englab.netapp.com'
+2022-12-19 07:55:56,205| INFO|10090|5877|logger.py|132|cluster_tasks.py|1164:refresh_cluster| Cluster [ArunS_2node]: node: ArunS_2node-01 will be refreshed.
+2022-12-19 07:55:56,222|DEBUG|10090|5877|logger.py|132|client_api_helper.py|718:host_get_vms| host_get_vms executing
+2022-12-19 07:55:56,352|DEBUG|10090|0|coroutine.py|177|RESTAPI [controllers.job:get_job] executing
+2022-12-19 07:55:56,353|DEBUG|10090|0|coroutine.py|190|Registered Myself: current tasks [{140091618331368: <CoroutineRecord (asynchronous.cluster_tasks:refresh_cluster) [ACTIVE]>, 140091618331912: <CoroutineRecord (controllers.job:get_job) [ACTIVE]>}]
+2022-12-19 07:55:56,356| INFO|10090|5882|restapi.py|231|Processing GET http://127.0.0.1:8080/api/v3/jobs/90bc68c8-7f72-11ed-a425-000c297a9d59?fields=*,last_modified,message
+2022-12-19 07:55:56,358| INFO|10090|5882|restapi.py|263|GET http://127.0.0.1:8080/api/v3/jobs/90bc68c8-7f72-11ed-a425-000c297a9d59?fields=*,last_modified,message returned in 5ms with status HTTPStatus.OK (BA)
+2022-12-19 07:55:56,620|DEBUG|10090|0|coroutine.py|177|RESTAPI [controllers.job:get_job] executing
+2022-12-19 07:55:56,621|DEBUG|10090|0|coroutine.py|190|Registered Myself: current tasks [{140091618331368: <CoroutineRecord (asynchronous.cluster_tasks:refresh_cluster) [ACTIVE]>, 140091618331912: <CoroutineRecord (controllers.job:get_job) [ACTIVE]>}]
+2022-12-19 07:55:56,623| INFO|10090|5883|restapi.py|231|Processing GET http://127.0.0.1:8080/api/v3/jobs/90bc68c8-7f72-11ed-a425-000c297a9d59?fields=*,last_modified,message
+2022-12-19 07:55:56,625| INFO|10090|5883|restapi.py|263|GET http://127.0.0.1:8080/api/v3/jobs/90bc68c8-7f72-11ed-a425-000c297a9d59?fields=*,last_modified,message returned in 3ms with status HTTPStatus.OK (BA)
+2022-12-19 07:55:57,081|DEBUG|10090|0|coroutine.py|177|RESTAPI [controllers.job:get_job] executing
+2022-12-19 07:55:57,082|DEBUG|10090|0|coroutine.py|190|Registered Myself: current tasks [{140091618331368: <CoroutineRecord (asynchronous.cluster_tasks:refresh_cluster) [ACTIVE]>, 140091618331912: <CoroutineRecord (controllers.job:get_job) [ACTIVE]>}]
+2022-12-19 07:55:57,084| INFO|10090|5884|restapi.py|231|Processing GET http://127.0.0.1:8080/api/v3/jobs/90bc68c8-7f72-11ed-a425-000c297a9d59?fields=*,last_modified,message
+2022-12-19 07:55:57,086| INFO|10090|5884|restapi.py|263|GET http://127.0.0.1:8080/api/v3/jobs/90bc68c8-7f72-11ed-a425-000c297a9d59?fields=*,last_modified,message returned in 3ms with status HTTPStatus.OK (BA)
+2022-12-19 07:55:57,430|DEBUG|10090|0|coroutine.py|177|RESTAPI [controllers.job:get_job] executing
+2022-12-19 07:55:57,431|DEBUG|10090|0|coroutine.py|190|Registered Myself: current tasks [{140091618331368: <CoroutineRecord (asynchronous.cluster_tasks:refresh_cluster) [ACTIVE]>, 140091618331912: <CoroutineRecord (controllers.job:get_job) [ACTIVE]>}]
+2022-12-19 07:55:57,433| INFO|10090|5885|restapi.py|231|Processing GET http://127.0.0.1:8080/api/v3/jobs/90bc68c8-7f72-11ed-a425-000c297a9d59?fields=*,last_modified,message
+2022-12-19 07:55:57,435| INFO|10090|5885|restapi.py|263|GET http://127.0.0.1:8080/api/v3/jobs/90bc68c8-7f72-11ed-a425-000c297a9d59?fields=*,last_modified,message returned in 3ms with status HTTPStatus.OK (BA)
+2022-12-19 07:55:57,504|DEBUG|10090|5877|rest.py|173|response body: [{"cpus":"1","host_id":"sdot-smicro-010.gdl.englab.netapp.com","hw_version":"vmx-11","memory":"128","metadata":{},"mgmt_server_uid":"3025b4b7-b510-4852-98ed-38668b194b85","name":"vCLS-0a04f1b2-77e9-4f17-9783-65fc3b669c36","obj_id":"vm-1285","state":"poweredoff","vm_uid":"50160c29-f3c7-647e-0d5b-31de72802daa"},{"cpus":"2","host_id":"sdot-smicro-010.gdl.englab.netapp.com","hw_version":"vmx-13","memory":"4096","metadata":{},"mgmt_server_uid":"3025b4b7-b510-4852-98ed-38668b194b85","name":"ONTAPdeploy_9.11.1_vasili","obj_id":"vm-5301","state":"poweredoff","vm_uid":"50161c46-3287-5395-681e-306dd77e673b"},{"cpus":"2","host_id":"sdot-smicro-010.gdl.englab.netapp.com","hw_version":"vmx-13","memory":"4096","metadata":{},"mgmt_server_uid":"3025b4b7-b510-4852-98ed-38668b194b85","name":"sdot-smicro-010-deploy","obj_id":"vm-6955","state":"poweredoff","vm_uid":"5016e0a9-74f2-b5f4-bf70-85991abf3e59"},{"cpus":"2","host_id":"sdot-smicro-010.gdl.englab.netapp.com","hw_version":"vmx-13","memory":"4096","metadata":{},"mgmt_server_uid":"3025b4b7-b510-4852-98ed-38668b194b85","name":"promoted-9.8vp","obj_id":"vm-8086","state":"poweredon","vm_uid":"52e08dec-d756-a4da-6073-59324ea1688a"},{"cpus":"2","host_id":"sdot-smicro-010.gdl.englab.netapp.com","hw_version":"vmx-13","memory":"4096","metadata":{},"mgmt_server_uid":"3025b4b7-b510-4852-98ed-38668b194b85","name":"promoted-9.8vp1","obj_id":"vm-8087","state":"poweredon","vm_uid":"528d8c9b-4bd4-96e5-47da-9acacdb7a5a0"},{"cpus":"4","host_id":"sdot-smicro-010.gdl.englab.netapp.com","hw_version":"vmx-14","memory":"16384","metadata":{"cluster_uuid":"b2c5f3e4-63cf-11ed-bfb4-000c297a9d59","node_uuid":"b2c71008-63cf-11ed-bfb4-000c297a9d59"},"mgmt_server_uid":"3025b4b7-b510-4852-98ed-38668b194b85","name":"ArunS_2node-02","obj_id":"vm-8357","state":"poweredon","vm_uid":"50162934-da91-54eb-9731-f8066b6a44a5"},{"cpus":"4","host_id":"sdot-smicro-010.gdl.englab.netapp.com","hw_version":"vmx-14","memory":"16384","metadata":{"cluster_uuid":"c5dde25c-6a14-11ed-bfb4-00505696bec4","node_uuid":"c5dee602-6a14-11ed-bfb4-00505696bec4"},"mgmt_server_uid":"3025b4b7-b510-4852-98ed-38668b194b85","name":"cluster_zapi_to_rest_u-02","obj_id":"vm-8625","state":"poweredon","vm_uid":"50166d1a-ffe0-9831-fcb8-ba9639b93bcd"},{"cpus":"4","host_id":"sdot-smicro-010.gdl.englab.netapp.com","hw_version":"vmx-14","memory":"16384","metadata":{"cluster_uuid":"0bc50dee-79a7-11ed-80a5-00505696bec4","node_uuid":"0bc61e96-79a7-11ed-80a5-00505696bec4"},"mgmt_server_uid":"3025b4b7-b510-4852-98ed-38668b194b85","name":"rest1-01","obj_id":"vm-8960","state":"poweredon","vm_uid":"50160cd1-1c04-d446-19b8-4b15f9ee6e8d"}]
+2022-12-19 07:55:57,512|DEBUG|10090|5877|logger.py|132|client_api_helper.py|726:host_get_vms| Info for all VMs on host [{'host_id': 'sdot-smicro-010.gdl.englab.netapp.com',
+ 'hw_version': 'vmx-11',
+ 'metadata': {'cluster_uuid': None, 'node_uuid': None},
+ 'mgmt_server_uid': '3025b4b7-b510-4852-98ed-38668b194b85',
+ 'name': 'vCLS-0a04f1b2-77e9-4f17-9783-65fc3b669c36',
+ 'obj_id': 'vm-1285',
+ 'state': 'poweredoff',
+ 'vm_uid': '50160c29-f3c7-647e-0d5b-31de72802daa'}, {'host_id': 'sdot-smicro-010.gdl.englab.netapp.com',
+ 'hw_version': 'vmx-13',
+ 'metadata': {'cluster_uuid': None, 'node_uuid': None},
+ 'mgmt_server_uid': '3025b4b7-b510-4852-98ed-38668b194b85',
+ 'name': 'ONTAPdeploy_9.11.1_vasili',
+ 'obj_id': 'vm-5301',
+ 'state': 'poweredoff',
+ 'vm_uid': '50161c46-3287-5395-681e-306dd77e673b'}, {'host_id': 'sdot-smicro-010.gdl.englab.netapp.com',
+ 'hw_version': 'vmx-13',
+ 'metadata': {'cluster_uuid': None, 'node_uuid': None},
+ 'mgmt_server_uid': '3025b4b7-b510-4852-98ed-38668b194b85',
+ 'name': 'sdot-smicro-010-deploy',
+ 'obj_id': 'vm-6955',
+ 'state': 'poweredoff',
+ 'vm_uid': '5016e0a9-74f2-b5f4-bf70-85991abf3e59'}, {'host_id': 'sdot-smicro-010.gdl.englab.netapp.com',
+ 'hw_version': 'vmx-13',
+ 'metadata': {'cluster_uuid': None, 'node_uuid': None},
+ 'mgmt_server_uid': '3025b4b7-b510-4852-98ed-38668b194b85',
+ 'name': 'promoted-9.8vp',
+ 'obj_id': 'vm-8086',
+ 'state': 'poweredon',
+ 'vm_uid': '52e08dec-d756-a4da-6073-59324ea1688a'}, {'host_id': 'sdot-smicro-010.gdl.englab.netapp.com',
+ 'hw_version': 'vmx-13',
+ 'metadata': {'cluster_uuid': None, 'node_uuid': None},
+ 'mgmt_server_uid': '3025b4b7-b510-4852-98ed-38668b194b85',
+ 'name': 'promoted-9.8vp1',
+ 'obj_id': 'vm-8087',
+ 'state': 'poweredon',
+ 'vm_uid': '528d8c9b-4bd4-96e5-47da-9acacdb7a5a0'}, {'host_id': 'sdot-smicro-010.gdl.englab.netapp.com',
+ 'hw_version': 'vmx-14',
+ 'metadata': {'cluster_uuid': 'b2c5f3e4-63cf-11ed-bfb4-000c297a9d59',
+              'node_uuid': 'b2c71008-63cf-11ed-bfb4-000c297a9d59'},
+ 'mgmt_server_uid': '3025b4b7-b510-4852-98ed-38668b194b85',
+ 'name': 'ArunS_2node-02',
+ 'obj_id': 'vm-8357',
+ 'state': 'poweredon',
+ 'vm_uid': '50162934-da91-54eb-9731-f8066b6a44a5'}, {'host_id': 'sdot-smicro-010.gdl.englab.netapp.com',
+ 'hw_version': 'vmx-14',
+ 'metadata': {'cluster_uuid': 'c5dde25c-6a14-11ed-bfb4-00505696bec4',
+              'node_uuid': 'c5dee602-6a14-11ed-bfb4-00505696bec4'},
+ 'mgmt_server_uid': '3025b4b7-b510-4852-98ed-38668b194b85',
+ 'name': 'cluster_zapi_to_rest_u-02',
+ 'obj_id': 'vm-8625',
+ 'state': 'poweredon',
+ 'vm_uid': '50166d1a-ffe0-9831-fcb8-ba9639b93bcd'}, {'host_id': 'sdot-smicro-010.gdl.englab.netapp.com',
+ 'hw_version': 'vmx-14',
+ 'metadata': {'cluster_uuid': '0bc50dee-79a7-11ed-80a5-00505696bec4',
+              'node_uuid': '0bc61e96-79a7-11ed-80a5-00505696bec4'},
+ 'mgmt_server_uid': '3025b4b7-b510-4852-98ed-38668b194b85',
+ 'name': 'rest1-01',
+ 'obj_id': 'vm-8960',
+ 'state': 'poweredon',
+ 'vm_uid': '50160cd1-1c04-d446-19b8-4b15f9ee6e8d'}]
+2022-12-19 07:55:57,514|DEBUG|10090|5877|logger.py|132|node.py|1579:get_vm_name_from_host| Node [ArunS_2node-02] Cluster [ArunS_2node]: found VM 'ArunS_2node-02' for node on host 'sdot-smicro-010.gdl.englab.netapp.com'
+2022-12-19 07:55:57,515| INFO|10090|5877|logger.py|132|cluster_tasks.py|1164:refresh_cluster| Cluster [ArunS_2node]: node: ArunS_2node-02 will be refreshed.
+2022-12-19 07:55:57,516| INFO|10090|5877|logger.py|132|cluster_tasks.py|1201:refresh_cluster| Cluster [ArunS_2node]: Testing availability of the ONTAP cluster with management IP address: 10.232.27.158
+2022-12-19 07:55:57,565|DEBUG|10090|5877|logger.py|132|ZAPI.py|241:invoke|
+API: "cluster-identity-get"
+User: "admin"
+Request:
+<suppressed/>
+Response:
+<suppressed/>
+2022-12-19 07:55:57,569|DEBUG|10090|5877|logger.py|132|ClusterZapis.py|225:z_get_cluster_identity| Cluster [ArunS_2node]: got cluster_identity: [{'cluster-contact': None, 'cluster-location': None, 'cluster-name': 'ArunS_2node', 'cluster-serial-number': '1-80-000011', 'cluster-uuid': 'b2c5f3e4-63cf-11ed-bfb4-000c297a9d59', 'rdb-uuid': 'd368ce93-63d0-11ed-910c-00a0b8cba9da'}]
+2022-12-19 07:55:57,629|DEBUG|10090|5877|logger.py|132|ZAPI.py|241:invoke|
+API: "net-interface-get-iter"
+User: "admin"
+Request:
+<suppressed/>
+Response:
+<suppressed/>
+2022-12-19 07:55:57,671|DEBUG|10090|5877|logger.py|132|ZAPI.py|241:invoke|
+API: "net-routes-get-iter"
+User: "admin"
+Request:
+<suppressed/>
+Response:
+<suppressed/>
+2022-12-19 07:55:57,697|DEBUG|10090|0|coroutine.py|177|RESTAPI [controllers.job:get_job] executing
+2022-12-19 07:55:57,698|DEBUG|10090|0|coroutine.py|190|Registered Myself: current tasks [{140091618331368: <CoroutineRecord (asynchronous.cluster_tasks:refresh_cluster) [ACTIVE]>, 140091618332184: <CoroutineRecord (controllers.job:get_job) [ACTIVE]>}]
+2022-12-19 07:55:57,699| INFO|10090|5886|restapi.py|231|Processing GET http://127.0.0.1:8080/api/v3/jobs/90bc68c8-7f72-11ed-a425-000c297a9d59?fields=*,last_modified,message
+2022-12-19 07:55:57,701| INFO|10090|5886|restapi.py|263|GET http://127.0.0.1:8080/api/v3/jobs/90bc68c8-7f72-11ed-a425-000c297a9d59?fields=*,last_modified,message returned in 3ms with status HTTPStatus.OK (BA)
+2022-12-19 07:55:57,724|DEBUG|10090|5877|logger.py|132|ZAPI.py|241:invoke|
+API: "net-dns-get-iter"
+User: "admin"
+Request:
+<suppressed/>
+Response:
+<suppressed/>
+2022-12-19 07:55:57,755|DEBUG|10090|5877|logger.py|132|ZAPI.py|241:invoke|
+API: "ntp-server-get-iter"
+User: "admin"
+Request:
+<suppressed/>
+Response:
+<suppressed/>
+2022-12-19 07:55:57,758| INFO|10090|5877|logger.py|132|cluster.py|3357:patch_cluster_management_network| Cluster [ArunS_2node]: cluster management network information refreshed
+2022-12-19 07:56:04,618|DEBUG|10090|0|coroutine.py|177|RESTAPI [controllers.job:get_job] executing
+2022-12-19 07:56:04,619|DEBUG|10090|0|coroutine.py|190|Registered Myself: current tasks [{140091618331368: <CoroutineRecord (asynchronous.cluster_tasks:refresh_cluster) [ACTIVE]>, 140091618332184: <CoroutineRecord (controllers.job:get_job) [ACTIVE]>}]
+2022-12-19 07:56:04,622| INFO|10090|5887|restapi.py|231|Processing GET http://127.0.0.1:8080/api/v3/jobs/90bc68c8-7f72-11ed-a425-000c297a9d59?fields=*,last_modified,message
+2022-12-19 07:56:04,624| INFO|10090|5887|restapi.py|263|GET http://127.0.0.1:8080/api/v3/jobs/90bc68c8-7f72-11ed-a425-000c297a9d59?fields=*,last_modified,message returned in 4ms with status HTTPStatus.OK (BA)
+2022-12-19 07:56:06,886|DEBUG|10090|5877|logger.py|132|ClusterRestApis.py|986:r_get_unassigned_disks| Cluster [ArunS_2node]: "GET https://10.232.27.158:443/api/storage/disks/?fields=*&container_type=mediator&node.name=ArunS_2node-01" response: {
+  "records": [
+    {
+      "name": "NET-2.1",
+      "uid": "34363435:36316534:00000000:00000000:00000000:00000000:00000000:00000000:00000000:00000000",
+      "serial_number": "3436343536316534",
+      "model": "PHA-DISK",
+      "vendor": "NETAPP",
+      "firmware_version": "0001",
+      "type": "vmdisk",
+      "class": "virtual",
+      "container_type": "mediator",
+      "pool": "pool0",
+      "node": {
+        "uuid": "b2c64bbe-63cf-11ed-bfb4-000c297a9d59",
+        "name": "ArunS_2node-01",
+        "_links": {
+          "self": {
+            "href": "/api/cluster/nodes/b2c64bbe-63cf-11ed-bfb4-000c297a9d59"
+          }
+        }
+      },
+      "home_node": {
+        "uuid": "b2c64bbe-63cf-11ed-bfb4-000c297a9d59",
+        "name": "ArunS_2node-01",
+        "_links": {
+          "self": {
+            "href": "/api/cluster/nodes/b2c64bbe-63cf-11ed-bfb4-000c297a9d59"
+          }
+        }
+      },
+      "local": true,
+      "paths": [
+        {
+          "initiator": "0f",
+          "port_name": "A",
+          "port_type": "sas",
+          "wwnn": "53059d50444f5476",
+          "wwpn": "53059d50444f5476",
+          "node": {
+            "name": "ArunS_2node-01",
+            "uuid": "b2c64bbe-63cf-11ed-bfb4-000c297a9d59",
+            "_links": {
+              "self": {
+                "href": "/api/cluster/nodes/b2c64bbe-63cf-11ed-bfb4-000c297a9d59"
+              }
+            }
+          }
+        },
+        {
+          "initiator": "0f",
+          "port_name": "A",
+          "port_type": "sas",
+          "wwnn": "53059d50444f5476",
+          "wwpn": "53059d50444f5476",
+          "node": {
+            "name": "ArunS_2node-02",
+            "uuid": "b2c71008-63cf-11ed-bfb4-000c297a9d59",
+            "_links": {
+              "self": {
+                "href": "/api/cluster/nodes/b2c71008-63cf-11ed-bfb4-000c297a9d59"
+              }
+            }
+          }
+        }
+      ],
+      "outage": {
+        "persistently_failed": false,
+        "reason": {
+          "message": "Failed disk. Reason: \"\".",
+          "code": "721081"
+        }
+      },
+      "self_encrypting": false,
+      "fips_certified": false,
+      "bytes_per_sector": 512,
+      "sector_count": 47104,
+      "right_size_sector_count": 34304,
+      "physical_size": 24117248,
+      "stats": {
+        "average_latency": 16,
+        "throughput": 4096,
+        "iops_total": 1,
+        "path_error_count": 0,
+        "power_on_hours": 0
+      },
+      "_links": {
+        "self": {
+          "href": "/api/storage/disks/NET-2.1"
+        }
+      }
+    }
+  ],
+  "num_records": 1,
+  "_links": {
+    "self": {
+      "href": "/api/storage/disks/?fields=%2A&container_type=mediator&node.name=ArunS_2node-01"
+    }
+  }
+}
+2022-12-19 07:57:26,104|DEBUG|10090|5877|logger.py|132|ClusterRestApis.py|989:r_get_unassigned_disks| Cluster [ArunS_2node]: "GET https://10.232.27.158:443/api/storage/disks/?fields=*&container_type=mediator&node.name=ArunS_2node-01" storage unassigned disks : [{'disk-inventory-info': {'capacity-sectors': 47104, 'disk-cluster-name': 'NET-2.1', 'bytes-per-sector': 512, 'right-size-sectors': 0}, 'disk-name': 'NET-2.1', 'disk-uid': '34363435:36316534:00000000:00000000:00000000:00000000:00000000:00000000:00000000:00000000', 'node_name': 'ArunS_2node-01'}]
+2022-12-19 07:57:30,389|DEBUG|10090|0|coroutine.py|190|Registered Myself: current tasks [{140091618331368: <CoroutineRecord (asynchronous.cluster_tasks:refresh_cluster) [ACTIVE]>, 140091609289320: <CoroutineRecord (asynchronous.crontab:create_mediator) [ACTIVE]>}]
+2022-12-19 07:57:31,657|DEBUG|10090|5877|logger.py|132|ClusterRestApis.py|986:r_get_unassigned_disks| Cluster [ArunS_2node]: "GET https://10.232.27.158:443/api/storage/disks/?fields=*&container_type=mediator&node.name=ArunS_2node-02" response: {
+  "records": [
+    {
+      "name": "NET-2.2",
+      "uid": "35356537:66393933:00000000:00000000:00000000:00000000:00000000:00000000:00000000:00000000",
+      "serial_number": "3535653766393933",
+      "model": "PHA-DISK",
+      "vendor": "NETAPP",
+      "firmware_version": "0001",
+      "type": "vmdisk",
+      "class": "virtual",
+      "container_type": "mediator",
+      "pool": "pool0",
+      "node": {
+        "uuid": "b2c71008-63cf-11ed-bfb4-000c297a9d59",
+        "name": "ArunS_2node-02",
+        "_links": {
+          "self": {
+            "href": "/api/cluster/nodes/b2c71008-63cf-11ed-bfb4-000c297a9d59"
+          }
+        }
+      },
+      "home_node": {
+        "uuid": "b2c71008-63cf-11ed-bfb4-000c297a9d59",
+        "name": "ArunS_2node-02",
+        "_links": {
+          "self": {
+            "href": "/api/cluster/nodes/b2c71008-63cf-11ed-bfb4-000c297a9d59"
+          }
+        }
+      },
+      "local": true,
+      "paths": [
+        {
+          "initiator": "0f",
+          "port_name": "A",
+          "port_type": "sas",
+          "wwnn": "53059d50444f5476",
+          "wwpn": "53059d50444f5476",
+          "node": {
+            "name": "ArunS_2node-01",
+            "uuid": "b2c64bbe-63cf-11ed-bfb4-000c297a9d59",
+            "_links": {
+              "self": {
+                "href": "/api/cluster/nodes/b2c64bbe-63cf-11ed-bfb4-000c297a9d59"
+              }
+            }
+          }
+        }
+      ],
+      "outage": {
+        "persistently_failed": false,
+        "reason": {
+          "message": "Failed disk. Reason: \"\".",
+          "code": "721081"
+        }
+      },
+      "self_encrypting": false,
+      "fips_certified": false,
+      "bytes_per_sector": 512,
+      "sector_count": 47104,
+      "right_size_sector_count": 34304,
+      "physical_size": 24117248,
+      "stats": {
+        "average_latency": 16,
+        "throughput": 1024,
+        "iops_total": 0,
+        "path_error_count": 0,
+        "power_on_hours": 0
+      },
+      "_links": {
+        "self": {
+          "href": "/api/storage/disks/NET-2.2"
+        }
+      }
+    }
+  ],
+  "num_records": 1,
+  "_links": {
+    "self": {
+      "href": "/api/storage/disks/?fields=%2A&container_type=mediator&node.name=ArunS_2node-02"
+    }
+  }
+}
+2022-12-19 07:57:51,892| INFO|10279|0|logger.py|132|sdotadmin_server.py|69:<module>| Swagger file location for the sdotadmin_server:app: /opt/netapp/lib/sdotadmin/server_config/sdotadmin_external_schema.yaml
+2022-12-19 07:57:51,895|DEBUG|10279|0|abstract.py|56|Root Path: /opt/netapp/lib/sdotadmin
+2022-12-19 07:57:51,896|DEBUG|10279|0|abstract.py|64|Specification directory: /opt/netapp/lib/sdotadmin/server_config
+2022-12-19 07:57:51,896|DEBUG|10279|0|abstract.py|66|Setting error handlers
+2022-12-19 07:57:52,522| INFO|10279|0|logger.py|132|sdotadmin_server.py|97:<module>| ---------------------ADD API----------------------------------------------
+2022-12-19 07:57:54,516|DEBUG|10279|0|library.py|45|Using default library file-path: [libarchive.so]
+2022-12-19 07:57:54,517|DEBUG|10279|0|library.py|50|Using library file-path: [libarchive.so]
+2022-12-19 07:57:55,417| INFO|10279|0|logger.py|132|sdotadmin_server.py|99:<module>| ---------------------END ADD API----------------------------------------------
+2022-12-19 07:57:55,418| INFO|10279|0|logger.py|132|flag.py|217:populate_flag_defaults| Checking if we need to add or remove flag constants...
+2022-12-19 07:57:55,544| INFO|10279|0|logger.py|132|flag.py|243:populate_flag_defaults| No changes needed to be made to the flag table.
+2022-12-19 07:57:55,607|DEBUG|10279|0|logger.py|132|autosync_cron_conf.py|44:read_cron_info| Failed to read/load the autosync /home/admin/auto_sync_conf.yaml config yaml file with error [Errno 2] No such file or directory: '/home/admin/auto_sync_conf.yaml'.setting default value.
+2022-12-19 07:57:55,607|DEBUG|10279|0|flask_app.py|91|Starting gevent HTTP server..
+2022-12-19 07:57:55,609| INFO|10279|0|flask_app.py|112|Listening on 127.0.0.1:8080..
+2022-12-19 07:58:51,851|DEBUG|10279|0|coroutine.py|190|Registered Myself: current tasks [{140005732234920: <CoroutineRecord (asynchronous.crontab:create_mediator) [ACTIVE]>}]
+2022-12-19 08:00:51,860|DEBUG|10279|0|coroutine.py|190|Registered Myself: current tasks [{140005732234376: <CoroutineRecord (asynchronous.crontab:rotate_events) [ACTIVE]>}]
+2022-12-19 08:01:38,717|DEBUG|10279|0|coroutine.py|177|RESTAPI [controllers.deploy:get_flags] executing
+2022-12-19 08:01:38,717|DEBUG|10279|0|coroutine.py|190|Registered Myself: current tasks [{140005732234376: <CoroutineRecord (controllers.deploy:get_flags) [ACTIVE]>}]
+2022-12-19 08:01:38,721| INFO|10279|5888|restapi.py|231|Processing GET http://127.0.0.1:8080/api/v3/flags?fields=name%2Cvalue
+2022-12-19 08:01:38,728| INFO|10279|5888|restapi.py|263|GET http://127.0.0.1:8080/api/v3/flags?fields=name%2Cvalue returned in 11ms with status HTTPStatus.OK
+2022-12-19 08:01:38,803|DEBUG|10279|0|coroutine.py|177|RESTAPI [controllers.deploy:get_deploy] executing
+2022-12-19 08:01:38,804|DEBUG|10279|0|coroutine.py|190|Registered Myself: current tasks [{140005732234376: <CoroutineRecord (controllers.deploy:get_deploy) [ACTIVE]>}]
+2022-12-19 08:01:38,806| INFO|10279|5889|restapi.py|231|Processing GET http://127.0.0.1:8080/api/v3/deploy?fields=version.%2A
+2022-12-19 08:01:38,817| INFO|10279|5889|restapi.py|263|GET http://127.0.0.1:8080/api/v3/deploy?fields=version.%2A returned in 13ms with status HTTPStatus.OK
+2022-12-19 08:01:38,831|DEBUG|10279|0|coroutine.py|177|RESTAPI [controllers.deploy:get_deploy] executing
+2022-12-19 08:01:38,831|DEBUG|10279|0|coroutine.py|190|Registered Myself: current tasks [{140005732234376: <CoroutineRecord (controllers.deploy:get_deploy) [ACTIVE]>}]
+2022-12-19 08:01:38,834| INFO|10279|5890|restapi.py|231|Processing GET http://127.0.0.1:8080/api/v3/deploy?fields=version.build_variant
+2022-12-19 08:01:38,839| INFO|10279|5890|restapi.py|263|GET http://127.0.0.1:8080/api/v3/deploy?fields=version.build_variant returned in 7ms with status HTTPStatus.OK
+2022-12-19 08:01:38,842|DEBUG|10279|0|coroutine.py|177|RESTAPI [controllers.deploy:get_deploy] executing
+2022-12-19 08:01:38,843|DEBUG|10279|0|coroutine.py|190|Registered Myself: current tasks [{140005732234376: <CoroutineRecord (controllers.deploy:get_deploy) [ACTIVE]>}]
+2022-12-19 08:01:38,844| INFO|10279|5891|restapi.py|231|Processing GET http://127.0.0.1:8080/api/v3/deploy
+2022-12-19 08:01:38,847| INFO|10279|5891|restapi.py|263|GET http://127.0.0.1:8080/api/v3/deploy returned in 4ms with status HTTPStatus.OK

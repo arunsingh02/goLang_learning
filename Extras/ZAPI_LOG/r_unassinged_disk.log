@@ -1,0 +1,124 @@
+2022-12-19 07:27:01,852|DEBUG| 7531|5697|logger.py|132|node.py|1579:get_vm_name_from_host| Node [ArunS_2node-02] Cluster [ArunS_2node]: found VM 'ArunS_2node-02' for node on host 'sdot-smicro-010.gdl.englab.netapp.com'
+2022-12-19 07:27:01,853| INFO| 7531|5697|logger.py|132|cluster_tasks.py|1164:refresh_cluster| Cluster [ArunS_2node]: node: ArunS_2node-02 will be refreshed.
+2022-12-19 07:27:01,855| INFO| 7531|5697|logger.py|132|cluster_tasks.py|1201:refresh_cluster| Cluster [ArunS_2node]: Testing availability of the ONTAP cluster with management IP address: 10.232.27.158
+2022-12-19 07:27:01,954|DEBUG| 7531|5697|logger.py|132|ZAPI.py|241:invoke|
+API: "cluster-identity-get"
+User: "admin"
+Request:
+<suppressed/>
+Response:
+<suppressed/>
+2022-12-19 07:27:01,956|DEBUG| 7531|5697|logger.py|132|ClusterZapis.py|225:z_get_cluster_identity| Cluster [ArunS_2node]: got cluster_identity: [{'cluster-contact': None, 'cluster-location': None, 'cluster-name': 'ArunS_2node', 'cluster-serial-number': '1-80-000011', 'cluster-uuid': 'b2c5f3e4-63cf-11ed-bfb4-000c297a9d59', 'rdb-uuid': 'd368ce93-63d0-11ed-910c-00a0b8cba9da'}]
+2022-12-19 07:27:02,071|DEBUG| 7531|0|coroutine.py|177|RESTAPI [controllers.job:get_job] executing
+2022-12-19 07:27:02,073|DEBUG| 7531|0|coroutine.py|190|Registered Myself: current tasks [{140589422653784: <CoroutineRecord (asynchronous.cluster_tasks:refresh_cluster) [ACTIVE]>, 140589429775624: <CoroutineRecord (controllers.job:get_job) [ACTIVE]>}]
+2022-12-19 07:27:02,075| INFO| 7531|5708|restapi.py|231|Processing GET http://127.0.0.1:8080/api/v3/jobs/86164ae6-7f6e-11ed-9769-000c297a9d59?fields=*,last_modified,message
+2022-12-19 07:27:02,077| INFO| 7531|5708|restapi.py|263|GET http://127.0.0.1:8080/api/v3/jobs/86164ae6-7f6e-11ed-9769-000c297a9d59?fields=*,last_modified,message returned in 4ms with status HTTPStatus.OK (BA)
+2022-12-19 07:27:02,105|DEBUG| 7531|5697|logger.py|132|ZAPI.py|241:invoke|
+API: "net-interface-get-iter"
+User: "admin"
+Request:
+<suppressed/>
+Response:
+<suppressed/>
+2022-12-19 07:27:02,165|DEBUG| 7531|5697|logger.py|132|ZAPI.py|241:invoke|
+API: "net-routes-get-iter"
+User: "admin"
+Request:
+<suppressed/>
+Response:
+<suppressed/>
+2022-12-19 07:27:02,214|DEBUG| 7531|5697|logger.py|132|ZAPI.py|241:invoke|
+API: "net-dns-get-iter"
+User: "admin"
+Request:
+<suppressed/>
+Response:
+<suppressed/>
+2022-12-19 07:27:02,265|DEBUG| 7531|5697|logger.py|132|ZAPI.py|241:invoke|
+API: "ntp-server-get-iter"
+User: "admin"
+Request:
+<suppressed/>
+Response:
+<suppressed/>
+2022-12-19 07:27:02,268| INFO| 7531|5697|logger.py|132|cluster.py|3357:patch_cluster_management_network| Cluster [ArunS_2node]: cluster management network information refreshed
+2022-12-19 07:27:05,719|DEBUG| 7531|0|coroutine.py|177|RESTAPI [controllers.job:get_job] executing
+2022-12-19 07:27:05,721|DEBUG| 7531|0|coroutine.py|190|Registered Myself: current tasks [{140589422653784: <CoroutineRecord (asynchronous.cluster_tasks:refresh_cluster) [ACTIVE]>, 140589429775624: <CoroutineRecord (controllers.job:get_job) [ACTIVE]>}]
+2022-12-19 07:27:05,724| INFO| 7531|5709|restapi.py|231|Processing GET http://127.0.0.1:8080/api/v3/jobs/86164ae6-7f6e-11ed-9769-000c297a9d59?fields=*,last_modified,message
+2022-12-19 07:27:05,726| INFO| 7531|5709|restapi.py|263|GET http://127.0.0.1:8080/api/v3/jobs/86164ae6-7f6e-11ed-9769-000c297a9d59?fields=*,last_modified,message returned in 5ms with status HTTPStatus.OK (BA)
+2022-12-19 07:27:05,773|DEBUG| 7531|5697|logger.py|132|ClusterRestApis.py|983:r_get_unassigned_disks| Cluster [ArunS_2node]: "GET https://10.232.27.158:443/api/storage/disks/?fields=**&container_type=unassigned&node.name=ArunS_2node-01" response: {
+  "records": [
+  ],
+  "num_records": 0,
+  "_links": {
+    "self": {
+      "href": "/api/storage/disks/?fields=%2A%2A&container_type=unassigned&node.name=ArunS_2node-01"
+    }
+  }
+}
+2022-12-19 07:27:05,776|DEBUG| 7531|5697|logger.py|132|ClusterRestApis.py|986:r_get_unassigned_disks| Cluster [ArunS_2node]: "GET https://10.232.27.158:443/api/storage/disks/?fields=**&container_type=unassigned&node.name=ArunS_2node-01" storage unassigned disks : []
+2022-12-19 07:27:44,935| INFO| 7703|0|logger.py|132|sdotadmin_server.py|69:<module>| Swagger file location for the sdotadmin_server:app: /opt/netapp/lib/sdotadmin/server_config/sdotadmin_external_schema.yaml
+2022-12-19 07:27:44,938|DEBUG| 7703|0|abstract.py|56|Root Path: /opt/netapp/lib/sdotadmin
+2022-12-19 07:27:44,939|DEBUG| 7703|0|abstract.py|64|Specification directory: /opt/netapp/lib/sdotadmin/server_config
+2022-12-19 07:27:44,939|DEBUG| 7703|0|abstract.py|66|Setting error handlers
+2022-12-19 07:27:45,450| INFO| 7703|0|logger.py|132|sdotadmin_server.py|97:<module>| ---------------------ADD API----------------------------------------------
+2022-12-19 07:27:47,451|DEBUG| 7703|0|library.py|45|Using default library file-path: [libarchive.so]
+2022-12-19 07:27:47,452|DEBUG| 7703|0|library.py|50|Using library file-path: [libarchive.so]
+2022-12-19 07:27:48,345| INFO| 7703|0|logger.py|132|sdotadmin_server.py|99:<module>| ---------------------END ADD API----------------------------------------------
+2022-12-19 07:27:48,345| INFO| 7703|0|logger.py|132|flag.py|217:populate_flag_defaults| Checking if we need to add or remove flag constants...
+2022-12-19 07:27:48,476| INFO| 7703|0|logger.py|132|flag.py|243:populate_flag_defaults| No changes needed to be made to the flag table.
+2022-12-19 07:27:48,538|DEBUG| 7703|0|logger.py|132|autosync_cron_conf.py|44:read_cron_info| Failed to read/load the autosync /home/admin/auto_sync_conf.yaml config yaml file with error [Errno 2] No such file or directory: '/home/admin/auto_sync_conf.yaml'.setting default value.
+2022-12-19 07:27:48,538|DEBUG| 7703|0|flask_app.py|91|Starting gevent HTTP server..
+2022-12-19 07:27:48,540| INFO| 7703|0|flask_app.py|112|Listening on 127.0.0.1:8080..
+2022-12-19 07:28:44,911|DEBUG| 7703|0|coroutine.py|190|Registered Myself: current tasks [{140214342596264: <CoroutineRecord (asynchronous.crontab:create_mediator) [ACTIVE]>}]
+2022-12-19 07:31:02,735| INFO| 7918|0|logger.py|132|sdotadmin_server.py|69:<module>| Swagger file location for the sdotadmin_server:app: /opt/netapp/lib/sdotadmin/server_config/sdotadmin_external_schema.yaml
+2022-12-19 07:31:02,737|DEBUG| 7918|0|abstract.py|56|Root Path: /opt/netapp/lib/sdotadmin
+2022-12-19 07:31:02,738|DEBUG| 7918|0|abstract.py|64|Specification directory: /opt/netapp/lib/sdotadmin/server_config
+2022-12-19 07:31:02,738|DEBUG| 7918|0|abstract.py|66|Setting error handlers
+2022-12-19 07:31:03,268| INFO| 7918|0|logger.py|132|sdotadmin_server.py|97:<module>| ---------------------ADD API----------------------------------------------
+2022-12-19 07:31:05,457|DEBUG| 7918|0|library.py|45|Using default library file-path: [libarchive.so]
+2022-12-19 07:31:05,458|DEBUG| 7918|0|library.py|50|Using library file-path: [libarchive.so]
+2022-12-19 07:31:06,776| INFO| 7918|0|logger.py|132|sdotadmin_server.py|99:<module>| ---------------------END ADD API----------------------------------------------
+2022-12-19 07:31:06,777| INFO| 7918|0|logger.py|132|flag.py|217:populate_flag_defaults| Checking if we need to add or remove flag constants...
+2022-12-19 07:31:06,910| INFO| 7918|0|logger.py|132|flag.py|243:populate_flag_defaults| No changes needed to be made to the flag table.
+2022-12-19 07:31:06,969|DEBUG| 7918|0|logger.py|132|autosync_cron_conf.py|44:read_cron_info| Failed to read/load the autosync /home/admin/auto_sync_conf.yaml config yaml file with error [Errno 2] No such file or directory: '/home/admin/auto_sync_conf.yaml'.setting default value.
+2022-12-19 07:31:06,970|DEBUG| 7918|0|flask_app.py|91|Starting gevent HTTP server..
+2022-12-19 07:31:06,972| INFO| 7918|0|flask_app.py|112|Listening on 127.0.0.1:8080..
+2022-12-19 07:31:16,667| INFO| 7994|0|logger.py|132|sdotadmin_server.py|69:<module>| Swagger file location for the sdotadmin_server:app: /opt/netapp/lib/sdotadmin/server_config/sdotadmin_external_schema.yaml
+2022-12-19 07:31:16,670|DEBUG| 7994|0|abstract.py|56|Root Path: /opt/netapp/lib/sdotadmin
+2022-12-19 07:31:16,671|DEBUG| 7994|0|abstract.py|64|Specification directory: /opt/netapp/lib/sdotadmin/server_config
+2022-12-19 07:31:16,672|DEBUG| 7994|0|abstract.py|66|Setting error handlers
+2022-12-19 07:31:17,135| INFO| 7994|0|logger.py|132|sdotadmin_server.py|97:<module>| ---------------------ADD API----------------------------------------------
+2022-12-19 07:31:19,152|DEBUG| 7994|0|library.py|45|Using default library file-path: [libarchive.so]
+2022-12-19 07:31:19,153|DEBUG| 7994|0|library.py|50|Using library file-path: [libarchive.so]
+2022-12-19 07:31:20,013| INFO| 7994|0|logger.py|132|sdotadmin_server.py|99:<module>| ---------------------END ADD API----------------------------------------------
+2022-12-19 07:31:20,014| INFO| 7994|0|logger.py|132|flag.py|217:populate_flag_defaults| Checking if we need to add or remove flag constants...
+2022-12-19 07:31:20,144| INFO| 7994|0|logger.py|132|flag.py|243:populate_flag_defaults| No changes needed to be made to the flag table.
+2022-12-19 07:31:20,194|DEBUG| 7994|0|logger.py|132|autosync_cron_conf.py|44:read_cron_info| Failed to read/load the autosync /home/admin/auto_sync_conf.yaml config yaml file with error [Errno 2] No such file or directory: '/home/admin/auto_sync_conf.yaml'.setting default value.
+2022-12-19 07:31:37,846|DEBUG| 7994|0|flask_app.py|91|Starting gevent HTTP server..
+2022-12-19 07:31:37,855| INFO| 7994|0|flask_app.py|112|Listening on 127.0.0.1:8080..
+2022-12-19 07:31:42,112|DEBUG| 7994|0|coroutine.py|177|RESTAPI [controllers.job:get_jobs] executing
+2022-12-19 07:31:42,113|DEBUG| 7994|0|coroutine.py|190|Registered Myself: current tasks [{139735542237656: <CoroutineRecord (controllers.job:get_jobs) [ACTIVE]>}]
+2022-12-19 07:31:42,116| INFO| 7994|5710|restapi.py|231|Processing GET http://127.0.0.1:8080/api/v3/jobs?fields=id,message,name,owner,request_id&state=running%7Cqueued
+2022-12-19 07:31:42,119| INFO| 7994|5710|restapi.py|263|GET http://127.0.0.1:8080/api/v3/jobs?fields=id,message,name,owner,request_id&state=running%7Cqueued returned in 5ms with status HTTPStatus.OK (BA)
+2022-12-19 07:31:42,123|DEBUG| 7994|0|coroutine.py|177|RESTAPI [controllers.deploy:get_deploy] executing
+2022-12-19 07:31:42,123|DEBUG| 7994|0|coroutine.py|190|Registered Myself: current tasks [{139735542237656: <CoroutineRecord (controllers.deploy:get_deploy) [ACTIVE]>}]
+2022-12-19 07:31:42,125| INFO| 7994|5711|restapi.py|231|Processing GET http://127.0.0.1:8080/api/v3/deploy?fields=instance_types.*
+2022-12-19 07:31:42,143| INFO| 7994|5711|restapi.py|263|GET http://127.0.0.1:8080/api/v3/deploy?fields=instance_types.* returned in 19ms with status HTTPStatus.OK (BA)
+2022-12-19 07:31:42,150|DEBUG| 7994|0|coroutine.py|177|RESTAPI [controllers.cluster:get_cluster] executing
+2022-12-19 07:31:42,151|DEBUG| 7994|0|coroutine.py|190|Registered Myself: current tasks [{139735542237928: <CoroutineRecord (controllers.cluster:get_cluster) [ACTIVE]>}]
+2022-12-19 07:31:42,152| INFO| 7994|5712|restapi.py|231|Processing GET http://127.0.0.1:8080/api/v3/clusters/b2c5f3e4-63cf-11ed-bfb4-000c297a9d59?fields=uuid,name,num_nodes,state,last_refresh,mtu,ntp_servers,eval_days,ontap_image_version,ontap_version,ip,gateway,netmask,eval,nodes.host.*,mediator_iscsi_target.name,mediator_iscsi_target.mediator.ip,is_host_update_in_progress,dns_info.*,nodes.serial_number,nodes.*,nodes.networks.*,nodes.networks.vswitch.network_adapters,nodes.networks.vswitch.type,nodes.storage.pools.*,nodes.license.type,nodes.license.state,nodes.license.pool_name,nodes.license.capacity,nodes.host.hypervisor_type,nodes.storage.disks.*,nodes.host.hypervisor_config.esx.moid,nodes.vm.*,nodes.networks.network.moid
+2022-12-19 07:31:42,468|DEBUG| 7994|5712|logger.py|132|Mediator.py|41:get_all_iscsi_tgts_status| url (http://localhost:3080/targets/status), output ({"NumberOfTargets":1,"NumberOfTargetsWith0ActiveConnections":0,"NumberOfTargetsWith1ActiveConnections":0,"NumberOfTargetsWith2ActiveConnections":1,"Targets":[{"ActiveConnections":2,"Connections":[{"ip":"10.232.27.167","read_io_kb":"652","write_io_kb":"1236"},{"ip":"10.232.27.157","read_io_kb":"4420","write_io_kb":"19408"}],"Name":"select000000","lun0_last_access":"Mon Dec 19 07:31:40 2022","lun0_last_modify":"Mon Dec 19 07:31:42 2022","lun1_last_access":"Mon Dec 19 07:31:40 2022","lun1_last_modify":"Mon Dec 19 07:31:40 2022"}]})
+2022-12-19 07:31:42,488|DEBUG| 7994|5712|logger.py|132|Mediator.py|102:get_iscsi_tgt| url (http://localhost:3080/targets/select000000), output ({"INITIATORs":["iqn.1994-09.org.freebsd:*"],"LUNs":{"0":{"dev":"dev1-0","path":"\/mnt\/iscsi_space\/mb.select000000.0","scsiid":"lun0","scsisn":"lun0","type":"fileio"},"1":{"dev":"dev1-1","path":"\/mnt\/iscsi_space\/mb.select000000.1","scsiid":"lun1","scsisn":"lun1","type":"fileio"}},"iqn":"iqn.2012-05.local:mailbox.target.select000000","stack":"scst"})
+2022-12-19 07:31:42,527| INFO| 7994|5712|restapi.py|263|GET http://127.0.0.1:8080/api/v3/clusters/b2c5f3e4-63cf-11ed-bfb4-000c297a9d59?fields=uuid,name,num_nodes,state,last_refresh,mtu,ntp_servers,eval_days,ontap_image_version,ontap_version,ip,gateway,netmask,eval,nodes.host.*,mediator_iscsi_target.name,mediator_iscsi_target.mediator.ip,is_host_update_in_progress,dns_info.*,nodes.serial_number,nodes.*,nodes.networks.*,nodes.networks.vswitch.network_adapters,nodes.networks.vswitch.type,nodes.storage.pools.*,nodes.license.type,nodes.license.state,nodes.license.pool_name,nodes.license.capacity,nodes.host.hypervisor_type,nodes.storage.disks.*,nodes.host.hypervisor_config.esx.moid,nodes.vm.*,nodes.networks.network.moid returned in 376ms with status HTTPStatus.OK (BA)
+2022-12-19 07:31:42,893|DEBUG| 7994|0|coroutine.py|177|RESTAPI [controllers.storage:get_storage_pools] executing
+2022-12-19 07:31:42,894|DEBUG| 7994|0|coroutine.py|190|Registered Myself: current tasks [{139735542237928: <CoroutineRecord (controllers.storage:get_storage_pools) [ACTIVE]>}]
+2022-12-19 07:31:42,897| INFO| 7994|5713|restapi.py|231|Processing GET http://127.0.0.1:8080/api/v3/clusters/b2c5f3e4-63cf-11ed-bfb4-000c297a9d59/nodes/b2c64bbe-63cf-11ed-bfb4-000c297a9d59/storage/pools?fields=pool.moid,pool.device_type
+2022-12-19 07:31:42,973|DEBUG| 7994|5713|logger.py|132|client_api_helper.py|240:get_storage_pools| get_storage_pools executing
+2022-12-19 07:31:42,978|DEBUG| 7994|0|coroutine.py|177|RESTAPI [controllers.storage:get_storage_pools] executing
+2022-12-19 07:31:42,978|DEBUG| 7994|0|coroutine.py|190|Registered Myself: current tasks [{139735542237928: <CoroutineRecord (controllers.storage:get_storage_pools) [ACTIVE]>, 139735542238200: <CoroutineRecord (controllers.storage:get_storage_pools) [ACTIVE]>}]
+2022-12-19 07:31:42,980| INFO| 7994|5714|restapi.py|231|Processing GET http://127.0.0.1:8080/api/v3/clusters/b2c5f3e4-63cf-11ed-bfb4-000c297a9d59/nodes/b2c71008-63cf-11ed-bfb4-000c297a9d59/storage/pools?fields=pool.moid,pool.device_type
+2022-12-19 07:31:43,049|DEBUG| 7994|5714|logger.py|132|client_api_helper.py|240:get_storage_pools| get_storage_pools executing
+2022-12-19 07:31:43,059|DEBUG| 7994|0|coroutine.py|177|RESTAPI [controllers.cluster:get_clusters] executing
+2022-12-19 07:31:43,060|DEBUG| 7994|0|coroutine.py|190|Registered Myself: current tasks [{139735542237928: <CoroutineRecord (controllers.storage:get_storage_pools) [ACTIVE]>, 139735542238200: <CoroutineRecord (controllers.storage:get_storage_pools) [ACTIVE]>, 139735542238744: <CoroutineRecord (controllers.cluster:get_clusters) [ACTIVE]>}]
+2022-12-19 07:31:43,061| INFO| 7994|5715|restapi.py|231|Processing GET http://127.0.0.1:8080/api/v3/clusters?fields=id,name

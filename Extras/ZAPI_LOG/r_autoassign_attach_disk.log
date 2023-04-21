@@ -1,0 +1,156 @@
+2023-01-20 14:13:01,849|DEBUG| 6114|7007|logger.py|132|node.py|5323:get_ontap_disk_names| unsupported_disks list: []
+2023-01-20 14:13:01,849|DEBUG| 6114|7007|logger.py|132|node.py|5326:get_ontap_disk_names| Disks to be attached_after_checking ['naa.5002538455264e20']
+2023-01-20 14:13:01,851|DEBUG| 6114|7007|logger.py|132|node.py|5234:_get_ontap_disk_info| vmdisk-target-addr is unknown
+2023-01-20 14:13:01,854|DEBUG| 6114|7007|logger.py|132|node.py|5271:_get_ontap_disk_info| Matched disk NET-2.23 with diskpathname 0b.96
+2023-01-20 14:13:01,855|DEBUG| 6114|7007|logger.py|132|node.py|4637:_set_pdisks_ontap_names| ONTAP disks: {'naa.5002538455264e20': {'ontap_name': 'NET-2.23', 'found': True, 'more_disk_info': {'diskpath_name': '0b.96', 'container_type': 'shared', 'capacity': 400088457216}}}
+2023-01-20 14:13:01,870|DEBUG| 6114|7007|job.py|364|Updated <Job (DISK_ATTACH) running [id:2ac35cd4-98cc-11ed-8935-000c2916e291 rid:7007 mod:2023-01-20 14:13:01.870555]> [failed:False] Initiating ownership reassignment on the disks.
+2023-01-20 14:13:01,871|DEBUG| 6114|7007|logger.py|132|node.py|4692:_force_reassign_ownership| assigning disk ownership for disks ['NET-2.23']
+2023-01-20 14:13:01,886|DEBUG| 6114|7012|job.py|314|Long-polling done. cnt:42493
+2023-01-20 14:13:01,888| INFO| 6114|7012|restapi.py|263|GET http://127.0.0.1:8080/api/v3/jobs/2ac35cd4-98cc-11ed-8935-000c2916e291?fields=request_id%2Cmessage%2Cstate&last_modified=%3E%3D2023-01-20T14%3A12%3A12.204092Z&poll_timeout=120 returned in 49664ms with status HTTPStatus.OK
+2023-01-20 14:13:01,902|DEBUG| 6114|0|coroutine.py|177|RESTAPI [controllers.job:get_job] executing
+2023-01-20 14:13:01,904|DEBUG| 6114|0|coroutine.py|190|Registered Myself: current tasks [{139937216060680: <CoroutineRecord (asynchronous.cluster_tasks:attach_pdisks_async) [ACTIVE]>, 139937216059592: <CoroutineRecord (controllers.job:get_job) [ACTIVE]>}]
+2023-01-20 14:13:01,906| INFO| 6114|7013|restapi.py|231|Processing GET http://127.0.0.1:8080/api/v3/jobs/2ac35cd4-98cc-11ed-8935-000c2916e291?fields=request_id%2Cmessage%2Cstate&last_modified=%3E%3D2023-01-20T14%3A13%3A01.870555Z&poll_timeout=120
+2023-01-20 14:13:01,908|DEBUG| 6114|7013|job.py|308|Long-polling job.last_mod:2023-01-20 14:13:01.870555 last_mod:2023-01-20T14:13:01.870555Z timeout:120 endtime:2023-01-20 14:15:01.908127
+2023-01-20 14:13:02,081| INFO| 6114|7007|logger.py|132|ZAPI.py|241:invoke|
+API: "disk-sanown-assign"
+User: "admin"
+Request:
+<?xml version="1.0" ?>
+<!DOCTYPE netapp
+  SYSTEM 'file:/etc/netapp_filer.dtd'>
+<netapp nmsdk_language="Python" nmsdk_platform="Debian GNU/Linux 10
+ \l unknown" nmsdk_version="5.4" version="1.40" xmlns="http://www.netapp.com/filer/admin">
+        <disk-sanown-assign>
+                <owner>cluster-autoassign-01</owner>
+                <disklist>
+                        <disk-info>
+                                <name>NET-2.23</name>
+                        </disk-info>
+                </disklist>
+                <force>true</force>
+        </disk-sanown-assign>
+</netapp>
+
+Response:
+<?xml version="1.0" ?>
+<!DOCTYPE netapp
+  SYSTEM 'file:/etc/netapp_gx.dtd'>
+<netapp version="1.231" xmlns="http://www.netapp.com/filer/admin">
+
+
+        <results status="passed"/>
+</netapp>
+
+2023-01-20 14:13:02,082| INFO| 6114|7007|logger.py|132|ClusterZapis.py|1111:z_disk_assign_list| Successfully assigned ownership of disks [{'name': 'NET-2.23'}] to node "cluster-autoassign-01"
+2023-01-20 14:13:02,083|DEBUG| 6114|7007|logger.py|132|node.py|4717:_delete_partitions| Deleting disk partitions for disk 0b.96...
+2023-01-20 14:13:02,321| INFO| 6114|7007|logger.py|132|ZAPI.py|241:invoke|
+API: "system-cli"
+User: "admin"
+Request:
+<?xml version="1.0" ?>
+<!DOCTYPE netapp
+  SYSTEM 'file:/etc/netapp_filer.dtd'>
+<netapp nmsdk_language="Python" nmsdk_platform="Debian GNU/Linux 10
+ \l unknown" nmsdk_version="5.4" version="1.40" xmlns="http://www.netapp.com/filer/admin">
+        <system-cli>
+                <priv>diagnostic</priv>
+                <args>
+                        <arg>system</arg>
+                        <arg>node</arg>
+                        <arg>run</arg>
+                        <arg>-node</arg>
+                        <arg>cluster-autoassign-01</arg>
+                        <arg>-command</arg>
+                        <arg>setflag</arg>
+                        <arg>raid_sdot_force_unpartition</arg>
+                        <arg>1</arg>
+                        <arg>;</arg>
+                        <arg>system</arg>
+                        <arg>node</arg>
+                        <arg>run</arg>
+                        <arg>-node</arg>
+                        <arg>cluster-autoassign-01</arg>
+                        <arg>-command</arg>
+                        <arg>disk</arg>
+                        <arg>unpartition</arg>
+                        <arg>0b.96</arg>
+                        <arg>;</arg>
+                        <arg>system</arg>
+                        <arg>node</arg>
+                        <arg>run</arg>
+                        <arg>-node</arg>
+                        <arg>cluster-autoassign-01</arg>
+                        <arg>-command</arg>
+                        <arg>setflag</arg>
+                        <arg>raid_sdot_force_unpartition</arg>
+                        <arg>0</arg>
+                </args>
+        </system-cli>
+</netapp>
+
+Response:
+<?xml version="1.0" ?>
+<!DOCTYPE netapp
+  SYSTEM 'file:/etc/netapp_gx.dtd'>
+<netapp version="1.231" xmlns="http://www.netapp.com/filer/admin">
+
+
+        <results status="passed">
+                <cli-output>
+
+disk unpartition: 0b.96 unpartitioned successfully
+
+
+</cli-output>
+                <cli-result-value>1</cli-result-value>
+        </results>
+</netapp>
+
+2023-01-20 14:13:02,322|DEBUG| 6114|7007|logger.py|132|ClusterZapis.py|1067:z_disk_unpartition| Cluster [cluster-autoassign]: Disk unpartition SystemCLI zapi succeeded: disk unpartition: 0b.96 unpartitioned successfully
+2023-01-20 14:13:02,323| INFO| 6114|7007|logger.py|132|node.py|4755:_remove_owners| Attempting to remove ownership from disks ['NET-2.23'].
+2023-01-20 14:13:02,332|DEBUG| 6114|7007|fault.py|147|Unable to find a registered fault for zapi.disk_sanown_remove_ownership.
+2023-01-20 14:13:02,450| INFO| 6114|7007|logger.py|132|ZAPI.py|241:invoke|
+API: "disk-sanown-remove-ownership"
+User: "admin"
+Request:
+<?xml version="1.0" ?>
+<!DOCTYPE netapp
+  SYSTEM 'file:/etc/netapp_filer.dtd'>
+<netapp nmsdk_language="Python" nmsdk_platform="Debian GNU/Linux 10
+ \l unknown" nmsdk_version="5.4" version="1.40" xmlns="http://www.netapp.com/filer/admin">
+        <disk-sanown-remove-ownership>
+                <disk-list>
+                        <disk-name>NET-2.23</disk-name>
+                </disk-list>
+                <force>true</force>
+        </disk-sanown-remove-ownership>
+</netapp>
+
+Response:
+<?xml version="1.0" ?>
+<!DOCTYPE netapp
+  SYSTEM 'file:/etc/netapp_gx.dtd'>
+<netapp version="1.231" xmlns="http://www.netapp.com/filer/admin">
+
+
+        <results status="passed"/>
+</netapp>
+
+2023-01-20 14:13:02,451| INFO| 6114|7007|logger.py|132|ClusterZapis.py|1091:z_disk_remove_owner| Successfully removed ownership information from disks ['NET-2.23']
+2023-01-20 14:13:02,459| INFO| 6114|7007|logger.py|132|event.py|134:__init__| <Event(id=538, request_id='7007', time='2023-01-20 14:13:02.453408', evtype='DiskMetadataRemovalCompleted', category='node', level='Info', detail='Previous metadata was successfully deleted from disks "naa.5002538455264e20".')>
+2023-01-20 14:13:02,460|DEBUG| 6114|7007|job.py|364|Updated <Job (DISK_ATTACH) running [id:2ac35cd4-98cc-11ed-8935-000c2916e291 rid:7007 mod:2023-01-20 14:13:02.460885]> [failed:False] Previous metadata was successfully deleted from disks "naa.5002538455264e20".
+2023-01-20 14:13:02,461|DEBUG| 6114|7007|job.py|364|Updated <Job (DISK_ATTACH) running [id:2ac35cd4-98cc-11ed-8935-000c2916e291 rid:7007 mod:2023-01-20 14:13:02.461917]> [failed:False] Enabling disk auto-assign.
+2023-01-20 14:13:19,459|DEBUG| 6114|7013|job.py|314|Long-polling done. cnt:2695
+2023-01-20 14:13:19,463| INFO| 6114|7013|restapi.py|263|GET http://127.0.0.1:8080/api/v3/jobs/2ac35cd4-98cc-11ed-8935-000c2916e291?fields=request_id%2Cmessage%2Cstate&last_modified=%3E%3D2023-01-20T14%3A13%3A01.870555Z&poll_timeout=120 returned in 17558ms with status HTTPStatus.OK
+2023-01-20 14:13:19,474|DEBUG| 6114|0|coroutine.py|177|RESTAPI [controllers.job:get_job] executing
+2023-01-20 14:13:19,474|DEBUG| 6114|0|coroutine.py|190|Registered Myself: current tasks [{139937216060680: <CoroutineRecord (asynchronous.cluster_tasks:attach_pdisks_async) [ACTIVE]>, 139937216059592: <CoroutineRecord (controllers.job:get_job) [ACTIVE]>}]
+2023-01-20 14:13:19,477| INFO| 6114|7014|restapi.py|231|Processing GET http://127.0.0.1:8080/api/v3/jobs/2ac35cd4-98cc-11ed-8935-000c2916e291?fields=request_id%2Cmessage%2Cstate&last_modified=%3E%3D2023-01-20T14%3A13%3A02.461917Z&poll_timeout=120
+2023-01-20 14:13:19,478|DEBUG| 6114|7014|job.py|308|Long-polling job.last_mod:2023-01-20 14:13:02.461917 last_mod:2023-01-20T14:13:02.461917Z timeout:120 endtime:2023-01-20 14:15:19.478901
+2023-01-20 14:13:19,541|DEBUG| 6114|7007|logger.py|132|ClusterRestApis.py|1209:r_system_cli_set_disk_autoassign| Cluster [cluster-autoassign]: "PATCH https://10.228.201.193:443/api/private/cli/storage/disk/option" response: {
+  "num_records": 1
+}
+2023-01-20 14:13:19,541|DEBUG| 6114|7007|logger.py|132|ClusterRestApis.py|1213:r_system_cli_set_disk_autoassign| Cluster [cluster-autoassign]: "PATCH https://10.228.201.193:443/api/private/cli/storage/disk/option" The CLI command "storage disk option modify -autoassign on" executed successfully.
+2023-01-20 14:13:19,550| INFO| 6114|7007|logger.py|132|event.py|134:__init__| <Event(id=539, request_id='7007', time='2023-01-20 14:13:19.544401', evtype='NodeAttachDisksSuccessful', category='node', level='Info', detail='Attach disks successful for node "cluster-autoassign-01" in cluster "cluster-autoassign". Count: 1')>
+2023-01-20 14:13:19,551|DEBUG| 6114|7007|job.py|364|Updated <Job (DISK_ATTACH) running [id:2ac35cd4-98cc-11ed-8935-000c2916e291 rid:7007 mod:2023-01-20 14:13:19.551296]> [failed:False] Attach disks successful for node "cluster-autoassign-01" in cluster "cluster-autoassign". Count: 1
+2023-01-20 14:13:19,559|DEBUG| 6114|7014|job.py|314|Long-polling done. cnt:300
+2023-01-20 14:13:19,562| INFO| 6114|7014|restapi.py|263|GET http://127.0.0.1:8080/api/v3/jobs/2ac35cd4-98cc-11ed-8935-000c2916e291?fields=request_id%2Cmessage%2Cstate&last_modified=%3E%3D2023-01-20T14%3A13%3A02.461917Z&poll_timeout=120 returned in 87ms with status HTTPStatus.OK
