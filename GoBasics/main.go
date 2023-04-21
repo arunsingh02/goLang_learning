@@ -29,5 +29,8 @@ func main() {
 	// practice.URLPlay()
 	// practice.VarPlay()
 	// practice.WebReader()
-	practice.HandleRaceCondition()
+	// practice.HandleRaceCondition()
+
+	practice.ClosureCaller()
+	practice.CalcSquare()
 }
